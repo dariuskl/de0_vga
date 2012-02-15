@@ -2,6 +2,7 @@ ABOUT THE PROJECT
 ----------------------------------------------------------------------
 
 
+
 DIRECTORY STRUCTURE
 ----------------------------------------------------------------------
 	doc		DOCumentation, DOCuments, etc.
@@ -12,3 +13,9 @@ DIRECTORY STRUCTURE
 OVERVIEW HARDWARE DESIGNS
 ----------------------------------------------------------------------
 de0_vga_qsys	Der Versuch das Ding mit Qsys hinzubiegen
+
+
+OVERVIEW SOFTWARE PROJECTS
+----------------------------------------------------------------------
+de0_vga_driver		the basic vga graphics driver including an even more basic demo application
+de0_vga_qsys_bsp	board support package for the de0_vga_qsys hardware design
