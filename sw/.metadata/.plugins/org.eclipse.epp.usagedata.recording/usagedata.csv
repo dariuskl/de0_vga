@@ -1,26 +1,101 @@
 what,kind,bundleId,bundleVersion,description,time
-ws,sysinfo,,,"gtk",1329341470733
-locale,sysinfo,,,"en_US",1329341470733
-processors,sysinfo,,,"2",1329341470733
-java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1329341470733
-java.runtime.version,sysinfo,,,"1.6.0_23-b05",1329341470733
-java.specification.name,sysinfo,,,"Java Platform API Specification",1329341470733
-java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
-java.specification.version,sysinfo,,,"1.6",1329341470733
-java.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
-java.version,sysinfo,,,"1.6.0_23",1329341470733
-java.vm.info,sysinfo,,,"mixed mode",1329341470733
-java.vm.name,sysinfo,,,"Java HotSpot(TM) Server VM",1329341470733
-java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1329341470733
-java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
-java.vm.specification.version,sysinfo,,,"1.0",1329341470733
-java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
-java.vm.version,sysinfo,,,"19.0-b09",1329341470733
-started,bundle,com.altera.systemconsole,11.1.0.173,"com.altera.systemconsole",1329341470747
-started,bundle,com.altera.utilities,11.1.0.173,"com.altera.utilities",1329341470782
-started,bundle,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch",1329341471414
-started,bundle,com.altera.sbtgui.core,11.1.0.173,"com.altera.sbtgui.core",1329341478086
-started,bundle,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search",1329341478099
-started,bundle,org.eclipse.compare,3.5.100.I20100526-0800,"org.eclipse.compare",1329341478180
-started,bundle,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui",1329341479729
-started,bundle,org.eclipse.cdt.debug.core,7.0.0.201009141542,"org.eclipse.cdt.debug.core",1329341479778
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343473227
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1329343483449
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.lineStart",1329343483752
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343497017
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343500005
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343502046
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343509728
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343518226
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343518415
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343518607
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343518859
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343519123
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.wordNext",1329343519909
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.wordNext",1329343520163
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1329343530642
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineStart",1329343544382
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.lineEnd",1329343545861
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343552270
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343554515
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343569059
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343589631
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343591031
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343592805
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1329343604861
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343607711
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1329343609928
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1329343614337
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1329343620788
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1329343622235
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1329343632863
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordNext",1329343633586
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.select.lineEnd",1329343644302
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1329343645735
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1329343646175
+activated,view,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1329343663500
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343677865
+closed,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343682913
+started,bundle,org.eclipse.cdt.mylyn.ui,1.1.3.v20100909-0100-e3x,"org.eclipse.cdt.mylyn.ui",1329343682964
+error,log,,,"Project hello_world is closed",1329343684682
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343684919
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343687764
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343691968
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343695675
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343695859
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343698531
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343707230
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1329343711332
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1329343714501
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343714929
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343716523
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343733765
+opened,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343735610
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343735671
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343735695
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343745768
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343745816
+closed,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343745816
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343770150
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1329343776057
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343779261
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1329343780350
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343780777
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343782766
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343795743
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343796494
+error,log,,,"Project hello_world is closed",1329343798429
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343798502
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343799842
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343800522
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343804224
+executed,command,,,"com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchShortcut.debug",1329343805051
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343805115
+activated,view,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1329343806167
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343826282
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343826306
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1329343826318
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343826367
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343826394
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343827398
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343831073
+started,bundle,org.eclipse.cdt.dsf.ui,2.1.1.201009141542,"org.eclipse.cdt.dsf.ui",1329343831699
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1329343831810
+error,log,,,"Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView",1329343838537
+error,log,,,"Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView",1329343838544
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1329343838936
+activated,perspective,com.altera.sbtgui.ui,11.1.0.173,"com.altera.sbtgui.ui.debugPerspective",1329343839022
+activated,view,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1329343839071
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343839142
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1329343839180
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1329343843112
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343859406
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343876219
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343886672
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1329343896631
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1329343901282
+activated,view,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1329343909203
+opened,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.asm.AsmEditor",1329343916519
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1329343919711
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1329343920051
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.asm.AsmEditor",1329343923138

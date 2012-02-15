@@ -1,0 +1,28 @@
+/*!
+ *	\file demo.c
+ *
+ *	\date		File created: Feb 15, 2012
+ *	\author		darius
+ *
+ *	\version	alpha
+ */
+
+#include <stdio.h>
+
+#include "vga_driver.h"
+
+
+int main ()
+{
+	uint64 *frame_buffer;
+
+	// Try to allocate as many segments as required for the frame buffer.
+	if ((frame_buffer = (uint64 *) malloc (((DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS) / 5) * sizeof (uint64))) == NULL)
+	{	// if it failed
+		printf ("FATAL: Could not allocate memory for the frame buffer\n");		// print error
+		return -1;																// and return
+	}
+	printf ("Frame buffer allocated at base address %x\n", frame_buffer);
+
+	return 0;
+}

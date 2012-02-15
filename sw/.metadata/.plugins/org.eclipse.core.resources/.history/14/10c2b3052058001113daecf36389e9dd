@@ -1,0 +1,18 @@
+/*!
+ *	\file demo.c
+ *
+ *	\date		File created: Feb 15, 2012
+ *	\author		darius
+ *
+ *	\version	alpha
+ */
+
+#include <stdio.h>
+
+#include "vga_driver.h"
+
+
+int main ()
+{
+
+}

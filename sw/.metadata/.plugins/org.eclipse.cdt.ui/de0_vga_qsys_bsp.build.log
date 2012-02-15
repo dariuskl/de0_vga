@@ -1,5 +1,5 @@
 
-**** Clean-only build of configuration Nios II for project de0_vga_qsys_bsp ****
+**** Build of configuration Nios II for project de0_vga_qsys_bsp ****
 
-make clean 
-[BSP clean complete]
+make all 
+[BSP build complete]
