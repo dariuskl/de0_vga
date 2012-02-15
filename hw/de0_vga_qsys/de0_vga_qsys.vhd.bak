@@ -1,0 +1,96 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity de0_vga_qsys is
+
+	port (
+		CLOCK_50		: in 		std_logic;
+		KEY			: in 		std_logic_vector(2 downto 0);
+		SW				: in		std_logic_vector(9 downto 0);
+		LEDG			: out		std_logic_vector(9 downto 0);
+		HEX0			: out		std_logic_vector(0 to 7);
+		HEX1			: out		std_logic_vector(0 to 7);
+		HEX2			: out		std_logic_vector(0 to 7);
+		HEX3			: out		std_logic_vector(0 to 7);
+		DRAM_CLK		: out 	std_logic;
+		DRAM_CKE		: out 	std_logic;
+		DRAM_ADDR	: out 	std_logic_vector (11 downto 0);
+		DRAM_BA		: out 	std_logic_vector (1 downto 0);
+		DRAM_CS_N	: out 	std_logic;
+		DRAM_CAS_N	: out		std_logic;
+		DRAM_RAS_N	: out		std_logic;
+		DRAM_WE_N	: out 	std_logic;
+		DRAM_DQ		: inout 	std_logic_vector (15 downto 0);
+		DRAM_UDQM	: buffer std_logic;
+		DRAM_LDQM	: buffer std_Logic
+	);
+
+end de0_vga_qsys;
+
+architecture default of dma_test is
+	component nios_system is
+		port(
+			-- 1) global signals:
+			clk_0 : IN STD_LOGIC;
+			reset_n : IN STD_LOGIC;
+			sdram_clk : OUT STD_LOGIC;
+			sys_clk : OUT STD_LOGIC;
+			-- the_dma_controller_0
+			coe_hex_export_from_the_dma_controller_0 : OUT STD_LOGIC_VECTOR (11 DOWNTO 0);
+			coe_ledg_export_from_the_dma_controller_0 : OUT STD_LOGIC_VECTOR (9 DOWNTO 0);
+			coe_read_export_to_the_dma_controller_0 : IN STD_LOGIC;
+			-- the_sdram_0
+			zs_addr_from_the_sdram_0 : OUT STD_LOGIC_VECTOR (11 DOWNTO 0);
+			zs_ba_from_the_sdram_0 : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+			zs_cas_n_from_the_sdram_0 : OUT STD_LOGIC;
+			zs_cke_from_the_sdram_0 : OUT STD_LOGIC;
+			zs_cs_n_from_the_sdram_0 : OUT STD_LOGIC;
+			zs_dq_to_and_from_the_sdram_0 : INOUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+			zs_dqm_from_the_sdram_0 : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+			zs_ras_n_from_the_sdram_0 : OUT STD_LOGIC;
+			zs_we_n_from_the_sdram_0 : OUT STD_LOGIC
+		);
+	end component;
+	component seg7display
+		port(
+			value: in std_logic_vector(15 downto 0);
+			disp3, disp2, disp1, disp0: out std_logic_vector(0 to 7)
+		);
+	end component;
+	signal dqm : std_logic_vector(1 downto 0);
+	signal temp: std_logic_vector(15 downto 0);
+begin
+	DRAM_UDQM <= dqm(1);
+	DRAM_LDQM <= dqm(0);
+	temp(15 downto 12) <= "0000";
+	sys: nios_system
+		port map(
+			-- 1) global signals:
+			clk_0													=> CLOCK_50,
+			reset_n												=> KEY(0),
+			sdram_clk											=> DRAM_CLK,
+			-- the_dma_controller_0
+			coe_hex_export_from_the_dma_controller_0	=> temp(11 downto 0),
+			coe_ledg_export_from_the_dma_controller_0	=> LEDG,
+			coe_read_export_to_the_dma_controller_0	=> SW(0),
+			-- the_sdram_0
+			zs_addr_from_the_sdram_0						=> DRAM_ADDR,
+			zs_ba_from_the_sdram_0							=> DRAM_BA,
+			zs_cas_n_from_the_sdram_0						=> DRAM_CAS_N,
+			zs_cke_from_the_sdram_0							=> DRAM_CKE,
+			zs_cs_n_from_the_sdram_0						=> DRAM_CS_N,
+			zs_dq_to_and_from_the_sdram_0					=> DRAM_DQ,
+			zs_dqm_from_the_sdram_0							=> dqm,
+			zs_ras_n_from_the_sdram_0						=> DRAM_RAS_N,
+			zs_we_n_from_the_sdram_0						=> DRAM_WE_N
+		);
+	seg: seg7display
+		port map(
+			value => temp,
+			disp3 => HEX3,
+			disp2 => HEX2,
+			disp1 => HEX1,
+			disp0 => HEX0
+		);
+end default;

@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project hello_world ****
+
+make all 
+Info: Building /home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/
+make --no-print-directory -C /home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/
+[BSP build complete]
+[hello_world build complete]

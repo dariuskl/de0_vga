@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="175" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="327" />
+   <clocksource preferredWidth="326" />
+   <frequency preferredWidth="307" />
+  </columns>
+ </clocktable>
+ <library
+   expandedCategories="Library/Bridges,Library/Clock and Reset,Project,Library" />
+ <window width="1300" height="792" x="-9" y="17" />
+ <hdlexample language="VHDL" />
+ <generation block_symbol_file="0" />
+</preferences>

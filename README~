@@ -1,13 +1,11 @@
 ABOUT THE PROJECT
 ----------------------------------------------------------------------
 
-
 DIRECTORY STRUCTURE
 ----------------------------------------------------------------------
 	doc		DOCumentation, DOCuments, etc.
 	hw		Quartus hardware design
 	sw		driver software
-
 
 OVERVIEW HARDWARE DESIGNS
 ----------------------------------------------------------------------

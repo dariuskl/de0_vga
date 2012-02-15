@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+ws,sysinfo,,,"gtk",1329341470733
+locale,sysinfo,,,"en_US",1329341470733
+processors,sysinfo,,,"2",1329341470733
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1329341470733
+java.runtime.version,sysinfo,,,"1.6.0_23-b05",1329341470733
+java.specification.name,sysinfo,,,"Java Platform API Specification",1329341470733
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
+java.specification.version,sysinfo,,,"1.6",1329341470733
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
+java.version,sysinfo,,,"1.6.0_23",1329341470733
+java.vm.info,sysinfo,,,"mixed mode",1329341470733
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Server VM",1329341470733
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1329341470733
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
+java.vm.specification.version,sysinfo,,,"1.0",1329341470733
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1329341470733
+java.vm.version,sysinfo,,,"19.0-b09",1329341470733
+started,bundle,com.altera.systemconsole,11.1.0.173,"com.altera.systemconsole",1329341470747
+started,bundle,com.altera.utilities,11.1.0.173,"com.altera.utilities",1329341470782
+started,bundle,com.altera.sbtgui.launch,11.1.0.173,"com.altera.sbtgui.launch",1329341471414
+started,bundle,com.altera.sbtgui.core,11.1.0.173,"com.altera.sbtgui.core",1329341478086
+started,bundle,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search",1329341478099
+started,bundle,org.eclipse.compare,3.5.100.I20100526-0800,"org.eclipse.compare",1329341478180
+started,bundle,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui",1329341479729
+started,bundle,org.eclipse.cdt.debug.core,7.0.0.201009141542,"org.eclipse.cdt.debug.core",1329341479778
