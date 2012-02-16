@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="vga_controller">
+		<CBX_INST_ENTRY INSTANCE_NAME="|vga_controller|vga_signals:vga_s|vga_px_clk_pll:pll|altpll:altpll_component" CBX_FILE_NAME="vga_px_clk_pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>
