@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project de0_vga_qsys_application ****
+
+make all 
+Info: Building ../de0_vga_qsys_bsp/
+make --no-print-directory -C ../de0_vga_qsys_bsp/
+[BSP build complete]
+[de0_vga_qsys_application build complete]

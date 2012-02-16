@@ -2,11 +2,8 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879339484;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879339484.;cdt.managedbuild.tool.gnu.cpp.compiler.base.919637137;cdt.managedbuild.tool.gnu.cpp.compiler.input.668823136">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1046645105;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1046645105.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1727405249;cdt.managedbuild.tool.gnu.cpp.compiler.input.541635131">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/HAL/inc"/>
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/"/>
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/drivers/inc"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/nios2-elf"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/backward"/>
@@ -272,17 +269,10 @@
 <definedSymbol symbol="__nios2_little_endian=1"/>
 <definedSymbol symbol="__nios2_little_endian__=1"/>
 <definedSymbol symbol="nios2_little_endian=1"/>
-<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
-<definedSymbol symbol="__hal__=1"/>
-<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
-<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879339484;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879339484.;cdt.managedbuild.tool.gnu.c.compiler.base.482886924;cdt.managedbuild.tool.gnu.c.compiler.input.1723667877">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1046645105;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1046645105.;cdt.managedbuild.tool.gnu.c.compiler.base.718611778;cdt.managedbuild.tool.gnu.c.compiler.input.1766723513">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/HAL/inc"/>
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/"/>
-<includePath path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_qsys_bsp/drivers/inc"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/include"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/include-fixed"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/include"/>
@@ -535,10 +525,6 @@
 <definedSymbol symbol="__nios2_little_endian=1"/>
 <definedSymbol symbol="__nios2_little_endian__=1"/>
 <definedSymbol symbol="nios2_little_endian=1"/>
-<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
-<definedSymbol symbol="__hal__=1"/>
-<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
-<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
 </scannerInfo>

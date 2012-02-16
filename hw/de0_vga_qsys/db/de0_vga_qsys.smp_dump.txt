@@ -1,4 +1,11 @@
 
+State Machine - |de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|\dma:state
+Name \dma:state.complete \dma:state.waiting \dma:state.request \dma:state.init 
+\dma:state.init 0 0 0 0 
+\dma:state.request 0 0 1 1 
+\dma:state.waiting 0 1 0 1 
+\dma:state.complete 1 0 0 1 
+
 State Machine - |de0_vga_qsys|system:qsys_system_0|system_sdram_0:sdram_0|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 

@@ -6,9 +6,13 @@ entity de0_vga_qsys is
 
 	port (
 		CLOCK_50		: in 		std_logic;
-		KEY			: in 		std_logic_vector(2 downto 0);
-		SW				: in		std_logic_vector(9 downto 0);
-		LEDG			: out		std_logic_vector(9 downto 0);
+		KEY			: in 		std_logic_vector (2 downto 0);
+		LEDG			: out		std_logic_vector (9 downto 0);
+		VGA_R			: out		std_logic_vector (3 downto 0);
+		VGA_G			: out		std_logic_vector (3 downto 0);
+		VGA_B			: out		std_logic_vector (3 downto 0);
+		VGA_HS		: out		std_logic;
+		VGA_VS		: out		std_logic;
 		DRAM_CLK		: out 	std_logic;
 		DRAM_CKE		: out 	std_logic;
 		DRAM_ADDR	: out 	std_logic_vector (11 downto 0);
@@ -36,7 +40,14 @@ architecture default of de0_vga_qsys is
 			sysclks_phasedone_conduit_export	: out	std_logic;
 			clk_sdram_clk	: out	std_logic;
 			
-			-- the_sdram_0
+			-- vga_0
+			vga_0_hs_export	: out	std_logic;
+			vga_0_vs_export	: out	std_logic;
+			vga_0_r_export		: out	std_logic_vector (3 downto 0);
+			vga_0_g_export		: out	std_logic_vector (3 downto 0);
+			vga_0_b_export		: out	std_logic_vector (3 downto 0);
+			
+			-- sdram_0
 			sdram_0_wire_addr		: out		std_logic_vector (11 downto 0);
 			sdram_0_wire_ba 		: out		std_logic_vector (1 downto 0);
 			sdram_0_wire_cas_n	: out 	std_logic;
@@ -65,6 +76,13 @@ begin
 			sysclks_locked_conduit_export		=> LEDG (9),
 			sysclks_phasedone_conduit_export	=> LEDG (8),
 			clk_sdram_clk							=> DRAM_CLK,
+			
+			-- vga_0
+			vga_0_hs_export		=> VGA_HS,
+			vga_0_vs_export		=> VGA_VS,
+			vga_0_r_export			=> VGA_R,
+			vga_0_g_export			=> VGA_G,
+			vga_0_b_export			=> VGA_B,
 			
 			-- the_sdram_0
 			sdram_0_wire_addr		=> DRAM_ADDR,

@@ -6,16 +6,6 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>com.altera.sbtgui.project.makefileBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.altera.sbtgui.project.makefileBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
@@ -90,7 +80,7 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUINature</nature>
-		<nature>com.altera.sbtgui.project.SBTGUIAppNature</nature>
+		<nature>com.altera.sbtgui.project.SBTGUILibNature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUIManagedNature</nature>
 	</natures>
 </projectDescription>

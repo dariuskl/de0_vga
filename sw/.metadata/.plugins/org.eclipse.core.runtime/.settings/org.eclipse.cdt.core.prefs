@@ -1,4 +1,4 @@
-#Wed Feb 15 22:48:40 CET 2012
+#Thu Feb 16 11:46:19 CET 2012
 org.eclipse.cdt.core.formatter.insert_new_line_before_catch_in_try_statement=do not insert
 org.eclipse.cdt.core.formatter.insert_space_after_comma_in_template_arguments=insert
 org.eclipse.cdt.core.formatter.continuation_indentation=2
@@ -78,6 +78,7 @@ org.eclipse.cdt.core.formatter.indent_body_declarations_compare_to_namespace_hea
 org.eclipse.cdt.core.formatter.insert_space_after_closing_angle_bracket_in_template_parameters=insert
 org.eclipse.cdt.core.formatter.insert_space_after_comma_in_template_parameters=insert
 org.eclipse.cdt.core.formatter.insert_space_before_closing_paren_in_parenthesized_expression=do not insert
+macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<macros/>\n
 org.eclipse.cdt.core.formatter.insert_space_before_opening_paren_in_exception_specification=insert
 org.eclipse.cdt.core.formatter.insert_space_before_comma_in_method_invocation_arguments=do not insert
 org.eclipse.cdt.core.formatter.insert_space_after_colon_in_base_clause=insert

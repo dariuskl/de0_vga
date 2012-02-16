@@ -3,20 +3,20 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="175" />
+   <connections preferredWidth="191" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="327" />
-   <clocksource preferredWidth="326" />
-   <frequency preferredWidth="307" />
+   <clockname preferredWidth="326" />
+   <clocksource preferredWidth="324" />
+   <frequency preferredWidth="308" />
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/Bridges,Library/Clock and Reset,Project,Library" />
- <window width="1300" height="792" x="-9" y="17" />
+   expandedCategories="Library/Peripherals,Library,Library/Peripherals/Display,Project" />
+ <window width="1298" height="792" x="-9" y="17" />
  <hdlexample language="VHDL" />
  <generation block_symbol_file="0" />
 </preferences>

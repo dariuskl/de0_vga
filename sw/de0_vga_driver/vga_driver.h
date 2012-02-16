@@ -42,6 +42,9 @@
 #define DISPLAY_NUM_ROWS		480
 #define NUM_PXS					DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS
 
+#define VGA_REG_FB_BASE_ADDR	0
+#define	VGA_REG_CTRL			1
+
 /*!
  * \brief	Takes an array of uint16 and positions its contents at (x_off, y_off) on the
  * 			passed frame_buffer.

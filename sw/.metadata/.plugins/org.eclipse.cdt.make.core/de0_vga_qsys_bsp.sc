@@ -2,7 +2,7 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.636687025;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.636687025.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1775488368;cdt.managedbuild.tool.gnu.cpp.compiler.input.1544252283">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1228586483;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1228586483.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1848969339;cdt.managedbuild.tool.gnu.cpp.compiler.input.112273528">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/nios2-elf"/>
@@ -271,7 +271,7 @@
 <definedSymbol symbol="nios2_little_endian=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.636687025;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.636687025.;cdt.managedbuild.tool.gnu.c.compiler.base.677200155;cdt.managedbuild.tool.gnu.c.compiler.input.966030536">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1228586483;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1228586483.;cdt.managedbuild.tool.gnu.c.compiler.base.201813945;cdt.managedbuild.tool.gnu.c.compiler.input.2068261253">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/include"/>
 <includePath path="/opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/include-fixed"/>

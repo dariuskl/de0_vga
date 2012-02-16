@@ -2,15 +2,17 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity vga_signals is
-	port(
-		reset			:	in	std_logic;
-		clk50			:	in	std_logic;
+
+	port (
+		reset				:	in		std_logic;
+		clk50				:	in		std_logic;
 		px_clk			:	out	std_logic;
 		px_clk_locked	:	out	std_logic;
-		display_data	:	out std_logic;	-- 1: data displayed on screen, 0: data not displayed on screen
+		screen_active	:	out	std_logic;	-- 1: data displayed on screen, 0: data not displayed on screen
 		h_sync			:	out	std_logic;
 		v_sync			:	out	std_logic
 	);
+
 end vga_signals;
 
 architecture default of vga_signals is
@@ -101,7 +103,7 @@ begin
 	px_clk <= s_px_clk;
 	h_sync <= s_hsync;
 	v_sync <= s_vsync;
-	display_data <= s_hactive and s_vactive;
+	screen_active <= s_hactive and s_vactive;
 	px_clk_locked <= s_px_clk_locked;
 
 end default;

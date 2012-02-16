@@ -6,24 +6,6 @@
 # Includes the BSP.
 ALT_INCLUDE_DIRS :=
 
-# List of library directories for -L linker option (-L added when used).
-# Includes the BSP.
-ALT_LIBRARY_DIRS :=
-
-# List of library names for -l linker option (-l added when used).
-# Includes the BSP.
-ALT_LIBRARY_NAMES :=
-
-# List of library names for -msys-lib linker option (-msys-lib added when used).
-# These are libraries that might be located in the BSP and depend on the BSP
-# library, or vice versa
-ALT_BSP_DEP_LIBRARY_NAMES :=
-
-# List of dependencies for the linker.  This is usually the full pathname
-# of each library (*.a) file.
-# Includes the BSP.
-ALT_LDDEPS :=
-
 # List of root library directories that support running make to build them.
 # Includes the BSP and any ALT libraries.
 MAKEABLE_LIBRARY_ROOT_DIRS :=
@@ -33,8 +15,26 @@ ALT_CFLAGS :=
 ALT_CXXFLAGS :=
 ALT_CPPFLAGS :=
 ALT_ASFLAGS :=
-ALT_LDFLAGS :=
+ALT_ARFLAGS :=
 
+#------------------------------------------------------------------------------
+#                                 TOOLS
+#------------------------------------------------------------------------------
+CROSS_COMPILE := nios2-elf-
+CC      := $(CROSS_COMPILE)gcc -xc
+CXX     := $(CROSS_COMPILE)gcc -xc++
+AS      := $(CROSS_COMPILE)gcc
+AR      := $(CROSS_COMPILE)ar
+LD      := $(CROSS_COMPILE)g++
+NM      := $(CROSS_COMPILE)nm
+RM      := rm -f
+CP      := cp -f
+OBJDUMP := $(CROSS_COMPILE)objdump
+OBJCOPY := $(CROSS_COMPILE)objcopy
+STACKREPORT := nios2-stackreport
+
+MKDIR 	:= mkdir -p
+ECHO	:= echo
 
 #------------------------------------------------------------------------------
 #                         The adjust-path macro
@@ -77,8 +77,7 @@ define adjust-path
 $(strip \
 $(if $1,\
 $(if $(findstring :/,$(subst \,/,$1)),\
-$(shell echo $(subst \,/,$1) | sed -e 's,^\([a-zA-Z]\):/,/\1/,'),\
-$(subst \,/,$1))))
+$(shell echo $(subst \,/,$1) | sed -e 's,^\([a-zA-Z]\):/,/\1/,'),$(subst \,/,$1))))
 endef
 
 #
@@ -114,6 +113,14 @@ adjust-path-mixed = $1
 
 endif # COMSPEC
 
+#------------------------------------------------------------------------------
+#                           DEFAULT TARGET
+#------------------------------------------------------------------------------
+
+# Put "all" rule before included makefile fragments because they may
+# define rules and we don't want one of those to become the default rule.
+.PHONY : all
+all : build_pre_process makeable_libs lib build_post_process
 
 #vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #                           GENERATED SETTINGS START                         v
@@ -125,7 +132,7 @@ BUILD_CONFIGS := default
 
 # The following TYPE comment allows tools to identify the 'type' of target this 
 # makefile is associated with. 
-# TYPE: APP_MAKEFILE
+# TYPE: LIB_MAKEFILE
 
 # This following VERSION comment indicates the version of the tool used to 
 # generate this makefile. A makefile variable is provided for VERSION as well. 
@@ -136,14 +143,15 @@ ACDS_VERSION := 11.1
 # used to generate this makefile. 
 # BUILD_NUMBER: 173
 
-# Define path to the application ELF. 
-# It may be used by the makefile fragments so is defined before including them. 
-# 
-ELF := de0_vga_driver.elf
+
+# The library name (without a "lib" prefix or ".a" suffix).
+#
+# It may be used by the makefile fragments so is defined before including them.
+#
+LIB_NAME := de0_vga_driver
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += vga_driver.c
-C_SRCS += demo.c
+C_SRCS :=
 CXX_SRCS :=
 ASM_SRCS :=
 
@@ -151,44 +159,30 @@ ASM_SRCS :=
 # Path to root of object file tree.
 OBJ_ROOT_DIR := obj
 
-# Options to control objdump.
-CREATE_OBJDUMP := 1
-OBJDUMP_INCLUDE_SOURCE := 0
-OBJDUMP_FULL_CONTENTS := 0
+# Common arguments for LIB_CFLAGS
+LIB_CFLAGS_DEFINED_SYMBOLS :=
+LIB_CFLAGS_UNDEFINED_SYMBOLS :=
+LIB_CFLAGS_OPTIMIZATION := -O0
+LIB_CFLAGS_DEBUG_LEVEL := -g
+LIB_CFLAGS_WARNINGS := -Wall
+LIB_CFLAGS_USER_FLAGS :=
 
-# Options to enable/disable optional files.
-CREATE_ELF_DERIVED_FILES := 0
-CREATE_LINKER_MAP := 1
+LIB_ASFLAGS_USER :=
 
-# Common arguments for ALT_CFLAGSs
-APP_CFLAGS_DEFINED_SYMBOLS :=
-APP_CFLAGS_UNDEFINED_SYMBOLS :=
-APP_CFLAGS_OPTIMIZATION := -O0
-APP_CFLAGS_DEBUG_LEVEL := -g
-APP_CFLAGS_WARNINGS := -Wall
-APP_CFLAGS_USER_FLAGS :=
+# Common arguments for LIB_ARCHIVER_FLAGS
+LIB_ARCHIVER_FLAGS := -src
 
-APP_ASFLAGS_USER :=
-APP_LDFLAGS_USER :=
-
-# Linker options that have default values assigned later if not
-# assigned here.
-LINKER_SCRIPT :=
-CRT0 :=
-SYS_LIB :=
-
-# Define path to the root of the BSP.
-BSP_ROOT_DIR := ../de0_vga_qsys_bsp/
-
-# List of application specific include directories, library directories and library names
-APP_INCLUDE_DIRS :=
-APP_LIBRARY_DIRS :=
-APP_LIBRARY_NAMES :=
+# List of library specific include directories
+LIB_INCLUDE_DIRS :=
 
 # Pre- and post- processor settings.
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
+# Define path to the root of the BSP.
+BSP_ROOT_DIR :=
+
+# List of public include directories for -I compiler option (-I added when used).
 
 
 #END GENERATED
@@ -197,40 +191,17 @@ BUILD_POST_PROCESS :=
 #                            GENERATED SETTINGS END                           ^
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-#------------------------------------------------------------------------------
-#                           DEFAULT TARGET
-#------------------------------------------------------------------------------
-
-# Define the variable used to echo output if not already defined.
-ifeq ($(ECHO),)
-ECHO := echo
-endif
-
-# Put "all" rule before included makefile fragments because they may
-# define rules and we don't want one of those to become the default rule.
-.PHONY : all
-
-all:
-	@$(ECHO) [$(APP_NAME) build complete]
-
-all : build_pre_process libs app build_post_process 
-
-
 #------------------------------------------------------------------------------
 #                 VARIABLES DEPENDENT ON GENERATED CONTENT
 #------------------------------------------------------------------------------
 
+
 # Define object file directory per build configuration
 CONFIG_OBJ_DIR := $(OBJ_ROOT_DIR)/$(ACTIVE_BUILD_CONFIG)
 
-ifeq ($(BSP_ROOT_DIR),)
-$(error Edit Makefile and provide a value for BSP_ROOT_DIR)
-endif
+# Define absolute path to the root of the BSP.
 
-ifeq ($(wildcard $(BSP_ROOT_DIR)),)
-$(error BSP directory does not exist: $(BSP_ROOT_DIR))
-endif
+ifneq ($(BSP_ROOT_DIR),)
 
 # Define absolute path to the root of the BSP.
 ABS_BSP_ROOT_DIR := $(call adjust-path-mixed,$(shell cd "$(BSP_ROOT_DIR)"; pwd))
@@ -239,203 +210,48 @@ ABS_BSP_ROOT_DIR := $(call adjust-path-mixed,$(shell cd "$(BSP_ROOT_DIR)"; pwd))
 # including each makefile fragment so that it knows the path to itself.
 BSP_INCLUDE_FILE := $(BSP_ROOT_DIR)/public.mk
 ALT_LIBRARY_ROOT_DIR := $(BSP_ROOT_DIR)
+
 include $(BSP_INCLUDE_FILE)
-# C2H will need this to touch the BSP public.mk and avoid the sopc file out-of-date error during a BSP make
-ABS_BSP_INCLUDE_FILE := $(ABS_BSP_ROOT_DIR)/public.mk
-
-
-ifneq ($(WARNING.SMALL_STACK_SIZE),)
-# This WARNING is here to protect you from unknowingly using a very small stack
-# If the warning is set, increase your stack size or enable the BSP small stack 
-# setting to eliminate the warning
-$(warning WARNING: $(WARNING.SMALL_STACK_SIZE))
 endif
 
 
-# If the BSP public.mk indicates that ALT_SIM_OPTIMIZE is set, rename the ELF 
-# by prefixing it with RUN_ON_HDL_SIMULATOR_ONLY_.  
-ifneq ($(filter -DALT_SIM_OPTIMIZE,$(ALT_CPPFLAGS)),)
-ELF := RUN_ON_HDL_SIMULATOR_ONLY_$(ELF)
-endif
+# Library file name 
+LIB := lib$(LIB_NAME).a
 
-# If the BSP public.mk indicates that ALT_PROVIDE_GMON is set, add option to download_elf target
-ifneq ($(filter -DALT_PROVIDE_GMON,$(ALT_CPPFLAGS)),)
-GMON_OUT_FILENAME := gmon.out
-WRITE_GMON_OPTION := --write-gmon $(GMON_OUT_FILENAME)
-endif
-
-# Name of ELF application.
-APP_NAME := $(basename $(ELF))
-
-# Set to defaults if variables not already defined in settings.
-ifeq ($(LINKER_SCRIPT),)
-LINKER_SCRIPT := $(BSP_LINKER_SCRIPT)
-endif
-ifeq ($(CRT0),)
-CRT0 := $(BSP_CRT0)
-endif
-ifeq ($(SYS_LIB),)
-SYS_LIB := $(BSP_SYS_LIB)
-endif
-
-OBJDUMP_NAME := $(APP_NAME).objdump
-OBJDUMP_FLAGS := --disassemble --syms --all-header
-ifeq ($(OBJDUMP_INCLUDE_SOURCE),1)
-OBJDUMP_FLAGS += --source
-endif
-ifeq ($(OBJDUMP_FULL_CONTENTS),1)
-OBJDUMP_FLAGS += --full-contents
-endif
-
-# Create list of linker dependencies (*.a files).
-APP_LDDEPS := $(ALT_LDDEPS) $(LDDEPS)
+# Archive per build configuration
+ACTIVE_CONFIG_LIB := $(CONFIG_OBJ_DIR)/$(LIB)
 
 # Take lists and add required prefixes.
-APP_INC_DIRS := $(addprefix -I, $(ALT_INCLUDE_DIRS) $(APP_INCLUDE_DIRS) $(INC_DIRS))
-ASM_INC_PREFIX := -Wa,-I
-APP_ASM_INC_DIRS := $(addprefix $(ASM_INC_PREFIX), $(ALT_INCLUDE_DIRS) $(APP_INCLUDE_DIRS) $(INC_DIRS))
-APP_LIB_DIRS := $(addprefix -L, $(ALT_LIBRARY_DIRS) $(APP_LIBRARY_DIRS) $(LIB_DIRS))
-APP_LIBS := $(addprefix -l, $(ALT_LIBRARY_NAMES) $(APP_LIBRARY_NAMES) $(LIBS))
-
-ifneq ($(AVOID_NIOS2_GCC3_OPTIONS),)
-
-#
-# Avoid Nios II GCC 3.X options.
-#
-
-# Detect if small newlib C library is requested.
-# If yes, remove the -msmallc option because it is
-# now handled by other means.
-ifneq ($(filter -msmallc,$(ALT_LDFLAGS)),)
-	ALT_LDFLAGS := $(filter-out -msmallc,$(ALT_LDFLAGS))
-	ALT_C_LIBRARY := smallc
-else
-	ALT_C_LIBRARY := c
-endif
-
-# Put each BSP dependent library in a group to avoid circular dependencies.
-APP_BSP_DEP_LIBS := $(foreach l,$(ALT_BSP_DEP_LIBRARY_NAMES),-Wl,--start-group -l$(ALT_C_LIBRARY) -lgcc -l$(l) -Wl,--end-group)
-
-else # !AVOID_NIOS2_GCC3_OPTIONS
-
-#
-# Use Nios II GCC 3.X options.
-#
-APP_BSP_DEP_LIBS := $(addprefix -msys-lib=, $(ALT_BSP_DEP_LIBRARY_NAMES))
-
-endif # !AVOID_NIOS2_GCC3_OPTIONS
+LIB_INC_DIRS := $(addprefix -I, $(ALT_INCLUDE_DIRS) $(LIB_INCLUDE_DIRS) $(INC_DIRS))
 
 # Arguments for the C preprocessor, C/C++ compiler, assembler, and linker.
-APP_CFLAGS := $(APP_CFLAGS_DEFINED_SYMBOLS) \
-              $(APP_CFLAGS_UNDEFINED_SYMBOLS) \
-              $(APP_CFLAGS_OPTIMIZATION) \
-              $(APP_CFLAGS_DEBUG_LEVEL) \
-              $(APP_CFLAGS_WARNINGS) \
-              $(APP_CFLAGS_USER_FLAGS) \
+LIB_CFLAGS := $(LIB_CFLAGS_DEFINED_SYMBOLS) \
+              $(LIB_CFLAGS_UNDEFINED_SYMBOLS) \
+              $(LIB_CFLAGS_OPTIMIZATION) \
+              $(LIB_CFLAGS_DEBUG_LEVEL) \
+              $(LIB_CFLAGS_WARNINGS) \
+              $(LIB_CFLAGS_USER_FLAGS) \
               $(ALT_CFLAGS) \
               $(CFLAGS)
 
 # Arguments only for the C++ compiler.
-APP_CXXFLAGS := $(ALT_CXXFLAGS) $(CXXFLAGS)
+LIB_CXXFLAGS := $(ALT_CXXFLAGS) $(CXXFLAGS)
 
 # Arguments only for the C preprocessor.
 # Prefix each include directory with -I.
-APP_CPPFLAGS := $(APP_INC_DIRS) \
+LIB_CPPFLAGS := $(LIB_INC_DIRS) \
                 $(ALT_CPPFLAGS) \
                 $(CPPFLAGS)
 
 # Arguments only for the assembler.
-APP_ASFLAGS := $(APP_ASM_INC_DIRS) \
+LIB_ASFLAGS := $(LIB_ASM_INC_DIRS) \
                $(ALT_ASFLAGS) \
-               $(APP_ASFLAGS_USER) \
+               $(LIB_ASFLAGS_USER) \
                $(ASFLAGS)
 
-# Arguments only for the linker.
-APP_LDFLAGS := $(APP_LDFLAGS_USER)
-
-ifneq ($(LINKER_SCRIPT),)
-APP_LDFLAGS += -T'$(LINKER_SCRIPT)'
-endif
-
-ifneq ($(AVOID_NIOS2_GCC3_OPTIONS),)
-
-# Avoid Nios II GCC 3.x options.
-ifneq ($(CRT0),)
-APP_LDFLAGS += $(CRT0)
-endif
-
-# The equivalent of the -msys-lib option is provided
-# by the GROUP() command in the linker script.
-# Note this means the SYS_LIB variable is now ignored.
-
-else # !AVOID_NIOS2_GCC3_OPTIONS
-
-# Use Nios II GCC 3.x options.
-ifneq ($(CRT0),)
-APP_LDFLAGS += -msys-crt0='$(CRT0)'
-endif
-ifneq ($(SYS_LIB),)
-APP_LDFLAGS += -msys-lib=$(SYS_LIB)
-endif
-
-endif # !AVOID_NIOS2_GCC3_OPTIONS
-
-APP_LDFLAGS += \
-           $(APP_LIB_DIRS) \
-           $(ALT_LDFLAGS) \
-           $(LDFLAGS)
-
-LINKER_MAP_NAME := $(APP_NAME).map
-ifeq ($(CREATE_LINKER_MAP), 1)
-APP_LDFLAGS += -Wl,-Map=$(LINKER_MAP_NAME)
-endif
-
-# QUARTUS_PROJECT_DIR and SOPC_NAME need to be defined if you want the mem_init_install target of the mem_init.mk
-# (located in the associated BSP) to know how to copy memory initialization files (e.g. .dat, .hex)
-# into directories required for Quartus compilation or RTL simulation.
-
-# Defining QUARTUS_PROJECT_DIR causes mem_init_install to copy memory initialization files into your
-# Quartus project directory. This is required to provide the initial memory contents of
-# FPGA memories that can be initialized by the programming file (.sof) or Hardcopy ROMs.
-# It is also used for VHDL simulation of on-chip memories.
-
-# Defining SOPC_NAME causes the mem_init_install target to copy memory initialization files into your
-# RTL simulation directory.  This is required to provide the initial memory contents of all
-# memories that can be initialized by RTL simulation.
-# This variable should be set to the same name as your SOPC Builder system name.
-# For example, if you have a system called "foo.sopc", this variable should be set to "foo".
-
-# If SOPC_NAME is not set and QUARTUS_PROJECT_DIR is set, then derive SOPC_NAME.
-ifeq ($(SOPC_NAME),)
-ifneq ($(QUARTUS_PROJECT_DIR),)
-SOPC_NAME := $(basename $(notdir $(wildcard $(QUARTUS_PROJECT_DIR)/*.sopcinfo)))
-endif
-endif
-
-# Defining JDI_FILE is required to specify the JTAG Debug Information File path. This file is generated by Quartus,
-# and is needed to resolve processor instance ID's from names in a multi-CPU SOPC Information file.
-# For multi-CPU systems, the processor instance ID is used to select from multiple CPU's during ELF download.
-
-# If JDI_FILE is not set and QUARTUS_PROJECT_DIR is set, then derive JDI_FILE.
-ifeq ($(JDI_FILE),)
-ifneq ($(QUARTUS_PROJECT_DIR),)
-JDI_FILE := $(wildcard $(QUARTUS_PROJECT_DIR)/*.jdi)
-endif
-endif
-
-# Path to root runtime directory used for hdl simulation 
-RUNTIME_ROOT_DIR := $(CONFIG_OBJ_DIR)/runtime
-
-
-
-#------------------------------------------------------------------------------
-#           MAKEFILE INCLUDES DEPENDENT ON GENERATED CONTENT
-#------------------------------------------------------------------------------
-# mem_init.mk is a generated makefile fragment. This file defines all targets
-# used to generate HDL initialization simulation files and pre-initialized
-# onchip memory files.
-MEM_INIT_FILE :=  $(BSP_ROOT_DIR)/mem_init.mk
-include $(MEM_INIT_FILE)
+# Arguments only for the archiver.
+LIB_ARFLAGS := $(ALT_ARFLAGS) \
+               $(LIB_ARCHIVER_FLAGS)
 
 # Create list of object files to be built using the list of source files.
 # The source file hierarchy is preserved in the object tree.
@@ -495,7 +311,7 @@ SDIR_OBJ_LIST := $(sort $(SDIR_OBJ_LIST_C) $(SDIR_OBJ_LIST_CPP) \
 # lists, and then handles them as appropriate.
 
 FLATTEN_OBJ_LIST := $(filter ../%,$(OBJ_LIST))
-FLATTEN_APP_OBJS := $(addprefix $(CONFIG_OBJ_DIR)/,$(notdir $(FLATTEN_OBJ_LIST)))
+FLATTEN_LIB_OBJS := $(addprefix $(CONFIG_OBJ_DIR)/,$(notdir $(FLATTEN_OBJ_LIST)))
 
 REGULAR_OBJ_LIST 		:= $(filter-out $(FLATTEN_OBJ_LIST),$(OBJ_LIST))
 REGULAR_OBJ_LIST_C 		:= $(filter $(OBJ_LIST_C),$(REGULAR_OBJ_LIST))
@@ -506,7 +322,7 @@ REGULAR_OBJ_LIST_S 		:= $(filter $(OBJ_LIST_S),$(REGULAR_OBJ_LIST))
 REGULAR_OBJ_LIST_SS		:= $(filter $(OBJ_LIST_SS),$(REGULAR_OBJ_LIST))
 
 FLATTEN_SDIR_OBJ_LIST := $(filter ../%,$(SDIR_OBJ_LIST))
-FLATTEN_SDIR_APP_OBJS := $(addprefix $(CONFIG_OBJ_DIR)/,$(notdir $(FLATTEN_SDIR_OBJ_LIST)))
+FLATTEN_SDIR_LIB_OBJS := $(addprefix $(CONFIG_OBJ_DIR)/,$(notdir $(FLATTEN_SDIR_OBJ_LIST)))
 
 REGULAR_SDIR_OBJ_LIST 		:= $(filter-out $(FLATTEN_SDIR_OBJ_LIST),$(SDIR_OBJ_LIST))
 REGULAR_SDIR_OBJ_LIST_C 	:= $(filter $(SDIR_OBJ_LIST_C),$(REGULAR_SDIR_OBJ_LIST))
@@ -518,65 +334,39 @@ REGULAR_SDIR_OBJ_LIST_SS	:= $(filter $(SDIR_OBJ_LIST_SS),$(REGULAR_SDIR_OBJ_LIST
 
 VPATH := $(sort $(dir $(FLATTEN_OBJ_LIST)) $(dir $(FLATTEN_SDIR_OBJ_LIST)))
 
-APP_OBJS_C := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_C := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_C) \
 	$(foreach s,$(REGULAR_OBJ_LIST_C),$(call adjust-path,$s)))
 
-APP_OBJS_CPP := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_CPP := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_CPP) \
 	$(foreach s,$(REGULAR_OBJ_LIST_CPP),$(call adjust-path,$s)))
 
-APP_OBJS_CXX := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_CXX := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_CXX) \
 	$(foreach s,$(REGULAR_OBJ_LIST_CXX),$(call adjust-path,$s)))
 
-APP_OBJS_CC := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_CC := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_CC) \
 	$(foreach s,$(REGULAR_OBJ_LIST_CC),$(call adjust-path,$s)))
 
-APP_OBJS_S := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_S := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_S) \
 	$(foreach s,$(REGULAR_OBJ_LIST_S),$(call adjust-path,$s)))
 
-APP_OBJS_SS := $(addprefix $(CONFIG_OBJ_DIR)/,\
+LIB_OBJS_SS := $(addprefix $(CONFIG_OBJ_DIR)/,\
 	$(REGULAR_SDIR_OBJ_LIST_SS) \
 	$(foreach s,$(REGULAR_OBJ_LIST_SS),$(call adjust-path,$s)))
 
-APP_OBJS := $(APP_OBJS_C) $(APP_OBJS_CPP) $(APP_OBJS_CXX) $(APP_OBJS_CC) \
-	$(APP_OBJS_S) $(APP_OBJS_SS) \
-	$(FLATTEN_APP_OBJS) $(FLATTEN_SDIR_APP_OBJS)
+LIB_OBJS := $(LIB_OBJS_C) $(LIB_OBJS_CPP) $(LIB_OBJS_CXX) $(LIB_OBJS_CC) \
+	$(LIB_OBJS_S) $(LIB_OBJS_SS) \
+	$(FLATTEN_LIB_OBJS) $(FLATTEN_SDIR_LIB_OBJS)
 
 # Add any extra user-provided object files.
-APP_OBJS += $(OBJS)
+LIB_OBJS += $(OBJS)
 
 # Create list of dependancy files for each object file.
-APP_DEPS := $(APP_OBJS:.o=.d)
-
-# Patch the Elf file with system specific information
-
-# Patch the Elf with the name of the sopc system
-ifneq ($(SOPC_NAME),)
-ELF_PATCH_FLAG += --sopc_system_name $(SOPC_NAME)
-endif
-
-# Patch the Elf with the absolute path to the Quartus Project Directory
-ifneq ($(QUARTUS_PROJECT_DIR),)
-ABS_QUARTUS_PROJECT_DIR := $(call adjust-path-mixed,$(shell cd "$(QUARTUS_PROJECT_DIR)"; pwd))
-ELF_PATCH_FLAG += --quartus_project_dir "$(ABS_QUARTUS_PROJECT_DIR)"
-endif
-
-# Patch the Elf and download args with the JDI_FILE if specified
-ifneq ($(wildcard $(JDI_FILE)),)
-ELF_PATCH_FLAG += --jdi $(JDI_FILE)
-DOWNLOAD_JDI_FLAG := --jdi $(JDI_FILE)
-endif
-
-# Use the DOWNLOAD_CABLE variable to specify which JTAG cable to use. 
-# This is not needed if you only have one cable.
-ifneq ($(DOWNLOAD_CABLE),)
-DOWNLOAD_CABLE_FLAG := --cable '$(DOWNLOAD_CABLE)'
-endif
-
+LIB_DEPS := $(LIB_OBJS:.o=.d)
 
 #------------------------------------------------------------------------------
 #                           BUILD PRE/POST PROCESS
@@ -589,121 +379,6 @@ build_post_process :
 
 .PHONY: build_pre_process build_post_process
 
-
-#------------------------------------------------------------------------------
-#                                 TOOLS
-#------------------------------------------------------------------------------
-
-#
-# Set tool default variables if not already defined.
-# If these are defined, they would typically be defined in an
-# included makefile fragment.
-#
-ifeq ($(DEFAULT_CROSS_COMPILE),)
-DEFAULT_CROSS_COMPILE := nios2-elf-
-endif
-
-ifeq ($(DEFAULT_STACK_REPORT),)
-DEFAULT_STACKREPORT := nios2-stackreport
-endif
-
-ifeq ($(DEFAULT_DOWNLOAD),)
-DEFAULT_DOWNLOAD := nios2-download
-endif
-
-ifeq ($(DEFAULT_FLASHPROG),)
-DEFAULT_FLASHPROG := nios2-flash-programmer
-endif
-
-ifeq ($(DEFAULT_ELFPATCH),)
-DEFAULT_ELFPATCH := nios2-elf-insert
-endif
-
-ifeq ($(DEFAULT_RM),)
-DEFAULT_RM := rm -f
-endif
-
-ifeq ($(DEFAULT_CP),)
-DEFAULT_CP := cp -f
-endif
-
-ifeq ($(DEFAULT_MKDIR),)
-DEFAULT_MKDIR := mkdir -p
-endif
-
-#
-# Set tool variables to defaults if not already defined.
-# If these are defined, they would typically be defined by a
-# setting in the generated portion of this makefile.
-#
-ifeq ($(CROSS_COMPILE),)
-CROSS_COMPILE := $(DEFAULT_CROSS_COMPILE)
-endif
-
-ifeq ($(origin CC),default)
-CC := $(CROSS_COMPILE)gcc -xc
-endif
-
-ifeq ($(origin CXX),default)
-CXX := $(CROSS_COMPILE)gcc -xc++
-endif
-
-ifeq ($(origin AS),default)
-AS := $(CROSS_COMPILE)gcc
-endif
-
-ifeq ($(origin AR),default)
-AR := $(CROSS_COMPILE)ar
-endif
-
-ifeq ($(origin LD),default)
-LD := $(CROSS_COMPILE)g++
-endif
-
-ifeq ($(origin NM),default)
-NM := $(CROSS_COMPILE)nm
-endif
-
-ifeq ($(origin RM),default)
-RM := $(DEFAULT_RM)
-endif
-
-ifeq ($(origin CP),default)
-CP := $(DEFAULT_CP)
-endif
-
-ifeq ($(OBJDUMP),)
-OBJDUMP := $(CROSS_COMPILE)objdump
-endif
-
-ifeq ($(OBJCOPY),)
-OBJCOPY := $(CROSS_COMPILE)objcopy
-endif
-
-ifeq ($(STACKREPORT),)
-ifeq ($(CROSS_COMPILE),nios2-elf-)
-STACKREPORT := $(DEFAULT_STACKREPORT)
-else
-DISABLE_STACKREPORT := 1
-endif
-endif
-
-ifeq ($(DOWNLOAD),)
-DOWNLOAD := $(DEFAULT_DOWNLOAD)
-endif
-
-ifeq ($(FLASHPROG),)
-FLASHPROG := $(DEFAULT_FLASHPROG)
-endif
-
-ifeq ($(ELFPATCH),)
-ELFPATCH := $(DEFAULT_ELFPATCH)
-endif
-
-ifeq ($(MKDIR),)
-MKDIR := $(DEFAULT_MKDIR)
-endif
-
 #------------------------------------------------------------------------------
 #                     PATTERN RULES TO BUILD OBJECTS
 #------------------------------------------------------------------------------
@@ -711,49 +386,49 @@ endif
 define compile.c
 @$(ECHO) Info: Compiling $< to $@
 @$(MKDIR) $(@D)
-$(CC) -MP -MMD -c $(APP_CPPFLAGS) $(APP_CFLAGS) -o $@ $<
+$(CC) -MP -MMD -c $(LIB_CPPFLAGS) $(LIB_CFLAGS) -o $@ $<
 $(CC_POST_PROCESS)
 endef
 
 define compile.cpp
 @$(ECHO) Info: Compiling $< to $@
 @$(MKDIR) $(@D)
-$(CXX) -MP -MMD -c $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+$(CXX) -MP -MMD -c $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 $(CXX_POST_PROCESS)
 endef
 
-# If assembling with the compiler, ensure "-Wa," is prepended to all APP_ASFLAGS
+# If assembling with the compiler, ensure "-Wa," is prepended to all LIB_ASFLAGS
 ifeq ($(AS),$(patsubst %as,%,$(AS)))
 COMMA := ,
-APP_ASFLAGS :=  $(filter-out $(APP_CFLAGS),$(addprefix -Wa$(COMMA),$(patsubst -Wa$(COMMA)%,%,$(APP_ASFLAGS))))
+LIB_ASFLAGS :=  $(filter-out $(APP_CFLAGS),$(addprefix -Wa$(COMMA),$(patsubst -Wa$(COMMA)%,%,$(LIB_ASFLAGS))))
 endif
 
 define compile.s
 @$(ECHO) Info: Assembling $< to $@
 @$(MKDIR) $(@D)
-$(AS) -MP -MMD -c $(APP_CPPFLAGS) $(APP_CFLAGS) $(APP_ASFLAGS) -o $@ $<
+$(AS) -MP -MMD -c $(LIB_CPPFLAGS) $(LIB_CFLAGS) $(LIB_ASFLAGS) -o $@ $<
 $(AS_POST_PROCESS)
 endef
 
 ifeq ($(MAKE_VERSION),3.81) 
 .SECONDEXPANSION:
 
-$(APP_OBJS_C): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.c)
+$(LIB_OBJS_C): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.c)
 	$(compile.c)
 
-$(APP_OBJS_CPP): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cpp)
+$(LIB_OBJS_CPP): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cpp)
 	$(compile.cpp)
 
-$(APP_OBJS_CC): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cc)
+$(LIB_OBJS_CC): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cc)
 	$(compile.cpp)
 
-$(APP_OBJS_CXX): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cxx)
+$(LIB_OBJS_CXX): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.cxx)
 	$(compile.cpp)
 
-$(APP_OBJS_S): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.S)
+$(LIB_OBJS_S): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.S)
 	$(compile.s)
 
-$(APP_OBJS_SS): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.s)
+$(LIB_OBJS_SS): $(CONFIG_OBJ_DIR)/%.o: $$(call adjust-path-mixed,%.s)
 	$(compile.s)
 
 endif # MAKE_VERSION != 3.81
@@ -776,7 +451,6 @@ $(CONFIG_OBJ_DIR)/%.o: %.S
 $(CONFIG_OBJ_DIR)/%.o: %.s
 	$(compile.s)
 
-
 #------------------------------------------------------------------------------
 #                     PATTERN RULES TO INTERMEDIATE FILES
 #------------------------------------------------------------------------------
@@ -784,43 +458,42 @@ $(CONFIG_OBJ_DIR)/%.o: %.s
 $(CONFIG_OBJ_DIR)/%.s: %.c
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CC) -S $(APP_CPPFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CC) -S $(LIB_CPPFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.s: %.cpp
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -S $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CXX) -S $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.s: %.cc
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -S $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CXX) -S $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.s: %.cxx
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -S $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CXX) -S $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.i: %.c
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CC) -E $(APP_CPPFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CC) -E $(LIB_CPPFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.i: %.cpp
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -E $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CXX) -E $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.i: %.cc
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -E $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
+	$(CXX) -E $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 $(CONFIG_OBJ_DIR)/%.i: %.cxx
 	@$(ECHO) Info: Compiling $< to $@
 	@$(MKDIR) $(@D)
-	$(CXX) -E $(APP_CPPFLAGS) $(APP_CXXFLAGS) $(APP_CFLAGS) -o $@ $<
-
+	$(CXX) -E $(LIB_CPPFLAGS) $(LIB_CXXFLAGS) $(LIB_CFLAGS) -o $@ $<
 
 #------------------------------------------------------------------------------
 #                        TARGET RULES
@@ -830,51 +503,35 @@ $(CONFIG_OBJ_DIR)/%.i: %.cxx
 help :
 	@$(ECHO) "Summary of Makefile targets"
 	@$(ECHO) "  Build targets:"
-	@$(ECHO) "    all (default)     - Application and all libraries (including BSP)"
-	@$(ECHO) "    bsp               - Just the BSP"
-	@$(ECHO) "    libs              - All libraries (including BSP)"
-	@$(ECHO) "    flash             - All flash files"	
-	@$(ECHO) "    mem_init_generate - All memory initialization files"
-ifeq ($(QSYS),1)
-	@$(ECHO) "    mem_init_install  - This target is deprecated for QSys Systems"
-	@$(ECHO) "                         --> Use the mem_init_generate target and then"
-	@$(ECHO) "                             add the generated meminit.qip file to your"
-	@$(ECHO) "                             Quartus II Project."
-else # if QSYS != 1
-	@$(ECHO) "    mem_init_install  - Copy memory initialization files to Quartus II project"
-endif # QSYS == 1
-	@$(ECHO)
+	@$(ECHO) "    all (default) - Library, BSP and all libraries used by this library"
+	@$(ECHO) "    lib           - Just the library"
+ifneq ($(BSP_ROOT_DIR),)
+	@$(ECHO) "    bsp           - Just the BSP"
+endif
+	@$(ECHO) "    libs          - BSP and all libraries used by this library" 
 	@$(ECHO) "  Clean targets:"
-	@$(ECHO) "    clean_all         - Application and all libraries (including BSP)"
-	@$(ECHO) "    clean             - Just the application"
-	@$(ECHO) "    clean_bsp         - Just the BSP"
-	@$(ECHO) "    clean_libs        - All libraries (including BSP)"
-	@$(ECHO)
-	@$(ECHO) "  Run targets:"
-	@$(ECHO) "    download-elf      - Download and run your elf executable"
-	@$(ECHO) "    program-flash     - Program flash contents to the board"
-
-# Handy rule to skip making libraries and just make application.
-.PHONY : app
-app : $(ELF)
-
-ifeq ($(CREATE_OBJDUMP), 1)
-app : $(OBJDUMP_NAME)
+	@$(ECHO) "    clean_all     - Library, BSP and all other makeable libraries"
+	@$(ECHO) "    clean         - Just the library"
+ifneq ($(BSP_ROOT_DIR),)
+	@$(ECHO) "    clean_bsp     - Just the BSP"
 endif
+	@$(ECHO) "    clean_libs    - BSP and all libraries used by this library" 
 
-ifeq ($(CREATE_ELF_DERIVED_FILES),1)
-app : elf_derived_files
-endif
+# Handy rule to skip making libraries and just make main library.
+.PHONY : lib
+lib : $(LIB)
 
-.PHONY: elf_derived_files
-elf_derived_files: default_mem_init
-
+ifneq ($(BSP_ROOT_DIR),)
 # Handy rule for making just the BSP.
 .PHONY : bsp
-bsp :
+bsp : 
 	@$(ECHO) Info: Building $(BSP_ROOT_DIR)
 	@$(MAKE) --no-print-directory -C $(BSP_ROOT_DIR)
+endif
 
+# This target is just provided for backwards compatibility with the 7.1 release.
+.PHONY : makeable_libs
+makeable_libs : libs
 
 # Make sure all makeable libraries (including the BSP) are up-to-date.
 LIB_TARGETS := $(patsubst %,%-recurs-make-lib,$(MAKEABLE_LIBRARY_ROOT_DIRS))
@@ -888,43 +545,41 @@ $(LIB_TARGETS): %-recurs-make-lib:
 	$(MAKE) --no-print-directory -C $*
 endif
 
-ifneq ($(strip $(APP_LDDEPS)),)
-$(APP_LDDEPS): libs
-	@true
-endif
-
 # Rules to force your project to rebuild or relink
+# .force_rearchive file will force this library to archive (ar) 
 # .force_relink file will cause any application that depends on this project to relink 
 # .force_rebuild file will cause this project to rebuild object files
 # .force_rebuild_all file will cause this project and any project that depends on this project to rebuild object files
 
+FORCE_REARCHIVE := .force_rearchive
 FORCE_RELINK_DEP  := .force_relink
 FORCE_REBUILD_DEP := .force_rebuild
 FORCE_REBUILD_ALL_DEP := .force_rebuild_all
-FORCE_REBUILD_DEP_LIST := $(CONFIG_OBJ_DIR)/$(FORCE_RELINK_DEP) $(CONFIG_OBJ_DIR)/$(FORCE_REBUILD_DEP) $(FORCE_REBUILD_ALL_DEP)
+FORCE_REBUILD_DEP_LIST := $(CONFIG_OBJ_DIR)/$(FORCE_REARCHIVE) $(CONFIG_OBJ_DIR)/$(FORCE_RELINK_DEP) $(CONFIG_OBJ_DIR)/$(FORCE_REBUILD_DEP) $(FORCE_REBUILD_ALL_DEP)
 
 $(FORCE_REBUILD_DEP_LIST):
 
-$(APP_OBJS): $(wildcard $(CONFIG_OBJ_DIR)/$(FORCE_REBUILD_DEP)) $(wildcard $(addsuffix /$(FORCE_REBUILD_ALL_DEP), . $(ALT_LIBRARY_DIRS)))
+$(LIB_OBJS): $(wildcard $(CONFIG_OBJ_DIR)/$(FORCE_REBUILD_DEP)) $(wildcard $(addsuffix /$(FORCE_REBUILD_ALL_DEP), . $(ALT_LIBRARY_DIRS)))
 
-$(ELF): $(wildcard $(addsuffix /$(FORCE_RELINK_DEP), $(CONFIG_OBJ_DIR) $(ALT_LIBRARY_DIRS)))
+$(ACTIVE_CONFIG_LIB) : $(wildcard $(CONFIG_OBJ_DIR)/$(FORCE_REARCHIVE))
 
-
-# Clean just the application.
+# Clean just the library.
 .PHONY : clean
-ifeq ($(CREATE_ELF_DERIVED_FILES),1)
-clean : clean_elf_derived_files
-endif
-
 clean :
-	@$(RM) -r $(ELF) $(OBJDUMP_NAME) $(LINKER_MAP_NAME) $(OBJ_ROOT_DIR) $(RUNTIME_ROOT_DIR) $(FORCE_REBUILD_DEP_LIST)
-	@$(ECHO) [$(APP_NAME) clean complete]
+	@$(RM) -r $(LIB) $(OBJ_ROOT_DIR) $(FORCE_REBUILD_DEP_LIST)
+	@$(ECHO) [$(LIB_NAME) clean complete]	
 
+ifneq ($(BSP_ROOT_DIR),)
 # Clean just the BSP.
 .PHONY : clean_bsp
 clean_bsp :
 	@$(ECHO) Info: Cleaning $(BSP_ROOT_DIR)
 	@$(MAKE) --no-print-directory -C $(BSP_ROOT_DIR) clean
+endif
+
+# This target is just provided for backwards compatibility with the 7.1 release.
+.PHONY : clean_makeable_libs
+clean_makeable_libs : clean_libs
 
 # Clean all makeable libraries including the BSP.
 LIB_CLEAN_TARGETS := $(patsubst %,%-recurs-make-clean-lib,$(MAKEABLE_LIBRARY_ROOT_DIRS))
@@ -938,134 +593,38 @@ $(LIB_CLEAN_TARGETS): %-recurs-make-clean-lib:
 	$(MAKE) --no-print-directory -C $* clean
 endif
 
-.PHONY: clean_elf_derived_files
-clean_elf_derived_files: mem_init_clean
 
-# Clean application and all makeable libraries including the BSP.
+# Clean library and all makeable libraries including the BSP.
 .PHONY : clean_all
-clean_all : clean mem_init_clean clean_libs
+clean_all : clean clean_libs
+
 
 # Include the dependency files unless the make goal is performing a clean
-# of the application.
+# of the library.
 ifneq ($(firstword $(MAKECMDGOALS)),clean)
 ifneq ($(firstword $(MAKECMDGOALS)),clean_all)
--include $(APP_DEPS)
+-include $(LIB_DEPS)
 endif
 endif
 
-.PHONY : download-elf
-download-elf : $(ELF)
-	@if [ "$(DOWNLOAD)" = "none" ]; \
-	then \
-		$(ECHO) Downloading $(ELF) not supported; \
-	else \
-		$(ECHO) Info: Downloading $(ELF); \
-		$(DOWNLOAD) --go --cpu_name=$(CPU_NAME) $(DOWNLOAD_CABLE_FLAG) $(SOPC_SYSID_FLAG) $(DOWNLOAD_JDI_FLAG) $(WRITE_GMON_OPTION) $(ELF); \
-	fi	
-
-# Delete the target of a rule if it has changed and its commands exit 
+# Delete the target of a rule if it has changed and its commands exit
 # with a nonzero exit status.
 .DELETE_ON_ERROR:
 
-# Rules for flash programming commands
-PROGRAM_FLASH_SUFFIX := -program
-PROGRAM_FLASH_TARGET := $(addsuffix $(PROGRAM_FLASH_SUFFIX), $(FLASH_FILES))
-
-.PHONY : program-flash
-program-flash : $(PROGRAM_FLASH_TARGET)
-
-.PHONY : $(PROGRAM_FLASH_TARGET)
-$(PROGRAM_FLASH_TARGET) : flash
-	@if [ "$(FLASHPROG)" = "none" ]; \
-	then \
-		$(ECHO) Programming flash not supported; \
-	else \
-		$(ECHO) Info: Programming $(basename $@).flash; \
-		if [ -z "$($(basename $@)_EPCS_FLAGS)" ]; \
-		then \
-			$(ECHO) $(FLASHPROG) $(SOPC_SYSID_FLAG) --base=$($(basename $@)_START) $(basename $@).flash; \
-			$(FLASHPROG) $(DOWNLOAD_CABLE_FLAG) $(SOPC_SYSID_FLAG) --base=$($(basename $@)_START) $(basename $@).flash; \
-		else \
-			$(ECHO) $(FLASHPROG) $(SOPC_SYSID_FLAG) --epcs --base=$($(basename $@)_START) $(basename $@).flash; \
-			$(FLASHPROG) $(DOWNLOAD_CABLE_FLAG) $(SOPC_SYSID_FLAG) --epcs --base=$($(basename $@)_START) $(basename $@).flash; \
-		fi \
-	fi
-
-
-# Rules for simulating with an HDL Simulator [QSYS only]
-ifeq ($(QSYS),1)
-IP_MAKE_SIMSCRIPT := ip-make-simscript
-
-ifeq ($(VSIM),)
-VSIM_EXE := $(if $(VSIM_DIR),$(VSIM_DIR)/,)vsim
-ifeq ($(ENABLE_VSIM_GUI),1)
-VSIM := $(VSIM_EXE) -gui
-else
-VSIM := $(VSIM_EXE) -c
-endif # ENABLE_VSIM_GUI == 1
-endif # VSIM not set
-
-ifeq ($(SPD),)
-ifneq ($(ABS_QUARTUS_PROJECT_DIR),)
-ifneq ($(SOPC_NAME),)
-SPD := $(ABS_QUARTUS_PROJECT_DIR)/$(SOPC_NAME)_tb.spd
-endif # SOPC_NAME set
-endif # ABS_QUARTUS_PROJECT_DIR set
-endif # SPD == empty string
-
-ifeq ($(MSIM_SCRIPT),)
-SIM_SCRIPT_DIR := $(RUNTIME_ROOT_DIR)/sim
-MSIM_SCRIPT := $(SIM_SCRIPT_DIR)/mentor/msim_setup.tcl
-endif # MSIM_SCRIPT == empty string
-
-ifeq ($(MAKE_VERSION),3.81)
-ABS_MEM_INIT_DESCRIPTOR_FILE := $(abspath $(MEM_INIT_DESCRIPTOR_FILE))
-else
-ABS_MEM_INIT_DESCRIPTOR_FILE := $(call adjust-path-mixed,$(shell pwd))/$(MEM_INIT_DESCRIPTOR_FILE)
-endif
-
-$(MSIM_SCRIPT): $(SPD) $(MEM_INIT_DESCRIPTOR_FILE)
-ifeq ($(SPD),)
-	$(error No SPD file specified. Ensure QUARTUS_PROJECT_DIR variable is set)
-endif
-	@$(MKDIR) $(SIM_SCRIPT_DIR)
-	$(IP_MAKE_SIMSCRIPT) --spd=$(SPD) --spd=$(MEM_INIT_DESCRIPTOR_FILE) --output-directory=$(SIM_SCRIPT_DIR)
-
-VSIM_COMMAND = \
-	cd $(dir $(MSIM_SCRIPT)) && \
-	$(VSIM) -do "do $(notdir $(MSIM_SCRIPT)); ld; $(if $(VSIM_RUN_TIME),run ${VSIM_RUN_TIME};quit;)"
-
-.PHONY: sim
-sim: $(MSIM_SCRIPT) mem_init_generate
-ifeq ($(MSIM_SCRIPT),)
-	$(error MSIM_SCRIPT not set)
-endif
-	$(VSIM_COMMAND)
-
-endif # QSYS == 1
-
-
 #------------------------------------------------------------------------------
-#                         ELF TARGET RULE
+#                         AR TARGET RULE
 #------------------------------------------------------------------------------
-# Rule for constructing the executable elf file.
-$(ELF) : $(APP_OBJS) $(LINKER_SCRIPT) $(APP_LDDEPS)
-	@$(ECHO) Info: Linking $@
-	$(LD) $(APP_LDFLAGS) $(APP_CFLAGS) -o $@ $(filter-out $(CRT0),$(APP_OBJS)) $(APP_LIBS) $(APP_BSP_DEP_LIBS)
-ifneq ($(DISABLE_ELFPATCH),1)
-	$(ELFPATCH) $@ $(ELF_PATCH_FLAG)
-endif
-ifneq ($(DISABLE_STACKREPORT),1)
-	@$(STACKREPORT) $@
-endif
+# Rule for constructing the library file.
+$(ACTIVE_CONFIG_LIB) : $(LIB_OBJS)
+	@$(ECHO) Info: Archiving $@
+	$(RM) -f $@
+	$(MKDIR) $(@D)
+	$(AR) $(LIB_ARFLAGS) $@ $^
 
-$(OBJDUMP_NAME) : $(ELF)
-	@$(ECHO) Info: Creating $@
-	$(OBJDUMP) $(OBJDUMP_FLAGS) $< >$@
+$(LIB) : $(ACTIVE_CONFIG_LIB)
+	$(CP) $< $@
 
-# Rule for printing the name of the elf file
-.PHONY: print-elf-name
-print-elf-name:
-	@$(ECHO) $(ELF)
-
+# Declare $(LIB) as phony as we want to always copy prebuilt $(ACTIVE_CONFIG_LIB)
+# when we switch build configurations even if $(ACTIVE_CONFIG_LIB) is not rearchived.
+.PHONY: $(LIB)
 

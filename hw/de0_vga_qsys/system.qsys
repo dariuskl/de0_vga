@@ -97,6 +97,14 @@
          type = "int";
       }
    }
+   element vga_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -112,7 +120,7 @@
  <parameter name="projectName" value="de0_vga_qsys.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1329340502572" />
+ <parameter name="timeStamp" value="1329418691759" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -138,6 +146,11 @@
    internal="clock_bridge_0.out_clk"
    type="clock"
    dir="start" />
+ <interface name="vga_0_hs" internal="vga_0.vga_hs" type="conduit" dir="end" />
+ <interface name="vga_0_vs" internal="vga_0.vga_vs" type="conduit" dir="end" />
+ <interface name="vga_0_r" internal="vga_0.vga_r" type="conduit" dir="end" />
+ <interface name="vga_0_g" internal="vga_0.vga_g" type="conduit" dir="end" />
+ <interface name="vga_0_b" internal="vga_0.vga_b" type="conduit" dir="end" />
  <module kind="clock_source" version="11.1" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -400,7 +413,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cpu_0.jtag_debug_module' start='0x1000800' end='0x1001000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cpu_0.jtag_debug_module' start='0x1000800' end='0x1001000' /><slave name='sysclks.pll_slave' start='0x1001000' end='0x1001010' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x1001010' end='0x1001018' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='vga_0.controll' start='0x0' end='0x8' /><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cpu_0.jtag_debug_module' start='0x1000800' end='0x1001000' /><slave name='sysclks.pll_slave' start='0x1001000' end='0x1001010' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x1001010' end='0x1001020' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone III" />
   <parameter name="internalIrqMaskSystemInfo" value="1" />
@@ -468,6 +481,11 @@
   <parameter name="DERIVED_CLOCK_RATE" value="50000000" />
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module kind="vga_controller" version="1.0" enabled="1" name="vga_0">
+  <parameter name="DATAWIDTH" value="64" />
+  <parameter name="BUFFERWIDTH" value="48" />
+  <parameter name="AUTO_CLK_SNK_CLOCK_RATE" value="50000000" />
  </module>
  <connection
    kind="clock"
@@ -557,4 +575,22 @@
    version="11.1"
    start="sysclks.c1"
    end="clock_bridge_0.in_clk" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="clk_0.clk_reset"
+   end="vga_0.clk_snk_reset" />
+ <connection kind="clock" version="11.1" start="sysclks.c0" end="vga_0.clk_snk" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="cpu_0.data_master"
+   end="vga_0.controll">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection kind="avalon" version="11.1" start="vga_0.dma" end="sdram_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00800000" />
+ </connection>
 </system>

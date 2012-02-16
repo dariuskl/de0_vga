@@ -1,0 +1,819 @@
+<session jtag_chain="USB-Blaster [5-2]" jtag_device="@1: EP3C16/EP4CE15 (0x020F20DD)" sof_file="../../de0_vga_qsys/de0_vga_qsys_time_limited.sof">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="instance_one" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="instance_one" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="158"/>
+      <single attribute="data vertical scroll position" value="7"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="128"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="1016"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2012/02/16 23:09:01  #0">
+      <clock name="CLOCK_50" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="VGA_B[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[3]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Hsync" name="VGA_HS" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Vsync" name="VGA_VS" tap_mode="classic" type="output pin"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="read" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[32]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[33]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[34]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[35]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[36]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[37]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[38]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[39]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[40]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[41]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[42]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[43]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[44]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[45]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[46]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[47]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[48]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[49]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[50]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[51]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[52]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[53]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[54]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[55]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[56]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[57]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[58]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[59]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[60]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[61]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[62]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[63]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="waitreq" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_waitrequest" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="vga_read" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5]" tap_mode="classic" type="register"/>
+          <wire alias="Go" name="system:qsys_system_0|vga_controller:vga_0|vga_controll_slave:ctrl|control_reg[0]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|px_clk" tap_mode="classic" type="combinatorial"/>
+          <wire alias="screen_active" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|screen_active" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk_locked" name="system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|px_clk_locked" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="VGA_B[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[3]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Hsync" name="VGA_HS" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Vsync" name="VGA_VS" tap_mode="classic" type="output pin"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="read" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[32]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[33]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[34]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[35]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[36]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[37]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[38]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[39]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[40]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[41]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[42]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[43]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[44]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[45]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[46]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[47]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[48]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[49]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[50]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[51]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[52]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[53]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[54]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[55]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[56]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[57]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[58]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[59]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[60]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[61]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[62]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[63]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="waitreq" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_waitrequest" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="vga_read" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5]" tap_mode="classic" type="register"/>
+          <wire alias="Go" name="system:qsys_system_0|vga_controller:vga_0|vga_controll_slave:ctrl|control_reg[0]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|px_clk" tap_mode="classic" type="combinatorial"/>
+          <wire alias="screen_active" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|screen_active" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk_locked" name="system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|px_clk_locked" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="VGA_B[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_B[3]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_G[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Hsync" name="VGA_HS" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[0]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[1]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[2]" tap_mode="classic" type="output pin"/>
+          <wire name="VGA_R[3]" tap_mode="classic" type="output pin"/>
+          <wire alias="Vsync" name="VGA_VS" tap_mode="classic" type="output pin"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="read" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[32]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[33]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[34]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[35]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[36]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[37]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[38]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[39]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[40]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[41]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[42]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[43]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[44]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[45]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[46]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[47]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[48]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[49]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[50]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[51]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[52]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[53]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[54]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[55]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[56]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[57]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[58]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[59]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[60]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[61]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[62]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[63]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="waitreq" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_waitrequest" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="vga_read" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_read" tap_mode="classic" type="combinatorial"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[0]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[1]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[2]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[3]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[4]" tap_mode="classic" type="register"/>
+          <wire name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5]" tap_mode="classic" type="register"/>
+          <wire alias="Go" name="system:qsys_system_0|vga_controller:vga_0|vga_controll_slave:ctrl|control_reg[0]" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|px_clk" tap_mode="classic" type="combinatorial"/>
+          <wire alias="screen_active" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|screen_active" tap_mode="classic" type="combinatorial"/>
+          <wire alias="px_clk_locked" name="system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|px_clk_locked" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_controll_slave:ctrl|control_reg[0]"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|px_clk_locked"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|px_clk"/>
+          <bus alias="B" is_signal_inverted="no" link="all" name="VGA_B" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_B[3]"/>
+            <net is_signal_inverted="no" name="VGA_B[2]"/>
+            <net is_signal_inverted="no" name="VGA_B[1]"/>
+            <net is_signal_inverted="no" name="VGA_B[0]"/>
+          </bus>
+          <bus alias="G" is_signal_inverted="no" link="all" name="VGA_G" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_G[3]"/>
+            <net is_signal_inverted="no" name="VGA_G[2]"/>
+            <net is_signal_inverted="no" name="VGA_G[1]"/>
+            <net is_signal_inverted="no" name="VGA_G[0]"/>
+          </bus>
+          <bus alias="R" is_signal_inverted="no" link="all" name="VGA_R" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_R[3]"/>
+            <net is_signal_inverted="no" name="VGA_R[2]"/>
+            <net is_signal_inverted="no" name="VGA_R[1]"/>
+            <net is_signal_inverted="no" name="VGA_R[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="VGA_HS"/>
+          <net is_signal_inverted="no" name="VGA_VS"/>
+          <bus alias="address" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[31]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[30]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[29]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[28]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[27]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[26]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[25]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[24]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[23]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[22]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[21]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[20]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[19]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[18]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[17]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[16]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[15]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[14]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[13]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[12]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_read"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_waitrequest"/>
+          <bus alias="readdata" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[63]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[62]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[61]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[60]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[59]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[58]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[57]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[56]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[55]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[54]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[53]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[52]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[51]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[50]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[49]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[48]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[47]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[46]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[45]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[44]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[43]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[42]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[41]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[40]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[39]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[38]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[37]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[36]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[35]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[34]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[33]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[32]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[31]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[30]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[29]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[28]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[27]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[26]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[25]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[24]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[23]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[22]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[21]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[20]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[19]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[18]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[17]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[16]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[15]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[14]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[13]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[12]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[0]"/>
+          </bus>
+          <bus alias="rp" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[0]"/>
+          </bus>
+          <bus alias="vga_data" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_read"/>
+          <bus alias="wp" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|screen_active"/>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_controll_slave:ctrl|control_reg[0]"/>
+          <bus alias="address" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[31]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[30]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[29]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[28]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[27]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[26]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[25]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[24]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[23]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[22]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[21]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[20]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[19]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[18]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[17]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[16]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[15]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[14]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[13]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[12]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_address[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_read"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_waitrequest"/>
+          <bus alias="readdata" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[63]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[62]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[61]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[60]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[59]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[58]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[57]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[56]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[55]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[54]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[53]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[52]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[51]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[50]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[49]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[48]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[47]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[46]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[45]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[44]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[43]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[42]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[41]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[40]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[39]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[38]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[37]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[36]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[35]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[34]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[33]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[32]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[31]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[30]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[29]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[28]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[27]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[26]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[25]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[24]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[23]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[22]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[21]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[20]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[19]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[18]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[17]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[16]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[15]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[14]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[13]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[12]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|avm_dma_readdata[0]"/>
+          </bus>
+          <bus alias="wp" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|wp[0]"/>
+          </bus>
+          <bus alias="rp" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|rp[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_read"/>
+          <bus alias="vga_data" is_signal_inverted="no" link="all" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[11]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[10]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[9]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[8]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[7]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[6]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[5]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[4]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[3]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[2]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[1]"/>
+            <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|px_clk_locked"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|px_clk"/>
+          <net is_signal_inverted="no" name="system:qsys_system_0|vga_controller:vga_0|vga_logic:vga_l|screen_active"/>
+          <bus alias="B" is_signal_inverted="no" link="all" name="VGA_B" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_B[3]"/>
+            <net is_signal_inverted="no" name="VGA_B[2]"/>
+            <net is_signal_inverted="no" name="VGA_B[1]"/>
+            <net is_signal_inverted="no" name="VGA_B[0]"/>
+          </bus>
+          <bus alias="G" is_signal_inverted="no" link="all" name="VGA_G" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_G[3]"/>
+            <net is_signal_inverted="no" name="VGA_G[2]"/>
+            <net is_signal_inverted="no" name="VGA_G[1]"/>
+            <net is_signal_inverted="no" name="VGA_G[0]"/>
+          </bus>
+          <bus alias="R" is_signal_inverted="no" link="all" name="VGA_R" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="VGA_R[3]"/>
+            <net is_signal_inverted="no" name="VGA_R[2]"/>
+            <net is_signal_inverted="no" name="VGA_R[1]"/>
+            <net is_signal_inverted="no" name="VGA_R[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="VGA_HS"/>
+          <net is_signal_inverted="no" name="VGA_VS"/>
+        </setup_view>
+      </presentation>
+      <trigger CRC="4D15FD0F" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2012/02/16 23:09:01  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1024" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'screen_active' == rising edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="2"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,307,140,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="frame size" size="2" value="1280,752"/>
+    <multi attribute="jtag widget size" size="2" value="372,141"/>
+  </global_info>
+</session>
