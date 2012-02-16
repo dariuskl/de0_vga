@@ -1,0 +1,7 @@
+
+State Machine - |vga_controller|dma_read_master:dma|\dma:state
+Name \dma:state.complete \dma:state.waiting \dma:state.request \dma:state.init 
+\dma:state.init 0 0 0 0 
+\dma:state.request 0 0 1 1 
+\dma:state.waiting 0 1 0 1 
+\dma:state.complete 1 0 0 1 

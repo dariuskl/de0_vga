@@ -1,0 +1,162 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity vga_controller is
+	generic (
+		DATAWIDTH				:	integer	:= 64;
+		BUFFERWIDTH				:	integer	:= 32
+	);
+	port(
+		-- Avalon Clock Sink
+		csi_clk_snk_reset			:	in	std_logic;
+		csi_clk_snk_clk			:	in	std_logic;
+		-- Avalon MM Slave Interface "controll"
+		avs_controll_write		:	in	std_logic;
+		avs_controll_address		:	in	std_logic_vector(0 downto 0);  --slave address as words
+		avs_controll_writedata	:	in	std_logic_vector(31 downto 0);
+		-- Avalon MM Master Interface "dma"
+		avm_dma_waitrequest		:	in	std_logic;
+		avm_dma_readdata			:	in	std_logic_vector((DATAWIDTH-1) downto 0);
+		avm_dma_address			:	out	std_logic_vector(31 downto 0);  --master address as bytes
+		avm_dma_read				:	out	std_logic;
+		-- VGA outputs
+		coe_vga_hs_export			:	out	std_logic;
+		coe_vga_vs_export			:	out	std_logic;
+		coe_vga_r_export			:	out	std_logic_vector (3 downto 0);
+		coe_vga_g_export			:	out	std_logic_vector (3 downto 0);
+		coe_vga_b_export			:	out	std_logic_vector (3 downto 0)
+	);
+end vga_controller;
+
+architecture default of vga_controller is
+	
+	component vga_controll_slave
+		port(
+			clk50				:	in		std_logic;
+			reset				:	in		std_logic;
+			write_req		:	in		std_logic;
+			address			:	in		std_logic_vector(0 downto 0);
+			writedata		:	in		std_logic_vector(31 downto 0);
+			base_address	:	out	std_logic_vector(31 downto 0);
+			controll_reg	:	out	std_logic_vector(31 downto 0)
+		);
+	end component;
+	
+	component dma_read_master
+		generic(
+			DATAWIDTH	:	integer := 64;
+			BUFFERWIDTH	:	integer	:= 32
+		);
+		port(
+			reset			:	in		std_logic;
+			clk50			:	in		std_logic;
+			ctrl_go		:	in		std_logic;
+			ctrl_fb_base:	in		std_logic_vector(31 downto 0);
+			vga_v_sync	:	in		std_logic;
+			vga_read		:	in		std_logic;
+			vga_data		:	out	std_logic_vector(11 downto 0);
+			dma_waitreq	:	in		std_logic;
+			dma_data		:	in		std_logic_vector((DATAWIDTH-1) downto 0);
+			dma_read		:	out	std_logic;
+			dma_address	:	out	std_logic_vector(31 downto 0)
+		);
+	end component;
+	
+	component vga_logic
+		port (
+			reset					:	in		std_logic;
+			ctrl_go				:	in		std_logic;
+			px_clk				:	in		std_logic;
+			data_active			:	in		std_logic;
+			dma_buffer_data	:	in		std_logic_vector (11 downto 0);
+			dma_read_buffer	:	out	std_logic;
+			R						:	out	std_logic_vector (3 downto 0);
+			G						:	out	std_logic_vector (3 downto 0);
+			B						:	out	std_logic_vector (3 downto 0)
+		
+		);
+	end component;
+	
+	component vga_signals
+		port(
+			reset				:	in		std_logic;
+			clk50				:	in		std_logic;
+			px_clk			:	out	std_logic;
+			px_clk_locked	:	out	std_logic;
+			display_data	:	out 	std_logic;
+			h_sync			:	out	std_logic;
+			v_sync			:	out	std_logic
+		);
+	end component;
+	
+	signal s_reset				:	std_logic;
+	signal s_px_clk_locked	:	std_logic;
+	signal s_px_clk			:	std_logic;
+	signal s_buffer_data		:	std_logic_vector(11 downto 0);
+	signal s_controll_reg	:	std_logic_vector(31 downto 0);
+	signal s_base_address	:	std_logic_vector(31 downto 0);
+	signal s_read_buffer		:	std_logic;
+	signal s_display_data	:	std_logic;
+	signal s_v_sync			:	std_logic;
+	
+begin
+
+	--s_reset <= (not csi_clk_snk_reset) nand s_px_clk_locked;
+	s_reset <= csi_clk_snk_reset or not s_px_clk_locked;
+	
+	ctrl: vga_controll_slave
+	port map(
+			clk50				=> csi_clk_snk_clk,
+			reset				=> csi_clk_snk_reset,
+			write_req		=> avs_controll_write,
+			address			=> avs_controll_address,
+			writedata		=> avs_controll_writedata,
+			base_address	=> s_base_address,
+			controll_reg	=> s_controll_reg
+	);
+	
+	dma: dma_read_master
+	generic map(
+		DATAWIDTH		=> DATAWIDTH,
+		BUFFERWIDTH		=> BUFFERWIDTH
+	)
+	port map(
+		reset				=> s_reset,
+		clk50				=> csi_clk_snk_clk,
+		ctrl_go			=> s_controll_reg(0),
+		ctrl_fb_base	=> s_base_address,
+		vga_v_sync		=> s_v_sync,
+		vga_read			=> s_read_buffer,
+		vga_data			=> s_buffer_data,
+		dma_waitreq		=> avm_dma_waitrequest,
+		dma_data			=> avm_dma_readdata,
+		dma_read			=> avm_dma_read,
+		dma_address		=> avm_dma_address
+	);
+	
+	vga_l: vga_logic
+	port map(
+			reset					=> s_reset,
+			ctrl_go				=> s_controll_reg(0),
+			px_clk				=> s_px_clk,
+			data_active			=> s_display_data,
+			dma_buffer_data	=> s_buffer_data,
+			dma_read_buffer	=> s_read_buffer,
+			R						=> coe_vga_r_export,
+			G						=> coe_vga_g_export,
+			B						=> coe_vga_b_export
+	);
+	
+	vga_s: vga_signals
+	port map(
+			reset				=> csi_clk_snk_reset,
+			clk50				=> csi_clk_snk_clk,
+			px_clk			=> s_px_clk,
+			px_clk_locked	=> s_px_clk_locked,
+			display_data	=> s_display_data,
+			h_sync			=> coe_vga_hs_export,
+			v_sync			=> s_v_sync
+	);
+	coe_vga_vs_export <= s_v_sync;
+end default;
