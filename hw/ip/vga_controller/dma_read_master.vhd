@@ -48,7 +48,6 @@ architecture default of dma_read_master is
 			wrreq		: in	std_logic;
 			q			: out	std_logic_vector (63 downto 0);
 			rdempty	: out	std_logic;
-			wrfull	: out	std_logic;
 			wrusedw	: out std_logic_vector (5 DOWNTO 0)
 		);
 	end component;
@@ -67,8 +66,8 @@ architecture default of dma_read_master is
 	type t_dma_state is (idle, nospace, reading, complete);
 	signal dma_state	: t_dma_state := idle;
 	signal address				: std_logic_vector (31 downto 0)	:= (others => '0');
-	signal pending_reads		: integer range 0 to BUFFERWIDTH := BUFFERWIDTH/2;
-	signal burstcount 		: integer range 0 to BUFFERWIDTH := BUFFERWIDTH/2;
+	signal pending_reads		: integer range 0 to BUFFERWIDTH := 0;
+	signal burstcount 		: integer range 0 to BUFFERWIDTH := 0;
 	
 	-- vga_fsm
 	type t_vga_state is (idle, running);
@@ -90,7 +89,6 @@ begin
 		wrreq	 	=> fifo_write,
 		q	 		=> q_sig,
 		rdempty	=> fifo_empty,
-		wrfull	=> open,
 		wrusedw	=>	fifo_used
 	);
 	
@@ -188,6 +186,7 @@ begin
 			if pxcnt /= 0 then
 				-- rightshift current Segment by one px
 				curr_segment <= "000000000000" & curr_segment ((DATAWIDTH-1) downto 12);
+				fifo_read <= '0';
 			end if;
 			
 			-- when first pixel requested and fifo not empty
@@ -195,6 +194,7 @@ begin
 				if fifo_empty /= '1' then
 					curr_segment <= q_sig;		-- get new segment
 					pxcnt <= pxcnt + 1;
+					fifo_read <= '1';
 				end if;
 			-- when last pixel requested
 			elsif pxcnt < (PXPERREAD-1) then
@@ -206,8 +206,6 @@ begin
 		end if;
 		
 	end process;
-		
-	fifo_read <= '1' when vga_state = running and fifo_empty = '0' and pxcnt = 0 else '0';
 	
 	R	<= "0000" when vga_state = idle else	-- inactive screen area
 			"1111" when fifo_empty = '1' and vga_state = running else	-- underflow

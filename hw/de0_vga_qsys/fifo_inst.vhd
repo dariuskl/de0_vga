@@ -7,6 +7,5 @@ fifo_inst : fifo PORT MAP (
 		wrreq	 => wrreq_sig,
 		q	 => q_sig,
 		rdempty	 => rdempty_sig,
-		wrfull	 => wrfull_sig,
 		wrusedw	 => wrusedw_sig
 	);

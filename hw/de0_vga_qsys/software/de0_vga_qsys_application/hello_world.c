@@ -33,19 +33,17 @@ int main ()
 	printf ("Base address written into control register\n");
 
 	color = 0xFFF;
-	for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
-		for (y = 0; y < DISPLAY_NUM_ROWS; y++)
+	for (y = 0; y < DISPLAY_NUM_ROWS; y++)
+		for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
 		{
-			if (x <= 213)
-				color = 0xF00;
-			else if (x > 213 && x <= 426)
-				color = 0x0F0;
-			else
-				color = 0x00F;
+			if (y % 80 == 0 && x == 0)
+				color = ~color;
+			else if (x % 80 == 0)
+				color = ~color;
 			frame_px_w (frame_buffer, x, y, color);
 		}
 
-	printf ("Count sequence pixel pattern written\n");
+	printf ("Test pattern written\n");
 
 	IOWR (VGA_0_BASE, VGA_REG_CTRL, 1);							// write GO-Bit into control register
 	printf ("VGA startet\n");

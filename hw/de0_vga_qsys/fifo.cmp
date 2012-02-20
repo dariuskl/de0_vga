@@ -24,7 +24,6 @@ component fifo
 		wrreq		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (63 DOWNTO 0);
 		rdempty		: OUT STD_LOGIC ;
-		wrfull		: OUT STD_LOGIC ;
 		wrusedw		: OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
 	);
 end component;

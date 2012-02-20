@@ -827,11 +827,6 @@ set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[183
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[184] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|dma_state.reading" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[185] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|rdempty" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[186] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|rdreq" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[0]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[1]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[2]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[3]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[4]" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "system:qsys_system_0|vga_controller:vga_0|avm_dma_burstcount[0]" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "system:qsys_system_0|vga_controller:vga_0|avm_dma_burstcount[1]" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "system:qsys_system_0|vga_controller:vga_0|avm_dma_burstcount[2]" -section_id instance_one
@@ -975,33 +970,34 @@ set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[183] -
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[184] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|dma_state.reading" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[185] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|rdempty" -section_id instance_one
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[186] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|rdreq" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[0]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[1]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[2]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[3]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[4]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[0]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[1]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[2]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[3]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[4]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|reset" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_px_clk" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[199] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_screen_act" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[200] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_state" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[0]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[1]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[2]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[3]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[4]" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|reset" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_px_clk" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[199] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_screen_act" -section_id instance_one
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[200] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_state" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=201" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=201" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=627" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=25538" -section_id instance_one
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=11777" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[5]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[0]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[1]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[2]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[3]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[4]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|reset" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_px_clk" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_screen_act" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_state" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|s_hactive" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|s_vactive" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|fifo:fifo_inst|wrusedw[5]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[0]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[1]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[2]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[3]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|pending_reads[4]" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|reset" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_px_clk" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_screen_act" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|vga_state" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|s_hactive" -section_id instance_one
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|s_vactive" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=199" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=199" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=621" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=20710" -section_id instance_one
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=61845" -section_id instance_one
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
