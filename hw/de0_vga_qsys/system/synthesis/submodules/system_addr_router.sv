@@ -34,12 +34,12 @@ module system_addr_router_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_DESTID = 1 
    )
-  (output [87 - 85 : 0] default_destination_id,
+  (output [97 - 95 : 0] default_destination_id,
    output [5-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[87 - 85 : 0];
+    DEFAULT_DESTID[97 - 95 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
@@ -62,7 +62,7 @@ module system_addr_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [89-1 : 0]    sink_data,
+    input  [99-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,7 +71,7 @@ module system_addr_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [89-1    : 0] src_data,
+    output reg [99-1    : 0] src_data,
     output reg [5-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -83,9 +83,9 @@ module system_addr_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 87;
-    localparam PKT_DEST_ID_L = 85;
-    localparam ST_DATA_W = 89;
+    localparam PKT_DEST_ID_H = 97;
+    localparam PKT_DEST_ID_L = 95;
+    localparam ST_DATA_W = 99;
     localparam ST_CHANNEL_W = 5;
     localparam DECODER_TYPE = 0;
 

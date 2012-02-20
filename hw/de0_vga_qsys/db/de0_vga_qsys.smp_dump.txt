@@ -1,4 +1,21 @@
 
+State Machine - |de0_vga_qsys|system:qsys_system_0|altera_merlin_burst_adapter:burst_adapter|altera_merlin_burst_adapter_full:altera_merlin_burst_adapter_full.the_ba|state
+Name state.ST_RD_BEGIN_SUBBURST state.ST_UNCRD_CONTINUE_SUBBURST state.ST_UNCST_RD_BEGIN_SUBBURST state.ST_WR_CONTINUE_SUBBURST state.ST_WR_BEGIN_SUBBURST state.ST_RESET state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 
+state.ST_RESET 0 0 0 0 0 1 1 
+state.ST_WR_BEGIN_SUBBURST 0 0 0 0 1 0 1 
+state.ST_WR_CONTINUE_SUBBURST 0 0 0 1 0 0 1 
+state.ST_UNCST_RD_BEGIN_SUBBURST 0 0 1 0 0 0 1 
+state.ST_UNCRD_CONTINUE_SUBBURST 0 1 0 0 0 0 1 
+state.ST_RD_BEGIN_SUBBURST 1 0 0 0 0 0 1 
+
+State Machine - |de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|dma_read_master:dma|dma_state
+Name dma_state.complete dma_state.reading dma_state.nospace dma_state.idle 
+dma_state.idle 0 0 0 0 
+dma_state.nospace 0 0 1 1 
+dma_state.reading 0 1 0 1 
+dma_state.complete 1 0 0 1 
+
 State Machine - |de0_vga_qsys|system:qsys_system_0|system_sdram_0:sdram_0|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 

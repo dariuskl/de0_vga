@@ -34,12 +34,12 @@ module system_id_router_001_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_DESTID = 0 
    )
-  (output [69 - 67 : 0] default_destination_id,
+  (output [79 - 77 : 0] default_destination_id,
    output [5-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[69 - 67 : 0];
+    DEFAULT_DESTID[79 - 77 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
@@ -62,7 +62,7 @@ module system_id_router_001
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [71-1 : 0]    sink_data,
+    input  [81-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,7 +71,7 @@ module system_id_router_001
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [71-1    : 0] src_data,
+    output reg [81-1    : 0] src_data,
     output reg [5-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -83,9 +83,9 @@ module system_id_router_001
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 49;
     localparam PKT_ADDR_L = 18;
-    localparam PKT_DEST_ID_H = 69;
-    localparam PKT_DEST_ID_L = 67;
-    localparam ST_DATA_W = 71;
+    localparam PKT_DEST_ID_H = 79;
+    localparam PKT_DEST_ID_L = 77;
+    localparam ST_DATA_W = 81;
     localparam ST_CHANNEL_W = 5;
     localparam DECODER_TYPE = 1;
 

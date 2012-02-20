@@ -50,7 +50,8 @@ ENTITY fifo IS
 		wrreq		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (63 DOWNTO 0);
 		rdempty		: OUT STD_LOGIC ;
-		wrfull		: OUT STD_LOGIC 
+		wrfull		: OUT STD_LOGIC ;
+		wrusedw		: OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
 	);
 END fifo;
 
@@ -60,6 +61,7 @@ ARCHITECTURE SYN OF fifo IS
 	SIGNAL sub_wire0	: STD_LOGIC ;
 	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (63 DOWNTO 0);
 	SIGNAL sub_wire2	: STD_LOGIC ;
+	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (5 DOWNTO 0);
 
 
 
@@ -85,6 +87,7 @@ ARCHITECTURE SYN OF fifo IS
 			rdempty	: OUT STD_LOGIC ;
 			wrclk	: IN STD_LOGIC ;
 			wrreq	: IN STD_LOGIC ;
+			wrusedw	: OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
 			aclr	: IN STD_LOGIC ;
 			data	: IN STD_LOGIC_VECTOR (63 DOWNTO 0);
 			rdreq	: IN STD_LOGIC 
@@ -95,15 +98,16 @@ BEGIN
 	wrfull    <= sub_wire0;
 	q    <= sub_wire1(63 DOWNTO 0);
 	rdempty    <= sub_wire2;
+	wrusedw    <= sub_wire3(5 DOWNTO 0);
 
 	dcfifo_component : dcfifo
 	GENERIC MAP (
 		intended_device_family => "Cyclone III",
-		lpm_numwords => 32,
+		lpm_numwords => 64,
 		lpm_showahead => "OFF",
 		lpm_type => "dcfifo",
 		lpm_width => 64,
-		lpm_widthu => 5,
+		lpm_widthu => 6,
 		overflow_checking => "ON",
 		rdsync_delaypipe => 4,
 		underflow_checking => "ON",
@@ -120,7 +124,8 @@ BEGIN
 		rdreq => rdreq,
 		wrfull => sub_wire0,
 		q => sub_wire1,
-		rdempty => sub_wire2
+		rdempty => sub_wire2,
+		wrusedw => sub_wire3
 	);
 
 
@@ -136,7 +141,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AlmostFullThr NUMERIC "-1"
 -- Retrieval info: PRIVATE: CLOCKS_ARE_SYNCHRONIZED NUMERIC "0"
 -- Retrieval info: PRIVATE: Clock NUMERIC "4"
--- Retrieval info: PRIVATE: Depth NUMERIC "32"
+-- Retrieval info: PRIVATE: Depth NUMERIC "64"
 -- Retrieval info: PRIVATE: Empty NUMERIC "1"
 -- Retrieval info: PRIVATE: Full NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
@@ -161,14 +166,14 @@ END SYN;
 -- Retrieval info: PRIVATE: sc_sclr NUMERIC "0"
 -- Retrieval info: PRIVATE: wsEmpty NUMERIC "0"
 -- Retrieval info: PRIVATE: wsFull NUMERIC "1"
--- Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
+-- Retrieval info: PRIVATE: wsUsedW NUMERIC "1"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
--- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
+-- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "64"
 -- Retrieval info: CONSTANT: LPM_SHOWAHEAD STRING "OFF"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "dcfifo"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "64"
--- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "5"
+-- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "6"
 -- Retrieval info: CONSTANT: OVERFLOW_CHECKING STRING "ON"
 -- Retrieval info: CONSTANT: RDSYNC_DELAYPIPE NUMERIC "4"
 -- Retrieval info: CONSTANT: UNDERFLOW_CHECKING STRING "ON"
@@ -184,6 +189,7 @@ END SYN;
 -- Retrieval info: USED_PORT: wrclk 0 0 0 0 INPUT NODEFVAL "wrclk"
 -- Retrieval info: USED_PORT: wrfull 0 0 0 0 OUTPUT NODEFVAL "wrfull"
 -- Retrieval info: USED_PORT: wrreq 0 0 0 0 INPUT NODEFVAL "wrreq"
+-- Retrieval info: USED_PORT: wrusedw 0 0 6 0 OUTPUT NODEFVAL "wrusedw[5..0]"
 -- Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
 -- Retrieval info: CONNECT: @data 0 0 64 0 data 0 0 64 0
 -- Retrieval info: CONNECT: @rdclk 0 0 0 0 rdclk 0 0 0 0
@@ -193,6 +199,7 @@ END SYN;
 -- Retrieval info: CONNECT: q 0 0 64 0 @q 0 0 64 0
 -- Retrieval info: CONNECT: rdempty 0 0 0 0 @rdempty 0 0 0 0
 -- Retrieval info: CONNECT: wrfull 0 0 0 0 @wrfull 0 0 0 0
+-- Retrieval info: CONNECT: wrusedw 0 0 6 0 @wrusedw 0 0 6 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL fifo.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL fifo.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL fifo.cmp TRUE

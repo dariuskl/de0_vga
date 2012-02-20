@@ -28,7 +28,7 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         system_rsp_xbar_demux_001
-//   ST_DATA_W:           71
+//   ST_DATA_W:           81
 //   ST_CHANNEL_W:        5
 //   NUM_OUTPUTS:         3
 //   VALID_WIDTH:         1
@@ -46,7 +46,7 @@ module system_rsp_xbar_demux_001
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [71-1    : 0]   sink_data, // ST_DATA_W=71
+    input  [81-1    : 0]   sink_data, // ST_DATA_W=81
     input  [5-1 : 0]   sink_channel, // ST_CHANNEL_W=5
     input                         sink_startofpacket,
     input                         sink_endofpacket,
@@ -56,21 +56,21 @@ module system_rsp_xbar_demux_001
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [71-1    : 0] src0_data, // ST_DATA_W=71
+    output reg [81-1    : 0] src0_data, // ST_DATA_W=81
     output reg [5-1 : 0] src0_channel, // ST_CHANNEL_W=5
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
 
     output reg                      src1_valid,
-    output reg [71-1    : 0] src1_data, // ST_DATA_W=71
+    output reg [81-1    : 0] src1_data, // ST_DATA_W=81
     output reg [5-1 : 0] src1_channel, // ST_CHANNEL_W=5
     output reg                      src1_startofpacket,
     output reg                      src1_endofpacket,
     input                           src1_ready,
 
     output reg                      src2_valid,
-    output reg [71-1    : 0] src2_data, // ST_DATA_W=71
+    output reg [81-1    : 0] src2_data, // ST_DATA_W=81
     output reg [5-1 : 0] src2_channel, // ST_CHANNEL_W=5
     output reg                      src2_startofpacket,
     output reg                      src2_endofpacket,

@@ -2,7 +2,7 @@ set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_NAME 
 set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -library "lib_system" -name MISC_FILE [file join $::quartus(qip_path) ../../system.sopcinfo]
-set_instance_assignment -entity "system" -library "lib_system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1329754987"
+set_instance_assignment -entity "system" -library "lib_system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1329767328"
 set_global_assignment -library "lib_system" -name MISC_FILE [file join $::quartus(qip_path) ../../system.qsys]
 
 set_global_assignment -library "lib_system" -name VERILOG_FILE [file join $::quartus(qip_path) system.v]
@@ -34,13 +34,12 @@ set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join 
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/system_addr_router_002.sv]
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/system_addr_router_001.sv]
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/system_addr_router.sv]
+set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_master_agent.sv]
 set_global_assignment -library "lib_system" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_sc_fifo.v]
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_slave_agent.sv]
-set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_master_agent.sv]
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_slave_translator.sv]
 set_global_assignment -library "lib_system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_master_translator.sv]
 set_global_assignment -library "lib_system" -name VHDL_FILE [file join $::quartus(qip_path) submodules/vga_controller.vhd]
-set_global_assignment -library "lib_system" -name VHDL_FILE [file join $::quartus(qip_path) submodules/dma_read_master.vhd]
 set_global_assignment -library "lib_system" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/system_jtag_uart_0.v]
 set_global_assignment -library "lib_system" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/system_jtag_uart_0_input_mutex.dat]
 set_global_assignment -library "lib_system" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/system_jtag_uart_0_output_stream.dat]
@@ -127,15 +126,15 @@ set_global_assignment -entity "system_addr_router_001" -library "lib_system" -na
 set_global_assignment -entity "system_addr_router" -library "lib_system" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "system_addr_router" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "system_addr_router" -library "lib_system" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_system" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
 set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_system" -name IP_TOOL_NAME "altera_merlin_slave_agent"
 set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_system" -name IP_TOOL_ENV "qsys"
-set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_NAME "altera_merlin_master_agent"
-set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_VERSION "11.1"
-set_global_assignment -entity "altera_merlin_master_agent" -library "lib_system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_system" -name IP_TOOL_NAME "altera_merlin_slave_translator"
 set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_system" -name IP_TOOL_ENV "qsys"

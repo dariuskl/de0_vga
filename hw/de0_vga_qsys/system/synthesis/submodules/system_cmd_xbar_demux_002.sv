@@ -28,10 +28,10 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         system_cmd_xbar_demux_002
-//   ST_DATA_W:           125
+//   ST_DATA_W:           135
 //   ST_CHANNEL_W:        5
 //   NUM_OUTPUTS:         1
-//   VALID_WIDTH:         1
+//   VALID_WIDTH:         5
 // ------------------------------------------
 
 //------------------------------------------
@@ -45,8 +45,8 @@ module system_cmd_xbar_demux_002
     // -------------------
     // Sink
     // -------------------
-    input  [1-1      : 0]   sink_valid,
-    input  [125-1    : 0]   sink_data, // ST_DATA_W=125
+    input  [5-1      : 0]   sink_valid,
+    input  [135-1    : 0]   sink_data, // ST_DATA_W=135
     input  [5-1 : 0]   sink_channel, // ST_CHANNEL_W=5
     input                         sink_startofpacket,
     input                         sink_endofpacket,
@@ -56,7 +56,7 @@ module system_cmd_xbar_demux_002
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [125-1    : 0] src0_data, // ST_DATA_W=125
+    output reg [135-1    : 0] src0_data, // ST_DATA_W=135
     output reg [5-1 : 0] src0_channel, // ST_CHANNEL_W=5
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
@@ -85,7 +85,7 @@ module system_cmd_xbar_demux_002
         src0_endofpacket   = sink_endofpacket;
         src0_channel       = sink_channel >> NUM_OUTPUTS;
 
-        src0_valid         = sink_channel[0] && sink_valid;
+        src0_valid         = sink_channel[0] && sink_valid[0];
 
     end
 
