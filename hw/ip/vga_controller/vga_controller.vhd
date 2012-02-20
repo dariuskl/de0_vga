@@ -47,35 +47,23 @@ architecture default of vga_controller is
 	
 	component dma_read_master
 		generic(
-			DATAWIDTH	:	integer := 64;
-			BUFFERWIDTH	:	integer	:= 32
+			DATAWIDTH		:	integer := 64;
+			BUFFERWIDTH		:	integer	:= 32
 		);
 		port(
-			clk50			:	in		std_logic;
-			reset			:	in		std_logic;
---			ctrl_go		:	in		std_logic;
-			ctrl_fb_base:	in		std_logic_vector(31 downto 0);
-			vga_v_sync	:	in		std_logic;
-			vga_read		:	in		std_logic;
-			vga_data		:	out	std_logic_vector(11 downto 0);
-			dma_waitreq	:	in		std_logic;
-			dma_data		:	in		std_logic_vector((DATAWIDTH-1) downto 0);
-			dma_read		:	out	std_logic;
-			dma_address	:	out	std_logic_vector(31 downto 0);
-			dma_byte_en	:	out	std_logic_vector(((DATAWIDTH/8)-1) downto 0)
-		);
-	end component;
-	
-	component vga_logic
-		port (
-			px_clk				:	in		std_logic;
-			screen_active		:	in		std_logic;
-			dma_buffer_data	:	in		std_logic_vector (11 downto 0);
-			dma_read_buffer	:	out	std_logic;
-			R						:	out	std_logic_vector (3 downto 0);
-			G						:	out	std_logic_vector (3 downto 0);
-			B						:	out	std_logic_vector (3 downto 0)
-		
+			reset				:	in		std_logic;
+			clk50				:	in		std_logic;
+			ctrl_fb_base	:	in		std_logic_vector (31 downto 0);
+			vga_px_clk		:	in		std_logic;
+			vga_screen_act	:	in		std_logic;
+			R					:	out	std_logic_vector (3 downto 0);
+			G					:	out	std_logic_vector (3 downto 0);
+			B					:	out	std_logic_vector (3 downto 0);
+			dma_waitreq		:	in		std_logic;
+			dma_data			:	in		std_logic_vector((DATAWIDTH-1) downto 0);
+			dma_read			:	out	std_logic;
+			dma_address		:	out	std_logic_vector(31 downto 0);
+			dma_byte_en		:	out	std_logic_vector(((DATAWIDTH/8)-1) downto 0)
 		);
 	end component;
 	
@@ -91,7 +79,6 @@ architecture default of vga_controller is
 		);
 	end component;
 	
-	signal s_px_clk_locked	:	std_logic;
 	signal s_px_clk			:	std_logic;
 	signal s_buffer_data		:	std_logic_vector(11 downto 0);
 	signal s_control_reg		:	std_logic_vector(31 downto 0);
@@ -113,18 +100,20 @@ begin
 			control_reg		=> s_control_reg
 	);
 	
-	dma: dma_read_master
+	dma : dma_read_master
 	generic map(
 		DATAWIDTH		=> DATAWIDTH,
 		BUFFERWIDTH		=> BUFFERWIDTH
 	)
 	port map(
 		clk50				=> csi_clk_snk_clk,
-		reset				=> not s_control_reg(0),
+		reset				=> not s_control_reg(0) or not s_v_sync,	-- GO-Bit nicht gesetzt oder VSync aktiv
 		ctrl_fb_base	=> s_base_address,
-		vga_v_sync		=> s_v_sync,
-		vga_read			=> s_read_buffer,
-		vga_data			=> s_buffer_data,
+		vga_px_clk		=> s_px_clk,
+		vga_screen_act	=> s_screen_active,
+		R					=> coe_vga_r_export,
+		G					=> coe_vga_g_export,
+		B					=> coe_vga_b_export,
 		dma_waitreq		=> avm_dma_waitrequest,
 		dma_data			=> avm_dma_readdata,
 		dma_read			=> avm_dma_read,
@@ -132,23 +121,12 @@ begin
 		dma_byte_en		=>	avm_dma_byteenable
 	);
 	
-	vga_l: vga_logic
-	port map(
-			px_clk				=> s_px_clk,
-			screen_active		=> s_screen_active,
-			dma_buffer_data	=> s_buffer_data,
-			dma_read_buffer	=> s_read_buffer,
-			R						=> coe_vga_r_export,
-			G						=> coe_vga_g_export,
-			B						=> coe_vga_b_export
-	);
-	
-	vga_s: vga_signals
+	vga_s : vga_signals
 	port map(
 			reset				=> not s_control_reg (0),
 			clk50				=> csi_clk_snk_clk,
 			px_clk			=> s_px_clk,
-			px_clk_locked	=> s_px_clk_locked,
+			px_clk_locked	=> open,
 			screen_active	=> s_screen_active,
 			h_sync			=> coe_vga_hs_export,
 			v_sync			=> s_v_sync

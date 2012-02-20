@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 16, 2012 11:40:00 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1329432000166</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 20, 2012 4:27:33 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1329751653996</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../system.sopcinfo</SopcDesignFile>

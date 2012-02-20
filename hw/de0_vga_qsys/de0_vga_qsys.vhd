@@ -74,7 +74,7 @@ begin
 			reset_reset_n							=> KEY (0),
 			sysclks_areset_conduit_export		=> not KEY (0),
 			sysclks_locked_conduit_export		=> LEDG (9),
-			sysclks_phasedone_conduit_export	=> LEDG (8),
+			sysclks_phasedone_conduit_export	=> open,
 			clk_sdram_clk							=> DRAM_CLK,
 			
 			-- vga_0
@@ -96,6 +96,6 @@ begin
 			sdram_0_wire_we_n		=> DRAM_WE_N
 		);
 	
-	LEDG (7 downto 0) <= "00000000";
+	LEDG (8 downto 0) <= "000000000";
 
 end default;

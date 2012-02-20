@@ -1,5 +1,5 @@
 Assembler report for de0_vga_qsys
-Thu Feb 16 23:41:46 2012
+Mon Feb 20 17:27:18 2012
 Quartus II 32-bit Version 11.1 Build 173 11/01/2011 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Feb 16 23:41:46 2012 ;
+; Assembler Status      ; Successful - Mon Feb 20 17:27:18 2012 ;
 ; Revision Name         ; de0_vga_qsys                          ;
 ; Top-level Entity Name ; de0_vga_qsys                          ;
 ; Family                ; Cyclone III                           ;
@@ -105,7 +105,7 @@ applicable agreement for further details.
 +----------------+----------------------------------------+
 ; Device         ; EP3C16F484C6                           ;
 ; JTAG usercode  ; 0xFFFFFFFF                             ;
-; Checksum       ; 0x004F15BB                             ;
+; Checksum       ; 0x005317BE                             ;
 +----------------+----------------------------------------+
 
 
@@ -115,16 +115,16 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 11.1 Build 173 11/01/2011 SJ Web Edition
-    Info: Processing started: Thu Feb 16 23:41:40 2012
+    Info: Processing started: Mon Feb 20 17:27:11 2012
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de0_vga_qsys -c de0_vga_qsys
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info (115017): Design contains a time-limited core -- only a single, time-limited programming file can be generated
 Warning (210042): Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 330 megabytes
-    Info: Processing ended: Thu Feb 16 23:41:46 2012
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 331 megabytes
+    Info: Processing ended: Mon Feb 20 17:27:18 2012
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:04
 
 

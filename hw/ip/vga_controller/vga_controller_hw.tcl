@@ -49,7 +49,6 @@ set_module_property FIX_110_VIP_PATH false
 add_file vga_controller.vhd {SYNTHESIS SIMULATION}
 add_file dma_read_master.vhd {SYNTHESIS SIMULATION}
 add_file vga_controll_slave.vhd {SNYTHESIS SIMULATION}
-add_file vga_logic.vhd {SNYTHESIS SIMULATION}
 add_file vga_px_clk_pll.qip {SNYTHESIS SIMULATION}
 add_file vga_signals.vhd {SNYTHESIS SIMULATION}
 # | 

@@ -35,7 +35,8 @@ int main ()
 	for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
 		for (y = 0; y < DISPLAY_NUM_ROWS; y++)
 		{
-			frame_px_w (frame_buffer, x, y, 0xFFF-y);
+			//frame_px_w (frame_buffer, x, y, 0xFFF-y);
+			frame_px_w (frame_buffer, x, y, x + (DISPLAY_NUM_COLUMNS*y));
 		}
 
 	printf ("Count sequence pixel pattern written\n");

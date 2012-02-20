@@ -295,7 +295,7 @@ LOAD /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-
                 0x008001b4                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x00800020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x008001b4     0xc478
+.text           0x008001b4     0xc47c
                 0x008001b4                PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -342,632 +342,632 @@ LOAD /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x008001b4       0x3c ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
                 0x008001b4                _start
- .text          0x008001f0      0x314 obj/default/hello_world.o
+ .text          0x008001f0      0x318 obj/default/hello_world.o
                 0x008001f0                main
- .text          0x00800504       0x28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
-                0x00800504                free
-                0x00800518                malloc
- .text          0x0080052c      0x740 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
-                0x0080052c                _malloc_r
- .text          0x00800c6c       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
-                0x00800c6c                printf
-                0x00800cb0                _printf_r
- .text          0x00800ce4       0xb4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
-                0x00800ce4                _puts_r
-                0x00800d84                puts
- .text          0x00800d98       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
-                0x00800d98                _sbrk_r
- .text          0x00800e08       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
-                0x00800e08                strlen
- .text          0x00800e7c     0x1f28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
-                0x00800ed4                ___vfprintf_internal_r
-                0x00802d80                __vfprintf_internal
- .text          0x00802da4      0x13c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
-                0x00802da4                __swsetup_r
- .text          0x00802ee0     0x17cc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
-                0x008030f8                _dtoa_r
- .text          0x008046ac      0x230 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
-                0x008046ac                _fflush_r
-                0x008048a8                fflush
- .text          0x008048dc      0x2c0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
-                0x00804934                __sfp_lock_acquire
-                0x00804938                __sfp_lock_release
-                0x0080493c                __sinit_lock_acquire
-                0x00804940                __sinit_lock_release
-                0x00804944                __sinit
-                0x008049f8                __fp_unlock_all
-                0x00804a10                __fp_lock_all
-                0x00804a28                _cleanup_r
-                0x00804a34                _cleanup
-                0x00804a44                __sfmoreglue
-                0x00804aac                __sfp
- .text          0x00804b9c      0x440 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
-                0x00804b9c                _malloc_trim_r
-                0x00804cc8                _free_r
- .text          0x00804fdc      0x49c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
-                0x00804fdc                __sfvwrite_r
- .text          0x00805478      0x180 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
-                0x00805478                _fwalk_reent
-                0x00805540                _fwalk
- .text          0x008055f8        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
- .text          0x008055f8        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .text          0x008055f8       0xc4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
-                0x008055f8                __locale_charset
-                0x00805600                _localeconv_r
-                0x0080560c                localeconv
-                0x0080561c                _setlocale_r
-                0x008056a0                setlocale
- .text          0x008056bc      0x194 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
-                0x008056bc                __smakebuf_r
- .text          0x00805850       0xe4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
-                0x00805850                memchr
- .text          0x00805934       0xa0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
-                0x00805934                memcpy
- .text          0x008059d4       0xe0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
-                0x008059d4                memmove
- .text          0x00805ab4       0x98 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
-                0x00805ab4                memset
- .text          0x00805b4c      0xff4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
-                0x00805b4c                _Bfree
-                0x00805b74                __hi0bits
-                0x00805be4                __lo0bits
-                0x00805ca8                __mcmp
-                0x00805d08                __ulp
-                0x00805d88                __b2d
-                0x00805ea8                __ratio
-                0x00805f58                _mprec_log10
-                0x00805fec                __copybits
-                0x00806044                __any_on
-                0x008060cc                _Balloc
-                0x00806188                __d2b
-                0x00806304                __mdiff
-                0x00806490                __lshift
-                0x008065dc                __multiply
-                0x008067c4                __i2b
-                0x00806800                __multadd
-                0x00806900                __pow5mult
-                0x00806a20                __s2b
- .text          0x00806b40      0x5f4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
-                0x00806b40                _realloc_r
- .text          0x00807134       0x40 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
-                0x00807134                __isinfd
- .text          0x00807174       0x30 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
-                0x00807174                __isnand
- .text          0x008071a4      0x14c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
-                0x008071a4                __sclose
-                0x008071ac                __sseek
-                0x00807214                __swrite
-                0x00807290                __sread
- .text          0x008072f0       0xbc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
-                0x008072f0                strcmp
- .text          0x008073ac       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
-                0x008073ac                _write_r
- .text          0x00807424       0xb4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
-                0x00807424                _calloc_r
- .text          0x008074d8       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
-                0x008074d8                _close_r
- .text          0x00807548      0x124 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
-                0x00807548                _fclose_r
-                0x00807658                fclose
- .text          0x0080766c       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
-                0x0080766c                _fstat_r
- .text          0x008076e0       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
-                0x008076e0                _isatty_r
- .text          0x00807750       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
-                0x00807750                _lseek_r
- .text          0x008077c8       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
-                0x008077c8                _read_r
- .text          0x00807840      0x5dc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
-                0x00807840                __udivdi3
- .text          0x00807e1c      0x5b0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
-                0x00807e1c                __umoddi3
- .text          0x008083cc      0x504 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
-                0x008087dc                __subdf3
-                0x0080885c                __adddf3
- .text          0x008088d0      0x3c4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
-                0x008088d0                __muldf3
- .text          0x00808c94      0x258 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
-                0x00808c94                __divdf3
- .text          0x00808eec       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
-                0x00808eec                __eqdf2
- .text          0x00808f74       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
-                0x00808f74                __nedf2
- .text          0x00808ffc       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
-                0x00808ffc                __gtdf2
- .text          0x00809084       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
-                0x00809084                __gedf2
- .text          0x0080910c       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
-                0x0080910c                __ltdf2
- .text          0x00809194       0xf8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
-                0x00809194                __floatsidf
- .text          0x0080928c       0xd8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
-                0x0080928c                __fixdfsi
- .text          0x00809364        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
- .text          0x00809364      0x194 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
-                0x00809364                __floatunsidf
- .text          0x008094f8      0x14c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
-                0x00809574                __divsi3
-                0x008095d4                __modsi3
-                0x00809634                __udivsi3
-                0x0080963c                __umodsi3
- .text          0x00809644       0x98 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
-                0x00809644                __muldi3
- .text          0x008096dc        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
- .text          0x008096dc       0x80 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
-                0x008096dc                __clzsi2
- .text          0x0080975c      0x314 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
-                0x0080975c                __pack_d
- .text          0x00809a70      0x138 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
-                0x00809a70                __unpack_d
- .text          0x00809ba8       0xc8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
-                0x00809ba8                __fpcmp_parts_d
- .text          0x00809c70      0x15c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
-                0x00809c70                close
- .text          0x00809dcc       0x2c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
- .text          0x00809df8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
- .text          0x00809df8      0x134 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
-                0x00809df8                fstat
- .text          0x00809f2c      0x120 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
-                0x00809f2c                isatty
- .text          0x0080a04c       0xec ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
-                0x0080a04c                alt_load
- .text          0x0080a138      0x150 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
-                0x0080a138                lseek
- .text          0x0080a288       0x6c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
-                0x0080a288                alt_main
- .text          0x0080a2f4       0x40 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
-                0x0080a2f4                __malloc_lock
-                0x0080a314                __malloc_unlock
- .text          0x0080a334      0x180 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
-                0x0080a334                read
- .text          0x0080a4b4       0x60 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
-                0x0080a4b4                alt_release_fd
- .text          0x0080a514       0xbc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
-                0x0080a514                sbrk
- .text          0x0080a5d0      0x180 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
-                0x0080a5d0                write
- .text          0x0080a750       0xb0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0080a750                alt_irq_init
-                0x0080a784                alt_sys_init
- .text          0x0080a800      0x148 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
-                0x0080a800                altera_avalon_jtag_uart_read_fd
-                0x0080a858                altera_avalon_jtag_uart_write_fd
-                0x0080a8b0                altera_avalon_jtag_uart_close_fd
-                0x0080a8f8                altera_avalon_jtag_uart_ioctl_fd
- .text          0x0080a948      0x40c ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
-                0x0080a948                altera_avalon_jtag_uart_init
-                0x0080ace0                altera_avalon_jtag_uart_close
- .text          0x0080ad54       0xf4 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
-                0x0080ad54                altera_avalon_jtag_uart_ioctl
- .text          0x0080ae48      0x224 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
-                0x0080ae48                altera_avalon_jtag_uart_read
- .text          0x0080b06c      0x240 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0080b06c                altera_avalon_jtag_uart_write
- .text          0x0080b2ac      0x154 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
-                0x0080b2ac                alt_alarm_start
- .text          0x0080b400       0x1c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0080b400                alt_dcache_flush_all
- .text          0x0080b41c      0x114 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
-                0x0080b41c                alt_dev_llist_insert
- .text          0x0080b530       0x64 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
-                0x0080b530                _do_ctors
- .text          0x0080b594       0x64 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
-                0x0080b594                _do_dtors
- .text          0x0080b5f8       0x30 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x0080b5f8                alt_icache_flush_all
- .text          0x0080b628      0x1d4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
-                0x0080b628                alt_ic_isr_register
-                0x0080b678                alt_ic_irq_enable
-                0x0080b714                alt_ic_irq_disable
-                0x0080b7b4                alt_ic_irq_enabled
- .text          0x0080b7fc       0xf8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
-                0x0080b7fc                alt_iic_isr_register
- .text          0x0080b8f4      0x13c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
-                0x0080b9b8                alt_io_redirect
- .text          0x0080ba30        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
- .text          0x0080ba30        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
- .text          0x0080ba30        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
- .text          0x0080ba30      0x2c4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
-                0x0080bb0c                open
- .text          0x0080bcf4      0x1a4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
-                0x0080bcf4                alt_alarm_stop
-                0x0080bd8c                alt_tick
- .text          0x0080be98       0x20 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
-                0x0080be98                altera_nios2_qsys_irq_init
- .text          0x0080beb8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
- .text          0x0080beb8       0x94 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
-                0x0080beb8                alt_find_dev
- .text          0x0080bf4c      0x120 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
-                0x0080bf4c                alt_find_file
- .text          0x0080c06c       0xb8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
-                0x0080c06c                alt_get_fd
- .text          0x0080c124       0x90 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
-                0x0080c124                alt_icache_flush
- .text          0x0080c1b4       0x14 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
-                0x0080c1b4                atexit
- .text          0x0080c1c8       0x38 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
-                0x0080c1c8                exit
- .text          0x0080c200       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
-                0x0080c200                memcmp
- .text          0x0080c274      0x134 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
-                0x0080c274                __register_exitproc
- .text          0x0080c3a8      0x1b4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
-                0x0080c3ac                __call_exitprocs
- .text          0x0080c55c       0x60 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
-                0x0080c59c                _exit
+ .text          0x00800508       0x28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
+                0x00800508                free
+                0x0080051c                malloc
+ .text          0x00800530      0x740 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
+                0x00800530                _malloc_r
+ .text          0x00800c70       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
+                0x00800c70                printf
+                0x00800cb4                _printf_r
+ .text          0x00800ce8       0xb4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
+                0x00800ce8                _puts_r
+                0x00800d88                puts
+ .text          0x00800d9c       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
+                0x00800d9c                _sbrk_r
+ .text          0x00800e0c       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
+                0x00800e0c                strlen
+ .text          0x00800e80     0x1f28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
+                0x00800ed8                ___vfprintf_internal_r
+                0x00802d84                __vfprintf_internal
+ .text          0x00802da8      0x13c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
+                0x00802da8                __swsetup_r
+ .text          0x00802ee4     0x17cc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
+                0x008030fc                _dtoa_r
+ .text          0x008046b0      0x230 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
+                0x008046b0                _fflush_r
+                0x008048ac                fflush
+ .text          0x008048e0      0x2c0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
+                0x00804938                __sfp_lock_acquire
+                0x0080493c                __sfp_lock_release
+                0x00804940                __sinit_lock_acquire
+                0x00804944                __sinit_lock_release
+                0x00804948                __sinit
+                0x008049fc                __fp_unlock_all
+                0x00804a14                __fp_lock_all
+                0x00804a2c                _cleanup_r
+                0x00804a38                _cleanup
+                0x00804a48                __sfmoreglue
+                0x00804ab0                __sfp
+ .text          0x00804ba0      0x440 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
+                0x00804ba0                _malloc_trim_r
+                0x00804ccc                _free_r
+ .text          0x00804fe0      0x49c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
+                0x00804fe0                __sfvwrite_r
+ .text          0x0080547c      0x180 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
+                0x0080547c                _fwalk_reent
+                0x00805544                _fwalk
+ .text          0x008055fc        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x008055fc        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .text          0x008055fc       0xc4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+                0x008055fc                __locale_charset
+                0x00805604                _localeconv_r
+                0x00805610                localeconv
+                0x00805620                _setlocale_r
+                0x008056a4                setlocale
+ .text          0x008056c0      0x194 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
+                0x008056c0                __smakebuf_r
+ .text          0x00805854       0xe4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
+                0x00805854                memchr
+ .text          0x00805938       0xa0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                0x00805938                memcpy
+ .text          0x008059d8       0xe0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
+                0x008059d8                memmove
+ .text          0x00805ab8       0x98 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
+                0x00805ab8                memset
+ .text          0x00805b50      0xff4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
+                0x00805b50                _Bfree
+                0x00805b78                __hi0bits
+                0x00805be8                __lo0bits
+                0x00805cac                __mcmp
+                0x00805d0c                __ulp
+                0x00805d8c                __b2d
+                0x00805eac                __ratio
+                0x00805f5c                _mprec_log10
+                0x00805ff0                __copybits
+                0x00806048                __any_on
+                0x008060d0                _Balloc
+                0x0080618c                __d2b
+                0x00806308                __mdiff
+                0x00806494                __lshift
+                0x008065e0                __multiply
+                0x008067c8                __i2b
+                0x00806804                __multadd
+                0x00806904                __pow5mult
+                0x00806a24                __s2b
+ .text          0x00806b44      0x5f4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
+                0x00806b44                _realloc_r
+ .text          0x00807138       0x40 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
+                0x00807138                __isinfd
+ .text          0x00807178       0x30 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
+                0x00807178                __isnand
+ .text          0x008071a8      0x14c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
+                0x008071a8                __sclose
+                0x008071b0                __sseek
+                0x00807218                __swrite
+                0x00807294                __sread
+ .text          0x008072f4       0xbc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
+                0x008072f4                strcmp
+ .text          0x008073b0       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
+                0x008073b0                _write_r
+ .text          0x00807428       0xb4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
+                0x00807428                _calloc_r
+ .text          0x008074dc       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
+                0x008074dc                _close_r
+ .text          0x0080754c      0x124 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
+                0x0080754c                _fclose_r
+                0x0080765c                fclose
+ .text          0x00807670       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
+                0x00807670                _fstat_r
+ .text          0x008076e4       0x70 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
+                0x008076e4                _isatty_r
+ .text          0x00807754       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
+                0x00807754                _lseek_r
+ .text          0x008077cc       0x78 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
+                0x008077cc                _read_r
+ .text          0x00807844      0x5dc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
+                0x00807844                __udivdi3
+ .text          0x00807e20      0x5b0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
+                0x00807e20                __umoddi3
+ .text          0x008083d0      0x504 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
+                0x008087e0                __subdf3
+                0x00808860                __adddf3
+ .text          0x008088d4      0x3c4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
+                0x008088d4                __muldf3
+ .text          0x00808c98      0x258 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
+                0x00808c98                __divdf3
+ .text          0x00808ef0       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
+                0x00808ef0                __eqdf2
+ .text          0x00808f78       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
+                0x00808f78                __nedf2
+ .text          0x00809000       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
+                0x00809000                __gtdf2
+ .text          0x00809088       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
+                0x00809088                __gedf2
+ .text          0x00809110       0x88 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
+                0x00809110                __ltdf2
+ .text          0x00809198       0xf8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
+                0x00809198                __floatsidf
+ .text          0x00809290       0xd8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
+                0x00809290                __fixdfsi
+ .text          0x00809368        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
+ .text          0x00809368      0x194 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
+                0x00809368                __floatunsidf
+ .text          0x008094fc      0x14c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
+                0x00809578                __divsi3
+                0x008095d8                __modsi3
+                0x00809638                __udivsi3
+                0x00809640                __umodsi3
+ .text          0x00809648       0x98 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
+                0x00809648                __muldi3
+ .text          0x008096e0        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
+ .text          0x008096e0       0x80 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
+                0x008096e0                __clzsi2
+ .text          0x00809760      0x314 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
+                0x00809760                __pack_d
+ .text          0x00809a74      0x138 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
+                0x00809a74                __unpack_d
+ .text          0x00809bac       0xc8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
+                0x00809bac                __fpcmp_parts_d
+ .text          0x00809c74      0x15c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
+                0x00809c74                close
+ .text          0x00809dd0       0x2c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
+ .text          0x00809dfc        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
+ .text          0x00809dfc      0x134 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
+                0x00809dfc                fstat
+ .text          0x00809f30      0x120 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
+                0x00809f30                isatty
+ .text          0x0080a050       0xec ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
+                0x0080a050                alt_load
+ .text          0x0080a13c      0x150 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
+                0x0080a13c                lseek
+ .text          0x0080a28c       0x6c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
+                0x0080a28c                alt_main
+ .text          0x0080a2f8       0x40 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
+                0x0080a2f8                __malloc_lock
+                0x0080a318                __malloc_unlock
+ .text          0x0080a338      0x180 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
+                0x0080a338                read
+ .text          0x0080a4b8       0x60 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
+                0x0080a4b8                alt_release_fd
+ .text          0x0080a518       0xbc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
+                0x0080a518                sbrk
+ .text          0x0080a5d4      0x180 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
+                0x0080a5d4                write
+ .text          0x0080a754       0xb0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0080a754                alt_irq_init
+                0x0080a788                alt_sys_init
+ .text          0x0080a804      0x148 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x0080a804                altera_avalon_jtag_uart_read_fd
+                0x0080a85c                altera_avalon_jtag_uart_write_fd
+                0x0080a8b4                altera_avalon_jtag_uart_close_fd
+                0x0080a8fc                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x0080a94c      0x40c ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x0080a94c                altera_avalon_jtag_uart_init
+                0x0080ace4                altera_avalon_jtag_uart_close
+ .text          0x0080ad58       0xf4 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x0080ad58                altera_avalon_jtag_uart_ioctl
+ .text          0x0080ae4c      0x224 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0080ae4c                altera_avalon_jtag_uart_read
+ .text          0x0080b070      0x240 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0080b070                altera_avalon_jtag_uart_write
+ .text          0x0080b2b0      0x154 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
+                0x0080b2b0                alt_alarm_start
+ .text          0x0080b404       0x1c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0080b404                alt_dcache_flush_all
+ .text          0x0080b420      0x114 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0080b420                alt_dev_llist_insert
+ .text          0x0080b534       0x64 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
+                0x0080b534                _do_ctors
+ .text          0x0080b598       0x64 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
+                0x0080b598                _do_dtors
+ .text          0x0080b5fc       0x30 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0080b5fc                alt_icache_flush_all
+ .text          0x0080b62c      0x1d4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
+                0x0080b62c                alt_ic_isr_register
+                0x0080b67c                alt_ic_irq_enable
+                0x0080b718                alt_ic_irq_disable
+                0x0080b7b8                alt_ic_irq_enabled
+ .text          0x0080b800       0xf8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x0080b800                alt_iic_isr_register
+ .text          0x0080b8f8      0x13c ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
+                0x0080b9bc                alt_io_redirect
+ .text          0x0080ba34        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0080ba34        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0080ba34        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0080ba34      0x2c4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
+                0x0080bb10                open
+ .text          0x0080bcf8      0x1a4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
+                0x0080bcf8                alt_alarm_stop
+                0x0080bd90                alt_tick
+ .text          0x0080be9c       0x20 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x0080be9c                altera_nios2_qsys_irq_init
+ .text          0x0080bebc        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0080bebc       0x94 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
+                0x0080bebc                alt_find_dev
+ .text          0x0080bf50      0x120 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
+                0x0080bf50                alt_find_file
+ .text          0x0080c070       0xb8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
+                0x0080c070                alt_get_fd
+ .text          0x0080c128       0x90 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
+                0x0080c128                alt_icache_flush
+ .text          0x0080c1b8       0x14 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
+                0x0080c1b8                atexit
+ .text          0x0080c1cc       0x38 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
+                0x0080c1cc                exit
+ .text          0x0080c204       0x74 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                0x0080c204                memcmp
+ .text          0x0080c278      0x134 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                0x0080c278                __register_exitproc
+ .text          0x0080c3ac      0x1b4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0080c3b0                __call_exitprocs
+ .text          0x0080c560       0x60 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
+                0x0080c5a0                _exit
  *(.gnu.warning.*)
  *(.fini)
-                0x0080c5bc                PROVIDE (__etext, ABSOLUTE (.))
-                0x0080c5bc                PROVIDE (_etext, ABSOLUTE (.))
-                0x0080c5bc                PROVIDE (etext, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__etext, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (_etext, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0080c5bc                . = ALIGN (0x4)
-                0x0080c5bc                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+                0x0080c5c0                . = ALIGN (0x4)
+                0x0080c5c0                PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
-                0x0080c5bc                PROVIDE (__preinit_array_end, ABSOLUTE (.))
-                0x0080c5bc                PROVIDE (__init_array_start, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__init_array_start, ABSOLUTE (.))
  *(.init_array)
-                0x0080c5bc                PROVIDE (__init_array_end, ABSOLUTE (.))
-                0x0080c5bc                PROVIDE (__fini_array_start, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__fini_array_start, ABSOLUTE (.))
  *(.fini_array)
-                0x0080c5bc                PROVIDE (__fini_array_end, ABSOLUTE (.))
+                0x0080c5c0                PROVIDE (__fini_array_end, ABSOLUTE (.))
  *(.eh_frame)
- .eh_frame      0x0080c5bc       0x40 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
- .eh_frame      0x0080c5fc       0x2c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
+ .eh_frame      0x0080c5c0       0x40 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
+ .eh_frame      0x0080c600       0x2c /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
                                  0x40 (size before relaxing)
  *(.gcc_except_table)
  *(.dynamic)
-                0x0080c628                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+                0x0080c62c                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
  *(.ctors)
  *(SORT(.ctors.*))
- .ctors.65535   0x0080c628        0x4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
-                0x0080c62c                PROVIDE (__CTOR_END__, ABSOLUTE (.))
-                0x0080c62c                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ .ctors.65535   0x0080c62c        0x4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0080c630                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x0080c630                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
  *(.dtors)
  *(SORT(.dtors.*))
-                0x0080c62c                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+                0x0080c630                PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0080c62c                . = ALIGN (0x4)
+                0x0080c630                . = ALIGN (0x4)
 
-.rodata         0x0080c62c      0x40c
-                0x0080c62c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0080c62c                . = ALIGN (0x4)
+.rodata         0x0080c630      0x40c
+                0x0080c630                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0080c630                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0080c62c       0xc8 obj/default/hello_world.o
+ .rodata        0x0080c630       0xc8 obj/default/hello_world.o
  .rodata.str1.4
-                0x0080c6f4        0x2 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
+                0x0080c6f8        0x2 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
                                   0x4 (size before relaxing)
- *fill*         0x0080c6f6        0x2 00
+ *fill*         0x0080c6fa        0x2 00
  .rodata.str1.4
-                0x0080c6f8       0x5e /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
+                0x0080c6fc       0x5e /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
                                  0x60 (size before relaxing)
- .rodata        0x0080c756       0x20 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
- *fill*         0x0080c776        0x2 00
+ .rodata        0x0080c75a       0x20 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
+ *fill*         0x0080c77a        0x2 00
  .rodata.str1.4
-                0x0080c778       0x10 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
+                0x0080c77c       0x10 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
                                  0x14 (size before relaxing)
  .rodata.str1.4
-                0x0080c788        0x2 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x0080c78c        0x2 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x0080c78a        0x2 00
+ *fill*         0x0080c78e        0x2 00
  .rodata.str1.4
-                0x0080c78c       0x10 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+                0x0080c790       0x10 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
                                  0x18 (size before relaxing)
- .rodata        0x0080c79c       0x30 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
- .rodata        0x0080c7cc      0x124 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
-                0x0080c7cc                __mprec_tens
-                0x0080c894                __mprec_bigtens
-                0x0080c8bc                __mprec_tinytens
- .rodata        0x0080c8f0       0x14 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
-                0x0080c8f0                __thenan_df
- .rodata        0x0080c904      0x100 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
-                0x0080c904                __clz_tab
- .rodata        0x0080ca04        0xc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
- .rodata        0x0080ca10       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
- .rodata        0x0080ca24       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
+ .rodata        0x0080c7a0       0x30 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+ .rodata        0x0080c7d0      0x124 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
+                0x0080c7d0                __mprec_tens
+                0x0080c898                __mprec_bigtens
+                0x0080c8c0                __mprec_tinytens
+ .rodata        0x0080c8f4       0x14 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
+                0x0080c8f4                __thenan_df
+ .rodata        0x0080c908      0x100 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
+                0x0080c908                __clz_tab
+ .rodata        0x0080ca08        0xc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
+ .rodata        0x0080ca14       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
+ .rodata        0x0080ca28       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
  *(.rodata1)
-                0x0080ca38                . = ALIGN (0x4)
-                0x0080ca38                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0080c62c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0080ca3c                . = ALIGN (0x4)
+                0x0080ca3c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0080c630                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0080ca38     0x1a5c load address 0x0080e494
-                0x0080ca38                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0080ca38                . = ALIGN (0x4)
+.rwdata         0x0080ca3c     0x1a5c load address 0x0080e498
+                0x0080ca3c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0080ca3c                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0080ca38        0x0 ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
- .data          0x0080ca38        0x0 obj/default/hello_world.o
- .data          0x0080ca38        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
- .data          0x0080ca38      0x408 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
-                0x0080ca38                __malloc_av_
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
- .data          0x0080ce40        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
- .data          0x0080ce40      0x400 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
- .data          0x0080d240        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .data          0x0080d240        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
-                0x0080d240                __lc_ctype
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
- .data          0x0080d24c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
- .data          0x0080d24c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
- .data          0x0080d24c      0x1a8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
-                0x0080d24c                alt_dev_null
-                0x0080d274                alt_fd_list
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
- .data          0x0080d3f4        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
- .data          0x0080d3f4     0x1060 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
- .data          0x0080e454        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
- .data          0x0080e454        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
- .data          0x0080e454        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .data          0x0080e454        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .data          0x0080e454        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .data          0x0080e454        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
-                0x00816454                _gp = ABSOLUTE ((. + 0x8000))
-                0x00816454                PROVIDE (gp, _gp)
+ .data          0x0080ca3c        0x0 ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
+ .data          0x0080ca3c        0x0 obj/default/hello_world.o
+ .data          0x0080ca3c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
+ .data          0x0080ca3c      0x408 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0080ca3c                __malloc_av_
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
+ .data          0x0080ce44        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
+ .data          0x0080ce44      0x400 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x0080d244        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .data          0x0080d244        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+                0x0080d244                __lc_ctype
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
+ .data          0x0080d250        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
+ .data          0x0080d250        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
+ .data          0x0080d250      0x1a8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
+                0x0080d250                alt_dev_null
+                0x0080d278                alt_fd_list
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
+ .data          0x0080d3f8        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
+ .data          0x0080d3f8     0x1060 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .data          0x0080e458        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .data          0x0080e458        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x0080e458        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .data          0x0080e458        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .data          0x0080e458        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x0080e458        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
+                0x00816458                _gp = ABSOLUTE ((. + 0x8000))
+                0x00816458                PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0080e454        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
-                0x0080e454                __malloc_trim_threshold
-                0x0080e458                __malloc_sbrk_base
- .sdata         0x0080e45c        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
-                0x0080e45c                _impure_ptr
-                0x0080e460                _global_impure_ptr
- .sdata         0x0080e464        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
-                0x0080e464                __mb_cur_max
- .sdata         0x0080e46c       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
-                0x0080e46c                alt_fs_list
-                0x0080e474                alt_dev_list
-                0x0080e47c                alt_max_fd
- .sdata         0x0080e480        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
-                0x0080e480                alt_errno
- .sdata         0x0080e484        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
- .sdata         0x0080e488        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0080e488                alt_priority_mask
- .sdata         0x0080e48c        0x8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
-                0x0080e48c                alt_alarm_list
+ .sdata         0x0080e458        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0080e458                __malloc_trim_threshold
+                0x0080e45c                __malloc_sbrk_base
+ .sdata         0x0080e460        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x0080e460                _impure_ptr
+                0x0080e464                _global_impure_ptr
+ .sdata         0x0080e468        0x8 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+                0x0080e468                __mb_cur_max
+ .sdata         0x0080e470       0x14 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
+                0x0080e470                alt_fs_list
+                0x0080e478                alt_dev_list
+                0x0080e480                alt_max_fd
+ .sdata         0x0080e484        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
+                0x0080e484                alt_errno
+ .sdata         0x0080e488        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
+ .sdata         0x0080e48c        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0080e48c                alt_priority_mask
+ .sdata         0x0080e490        0x8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
+                0x0080e490                alt_alarm_list
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0080e494                . = ALIGN (0x4)
-                0x0080e494                _edata = ABSOLUTE (.)
-                0x0080e494                PROVIDE (edata, ABSOLUTE (.))
-                0x0080e494                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0080e494                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0080e498                . = ALIGN (0x4)
+                0x0080e498                _edata = ABSOLUTE (.)
+                0x0080e498                PROVIDE (edata, ABSOLUTE (.))
+                0x0080e498                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0080e498                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0080fef0      0x2ec
-                0x0080fef0                __bss_start = ABSOLUTE (.)
-                0x0080fef0                PROVIDE (__sbss_start, ABSOLUTE (.))
-                0x0080fef0                PROVIDE (___sbss_start, ABSOLUTE (.))
+.bss            0x0080fef4      0x2ec
+                0x0080fef4                __bss_start = ABSOLUTE (.)
+                0x0080fef4                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x0080fef4                PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0080fef0        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
-                0x0080fef0                __malloc_top_pad
-                0x0080fef4                __malloc_max_sbrked_mem
-                0x0080fef8                __malloc_max_total_mem
- .sbss          0x0080fefc        0x4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
-                0x0080fefc                errno
- .sbss          0x0080ff00        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
-                0x0080ff00                __nlocale_changed
-                0x0080ff04                __mlocale_changed
-                0x0080ff08                _PathLocale
- .sbss          0x0080ff0c        0xc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
-                0x0080ff0c                alt_argc
-                0x0080ff10                alt_argv
-                0x0080ff14                alt_envp
- .sbss          0x0080ff18        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0080ff18                alt_irq_active
- .sbss          0x0080ff1c        0x8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
-                0x0080ff1c                _alt_tick_rate
-                0x0080ff20                _alt_nticks
+ .sbss          0x0080fef4        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0080fef4                __malloc_top_pad
+                0x0080fef8                __malloc_max_sbrked_mem
+                0x0080fefc                __malloc_max_total_mem
+ .sbss          0x0080ff00        0x4 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                0x0080ff00                errno
+ .sbss          0x0080ff04        0xc /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+                0x0080ff04                __nlocale_changed
+                0x0080ff08                __mlocale_changed
+                0x0080ff0c                _PathLocale
+ .sbss          0x0080ff10        0xc ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
+                0x0080ff10                alt_argc
+                0x0080ff14                alt_argv
+                0x0080ff18                alt_envp
+ .sbss          0x0080ff1c        0x4 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0080ff1c                alt_irq_active
+ .sbss          0x0080ff20        0x8 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
+                0x0080ff20                _alt_tick_rate
+                0x0080ff24                _alt_nticks
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
-                0x0080ff24                PROVIDE (__sbss_end, ABSOLUTE (.))
-                0x0080ff24                PROVIDE (___sbss_end, ABSOLUTE (.))
+                0x0080ff28                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x0080ff28                PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0080ff24        0x0 ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
- .bss           0x0080ff24        0x0 obj/default/hello_world.o
- .bss           0x0080ff24        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
- .bss           0x0080ff24       0x28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
-                0x0080ff24                __malloc_current_mallinfo
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .bss           0x0080ff4c        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .bss           0x0080ff4c        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
+ .bss           0x0080ff28        0x0 ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
+ .bss           0x0080ff28        0x0 obj/default/hello_world.o
+ .bss           0x0080ff28        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-malloc.o)
+ .bss           0x0080ff28       0x28 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0080ff28                __malloc_current_mallinfo
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-printf.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-puts.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-sbrkr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-vfprintf.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-wsetup.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-dtoa.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fflush.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-findfp.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-freer.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fvwrite.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fwalk.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-locale.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-makebuf.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memchr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memmove.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memset.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-mprec.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-reallocr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isinfd.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-s_isnand.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-stdio.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-strcmp.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-writer.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-callocr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-closer.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fclose.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-fstatr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-isattyr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-lseekr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-readr.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_udivdi3.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_umoddi3.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_addsub_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_mul_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_div_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_eq_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ne_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_gt_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_ge_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_lt_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_si_to_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_df_to_si.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_thenan_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_usi_to_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(lib2-divmod.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_muldi3.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clz.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_clzsi2.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_pack_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_unpack_df.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_close.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_errno.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_fstat.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_isatty.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_lseek.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_malloc_lock.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_read.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sbrk.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_write.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_open.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_tick.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_find_file.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_get_fd.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .bss           0x0080ff50        0x0 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0080ff50        0x0 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_exit.o)
  *(COMMON)
- COMMON         0x0080ff4c      0x100 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x0080ff4c                alt_irq
- COMMON         0x0081004c      0x190 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
-                0x0081004c                _atexit0
-                0x008101dc                . = ALIGN (0x4)
-                0x008101dc                __bss_end = ABSOLUTE (.)
+ COMMON         0x0080ff50      0x100 ../de0_vga_qsys_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0080ff50                alt_irq
+ COMMON         0x00810050      0x190 /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/libc.a(lib_a-atexit.o)
+                0x00810050                _atexit0
+                0x008101e0                . = ALIGN (0x4)
+                0x008101e0                __bss_end = ABSOLUTE (.)
 
-.sdram_0        0x008101dc        0x0
-                0x008101dc                PROVIDE (_alt_partition_sdram_0_start, ABSOLUTE (.))
+.sdram_0        0x008101e0        0x0
+                0x008101e0                PROVIDE (_alt_partition_sdram_0_start, ABSOLUTE (.))
  *(.sdram_0. sdram_0.*)
-                0x008101dc                . = ALIGN (0x4)
-                0x008101dc                PROVIDE (_alt_partition_sdram_0_end, ABSOLUTE (.))
-                0x008101dc                _end = ABSOLUTE (.)
-                0x008101dc                end = ABSOLUTE (.)
-                0x008101dc                __alt_stack_base = ABSOLUTE (.)
-                0x008101dc                PROVIDE (_alt_partition_sdram_0_load_addr, LOADADDR (.sdram_0))
+                0x008101e0                . = ALIGN (0x4)
+                0x008101e0                PROVIDE (_alt_partition_sdram_0_end, ABSOLUTE (.))
+                0x008101e0                _end = ABSOLUTE (.)
+                0x008101e0                end = ABSOLUTE (.)
+                0x008101e0                __alt_stack_base = ABSOLUTE (.)
+                0x008101e0                PROVIDE (_alt_partition_sdram_0_load_addr, LOADADDR (.sdram_0))
 
 .stab
  *(.stab)
@@ -2207,8 +2207,8 @@ LOAD /opt/altera/11.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-
                 0x00000000       0x20 ../de0_vga_qsys_bsp//obj/HAL/src/crt0.o
                 0x01000000                __alt_data_end = 0x1000000
                 0x01000000                PROVIDE (__alt_stack_pointer, __alt_data_end)
-                0x008101dc                PROVIDE (__alt_stack_limit, __alt_stack_base)
-                0x008101dc                PROVIDE (__alt_heap_start, end)
+                0x008101e0                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x008101e0                PROVIDE (__alt_heap_start, end)
                 0x01000000                PROVIDE (__alt_heap_limit, 0x1000000)
 OUTPUT(de0_vga_qsys_application.elf elf32-littlenios2)
 

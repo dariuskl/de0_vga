@@ -120,7 +120,7 @@
  <parameter name="projectName" value="de0_vga_qsys.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1329418691759" />
+ <parameter name="timeStamp" value="1329748918846" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -484,7 +484,7 @@
  </module>
  <module kind="vga_controller" version="1.0" enabled="1" name="vga_0">
   <parameter name="DATAWIDTH" value="64" />
-  <parameter name="BUFFERWIDTH" value="48" />
+  <parameter name="BUFFERWIDTH" value="32" />
   <parameter name="AUTO_CLK_SNK_CLOCK_RATE" value="50000000" />
  </module>
  <connection
