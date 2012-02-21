@@ -2,24 +2,25 @@
  *	\file demo.c
  *
  *	\date		File created: Feb 15, 2012
- *	\author		darius
+ *	\author		Darius Kellermann
  *
- *	\version	alpha
+ *	\version	WS 11/12
  */
 
 #include <stdio.h>
 
-#include "vga_driver.h"
-#include "system.h"
-#include "io.h"
+#include <vga_driver.h>
+#include <system.h>
+#include <io.h>
+
+#include "fh_logo.h"
 
 
 int main ()
 {
 	uint16 x, y, color;
 	uint64 *frame_buffer;
-
-	IOWR (VGA_0_BASE, VGA_REG_CTRL, 0);							// deassert GO-Bit
+	char buffer[200] = {0};
 
 	// Try to allocate as many segments as required for the frame buffer.
 	if ((frame_buffer = (uint64 *) malloc (((DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS) / 5) * sizeof (uint64))) == NULL)
@@ -27,26 +28,50 @@ int main ()
 		printf ("FATAL: Could not allocate memory for the frame buffer\n");		// print error
 		return -1;																// and return
 	}
-	printf ("Frame buffer allocated at base address %#lx\n", (uint32) frame_buffer);
+	printf ("Frame buffer allocated at base address %#x\n", (uint32) frame_buffer);
 
-	IOWR (VGA_0_BASE, VGA_REG_FB_BASE_ADDR, (uint32) frame_buffer);		// write frame buffer base address into control register
+	IOWR (VGA_0_BASE, VGA_CSR_FB_BASE_ADDR, (uint32) frame_buffer);		// write frame buffer base address into control register
 	printf ("Base address written into control register\n");
 
 	color = 0xFFF;
 	for (y = 0; y < DISPLAY_NUM_ROWS; y++)
 		for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
-		{
-			if (y % 80 == 0 && x == 0)
-				color = ~color;
-			else if (x % 80 == 0)
-				color = ~color;
 			frame_px_w (frame_buffer, x, y, color);
+
+	printf ("Frame buffer whitened\n");
+
+	put_frame_buffer (frame_buffer, fh_logo, FH_LOGO_WIDTH, FH_LOGO_HEIGHT, 20, 30);
+	for (y = 0; y < 5; y++)
+		for (x = 0; x < 5; x++)
+		{
+			if (!(y == 4 && x > 2))
+				put_frame_buffer (frame_buffer, fh_logo, FH_LOGO_WIDTH, FH_LOGO_HEIGHT, (20 + (x+2)*FH_LOGO_WIDTH), (30 + y*FH_LOGO_HEIGHT));
+			if (y == 2 && x == 4)
+			{
+				sprintf (buffer, "Fachhochschule Koeln");
+				put_fb_string (frame_buffer, buffer, (30 + x*FH_LOGO_WIDTH) + 35, (30 + y*FH_LOGO_HEIGHT) + 4);
+			}
+			if (y == 3 && x == 4)
+			{
+				sprintf (buffer, "Cologne University of Applied Sciences");
+				put_fb_string (frame_buffer, buffer, (30 + x*FH_LOGO_WIDTH) + 35, (30 + y*FH_LOGO_HEIGHT) + 4);
+			}
 		}
 
-	printf ("Test pattern written\n");
-
-	IOWR (VGA_0_BASE, VGA_REG_CTRL, 1);							// write GO-Bit into control register
+	IOWR (VGA_0_BASE, VGA_CSR_CTRL, VGA_CSR_CTRL_GO);							// write GO-Bit into control register
 	printf ("VGA startet\n");
+	sprintf (buffer, "Max Stolze & Darius Kellermann\n\nImplementation einer VGA-Schnittstelle unter Verwendung von DMA in einem NIOS-System\n\nAbschlussbericht zur Embedded-Systems-Projektarbeit im WS 2011/2012\n\n");
+	vprintln (frame_buffer, buffer);
+
+	sprintf (buffer, "Hello World! Use the JTAG UART to tell me what to say. :)");
+	vprintln (frame_buffer, buffer);
+
+	while (1)
+	{
+		printf ("Tell me what to say: ");
+		vprintln (frame_buffer, fgets (buffer, 200, stdin));
+		printf ("Written \"%s\" into the buffer\n", buffer);
+	}
 
 	return 0;
 }

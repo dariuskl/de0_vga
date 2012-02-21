@@ -1,7 +1,7 @@
-#Thu Feb 16 11:43:00 CET 2012
+#Tue Feb 21 11:21:30 CET 2012
 newSoftwareExampleWizardPage.defaultLocation=/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application
 newSoftwareExampleWizardPage.sopcinfoFile=/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/system.sopcinfo
-newApplicationWizardPage.defaultLocation=/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver
+newApplicationWizardPage.defaultLocation=/home/darius/Projects/altera/de0_vga/sw/de0_vga_demo
 eclipse.preferences.version=1
 newLibraryWizardPage.defaultLocation=/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver
 newSoftwareExampleWizardPage2.newBspLocation=/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_bsp

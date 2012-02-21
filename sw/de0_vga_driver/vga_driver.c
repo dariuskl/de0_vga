@@ -8,6 +8,72 @@
  */
 
 #include "vga_driver.h"
+#include "charset_default.h"
+
+static short vprintln_y_off = VGA_PRINTLN_TEXT_OFFSET_Y;
+
+void vprintln (uint64 *frame_buffer, char *string)
+{
+	int i = 0, x = VGA_PRINTLN_TEXT_OFFSET_X, y = vprintln_y_off;
+	while (string[i] != 0)
+	{
+		switch (string[i])
+		{
+		case '\n':
+			x = VGA_PRINTLN_TEXT_OFFSET_X;
+			if (y < VGA_PRINTLN_TEXT_Y_MAX)
+				y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+			else
+				y = VGA_PRINTLN_TEXT_OFFSET_Y;
+			break;
+		default:
+			put_frame_buffer (frame_buffer, (uint16 *)&charmap[get_index (string[i])], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+			if (x < (VGA_PRINTLN_TEXT_X_MAX - (CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+				x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+			else
+			{
+				x = VGA_PRINTLN_TEXT_OFFSET_X;
+				if (y < VGA_PRINTLN_TEXT_Y_MAX)
+					y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+				else
+					y = VGA_PRINTLN_TEXT_OFFSET_Y;
+			}
+		}
+		i++;
+	}
+	// TODO whiten all remainder of the line
+	while (x < (VGA_PRINTLN_TEXT_X_MAX - (CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+	{
+		put_frame_buffer (frame_buffer, (uint16 *)&charmap[get_index (' ')], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+		x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+	}
+	// Line break!
+	if (y < VGA_PRINTLN_TEXT_Y_MAX)
+		y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+	else
+		y = VGA_PRINTLN_TEXT_OFFSET_Y;
+	vprintln_y_off = y;
+}
+
+void put_fb_string (uint64 *frame_buffer, char *string, uint16 x_off, uint16 y_off)
+{
+	int i = 0, x = x_off, y = y_off;
+	while (string[i] != 0)
+	{
+		put_frame_buffer (frame_buffer, (uint16 *)&charmap[get_index (string[i])], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+		if (x < (VGA_PRINTLN_TEXT_X_MAX - (CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+			x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+		else
+		{
+			x = x_off;
+			if (y < VGA_PRINTLN_TEXT_Y_MAX)
+				y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+			else
+				y = y_off;
+		}
+		i++;
+	}
+}
 
 void put_frame_buffer (uint64 *frame_buffer, uint16 *element, uint8 width, uint8 height, uint16 off_x, uint16 off_y)
 {

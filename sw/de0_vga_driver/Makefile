@@ -151,7 +151,7 @@ ACDS_VERSION := 11.1
 LIB_NAME := de0_vga_driver
 
 # Paths to C, C++, and assembly source files.
-C_SRCS :=
+C_SRCS := vga_driver.c
 CXX_SRCS :=
 ASM_SRCS :=
 
@@ -162,7 +162,7 @@ OBJ_ROOT_DIR := obj
 # Common arguments for LIB_CFLAGS
 LIB_CFLAGS_DEFINED_SYMBOLS :=
 LIB_CFLAGS_UNDEFINED_SYMBOLS :=
-LIB_CFLAGS_OPTIMIZATION := -O0
+LIB_CFLAGS_OPTIMIZATION := -O
 LIB_CFLAGS_DEBUG_LEVEL := -g
 LIB_CFLAGS_WARNINGS := -Wall
 LIB_CFLAGS_USER_FLAGS :=

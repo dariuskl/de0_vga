@@ -1,0 +1,15 @@
+
+**** Build of configuration Nios II for project de0_vga_demo ****
+
+make all 
+Info: Building ../../hw/de0_vga_qsys/software/de0_vga_qsys_bsp/
+make --no-print-directory -C ../../hw/de0_vga_qsys/software/de0_vga_qsys_bsp/
+[BSP build complete]
+Info: Linking de0_vga_demo.elf
+nios2-elf-g++  -T'../../hw/de0_vga_qsys/software/de0_vga_qsys_bsp//linker.x' -msys-crt0='../../hw/de0_vga_qsys/software/de0_vga_qsys_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../../hw/de0_vga_qsys/software/de0_vga_qsys_bsp/ -L../de0_vga_driver   -Wl,-Map=de0_vga_demo.map   -O0 -g -Wall   -EL -mhw-div -mhw-mul -mno-hw-mulx  -o de0_vga_demo.elf obj/default/main.o -lm -lde0_vga_driver 
+obj/default/main.o: In function `main':
+/home/darius/Projects/altera/de0_vga/sw/de0_vga_demo/main.c:44: undefined reference to `vprintln'
+/home/darius/Projects/altera/de0_vga/sw/de0_vga_demo/main.c:47: undefined reference to `vprintln'
+/home/darius/Projects/altera/de0_vga/sw/de0_vga_demo/main.c:54: undefined reference to `vprintln'
+collect2: ld returned 1 exit status
+make: *** [de0_vga_demo.elf] Error 1

@@ -2,4 +2,10 @@
 **** Build of configuration Nios II for project de0_vga_driver ****
 
 make all 
+Info: Compiling vga_driver.c to obj/default/vga_driver.o
+nios2-elf-gcc -xc -MP -MMD -c      -O -g -Wall    -o obj/default/vga_driver.o vga_driver.c
+Info: Archiving obj/default/libde0_vga_driver.a
+rm -f -f obj/default/libde0_vga_driver.a
+mkdir -p obj/default
+nios2-elf-ar  -src obj/default/libde0_vga_driver.a obj/default/vga_driver.o
 cp -f obj/default/libde0_vga_driver.a libde0_vga_driver.a

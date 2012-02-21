@@ -19,13 +19,15 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "alt_types.h"
 
-// map the altera types to more widespread type name conventions
-#define	uint64	alt_u64
-#define	uint32	alt_u32
-#define	uint16	alt_u16
-#define	uint8	alt_u8
+typedef	unsigned long long	uint64;
+typedef	signed long long	int64;
+typedef	unsigned int		uint32;
+typedef signed int			int32;
+typedef	unsigned short		uint16;
+typedef	signed short		int16;
+typedef	unsigned char		uint8;
+typedef	signed char			int8;
 
 /*!
  * \def 	DISPLAY_NUM_COLUMNS
@@ -37,13 +39,98 @@
  * \brief	A constant holding the number of columns to be displayed.
  * \warning	Changing this value will result in a bigger frame buffer, but does not influence the actual video resolution.
  */
+/*!
+ * \def 	NUM_PXS
+ * \brief	A constant holding the total number of pixels on the screen.
+ * 			NUM_PXS = DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS
+ */
 
 #define DISPLAY_NUM_COLUMNS		640
 #define DISPLAY_NUM_ROWS		480
 #define NUM_PXS					DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS
 
-#define VGA_REG_FB_BASE_ADDR	0
-#define	VGA_REG_CTRL			1
+
+/*!
+ *
+ * Register map VGA Control and Status Registers
+ *
+ *	VGA_CSR_FB_BASE_ADDR
+ *	+-----------------------------------------------------------------------+
+ *	| Name	| 									Frame buffer base address	|
+ *	+-----------------------------------------------------------------------+
+ *	| Bit	| 													Bit 31..0	|
+ *	+-----------------------------------------------------------------------+
+ *	| Reset | 															0	|
+ *	+-----------------------------------------------------------------------+
+ *
+ *	VGA_CSR_CTRL
+ *	+-----------------------------------------------------------------------+
+ *	| Name	| -														| GO	|
+ *	+-----------------------------------------------------------------------+
+ *	| Bit	| 31..1													| 0 	|
+ *	+-----------------------------------------------------------------------+
+ *	| Reset |														| 0		|
+ *	+-----------------------------------------------------------------------+
+ *
+ */
+
+/*!
+ * \def 	VGA_CSR_FB_BASE_ADDR
+ * \brief	VGA Control and Status Registers, Frame Buffer Base Address Register
+ */
+/*!
+ * \def 	VGA_CSR_CTRL
+ * \brief	VGA Control and Status Registers, Control Register
+ */
+/*!
+ * \def 	VGA_CSR_CTRL_GO
+ * \brief	VGA Control and Status Registers, Control Register, GO-Bit
+ */
+#define VGA_CSR_FB_BASE_ADDR	0
+#define	VGA_CSR_CTRL			1
+#define VGA_CSR_CTRL_GO			1
+
+/*!
+ * \def 	VGA_PRINTLN_TEXT_OFFSET_X
+ * \brief	The offset in x direction at which the text may begin.
+ */
+/*!
+ * \def 	VGA_PRINTLN_TEXT_X_MAX
+ * \brief	The maximum horizontal length the text may have.
+ */
+/*!
+ * \def 	VGA_PRINTLN_TEXT_OFFSET_Y
+ * \brief	The offset in y direction at which the text may begin.
+ */
+/*!
+ * \def 	VGA_PRINTLN_TEXT_Y_MAX
+ * \brief	The maximum vertical length the text may have.
+ */
+#define VGA_PRINTLN_TEXT_OFFSET_X	20
+#define VGA_PRINTLN_TEXT_X_MAX		620
+#define VGA_PRINTLN_TEXT_OFFSET_Y	120
+#define VGA_PRINTLN_TEXT_Y_MAX		460
+
+/*!
+ *	Takes a character string and writes it onto the frame buffer at the current cursor position.
+ *	Each call writes to a new line, after reaching the bottom of the writable area, it will be continued from top.
+ *	All previous text will be kept and overwritten line by line.
+ *	Supported control characters are: \n.
+ *
+ *	\param	frame_buffer	A pointer to the frame buffer.
+ *	\param	string			A pointer to a character array, the array MUST be 0-escaped!
+ */
+void vprintln (uint64 *frame_buffer, char *string);
+
+/*!
+ *	Takes a character string and writes it onto the frame buffer at the determined position. Control characters are ignored!
+ *
+ *	\param	frame_buffer	A pointer to the frame buffer.
+ *	\param	string			A pointer to a character array, the array MUST be 0-escaped!
+ *	\param	x_off			Horizontal offset
+ *	\param	y_off			Vertical offset
+ */
+void put_fb_string (uint64 *frame_buffer, char *string, uint16 x_off, uint16 y_off);
 
 /*!
  * \brief	Takes an array of uint16 and positions its contents at (x_off, y_off) on the

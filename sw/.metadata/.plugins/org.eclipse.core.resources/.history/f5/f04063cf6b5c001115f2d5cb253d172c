@@ -1,0 +1,135 @@
+/*!
+ * \file vga_driver.h
+ *
+ * \date	File created: Jan 12, 2012
+ * \author	Darius Kellermann
+ *
+ * \version	WS 11/12
+ *
+ *	This file contains definitions, macros and functions that make up the VGA interface driver for the DE0
+ *	development board. The driver functionality is focused around modification of the frame buffer.
+ *
+ *  The frame buffer is ordered in segments, each segment consists of 5 pixels in a horizontal row.
+ *  Each segment has a size of 64 bits. Each pixel consists of 12 bits.
+ *
+ */
+
+#ifndef VGA_DRIVER_H_
+#define VGA_DRIVER_H_
+
+#include <stdlib.h>
+#include <stdio.h>
+
+typedef	unsigned long long	uint64;
+typedef	signed long long	int64;
+typedef	unsigned int		uint32;
+typedef signed int			int32;
+typedef	unsigned short		uint16;
+typedef	signed short		int16;
+typedef	unsigned char		uint8;
+typedef	signed char			int8;
+
+/*!
+ * \def 	DISPLAY_NUM_COLUMNS
+ * \brief	A constant holding the number of columns to be displayed.
+ * \warning	Changing this value will result in a bigger frame buffer, but does not influence the actual video resolution.
+ */
+/*!
+ * \def 	DISPLAY_NUM_ROWS
+ * \brief	A constant holding the number of columns to be displayed.
+ * \warning	Changing this value will result in a bigger frame buffer, but does not influence the actual video resolution.
+ */
+/*!
+ * \def 	NUM_PXS
+ * \brief	A constant holding the total number of pixels on the screen.
+ * 			NUM_PXS = DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS
+ */
+
+#define DISPLAY_NUM_COLUMNS		640
+#define DISPLAY_NUM_ROWS		480
+#define NUM_PXS					DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS
+
+
+/*!
+ *
+ * Register map VGA Control and Status Registers
+ *
+ *	VGA_CSR_FB_BASE_ADDR
+ *	+-----------------------------------------------------------------------+
+ *	| Name	| 									Frame buffer base address	|
+ *	+-----------------------------------------------------------------------+
+ *	| Bit	| 													Bit 31..0	|
+ *	+-----------------------------------------------------------------------+
+ *	| Reset | 															0	|
+ *	+-----------------------------------------------------------------------+
+ *
+ *	VGA_CSR_CTRL
+ *	+-----------------------------------------------------------------------+
+ *	| Name	| -														| GO	|
+ *	+-----------------------------------------------------------------------+
+ *	| Bit	| 31..1													| 0 	|
+ *	+-----------------------------------------------------------------------+
+ *	| Reset |														| 0		|
+ *	+-----------------------------------------------------------------------+
+ *
+ */
+
+/*!
+ * \def 	VGA_CSR_FB_BASE_ADDR
+ * \brief	VGA Control and Status Registers, Frame Buffer Base Address Register
+ */
+/*!
+ * \def 	VGA_CSR_CTRL
+ * \brief	VGA Control and Status Registers, Control Register
+ */
+/*!
+ * \def 	VGA_CSR_CTRL_GO
+ * \brief	VGA Control and Status Registers, Control Register, GO-Bit
+ */
+#define VGA_CSR_FB_BASE_ADDR	0
+#define	VGA_CSR_CTRL			1
+#define VGA_CSR_CTRL_GO			1
+
+/*!
+ *
+ */
+void vprintf (uint64 *frame_buffer, char *string);
+
+/*!
+ * \brief	Takes an array of uint16 and positions its contents at (x_off, y_off) on the
+ * 			passed frame_buffer.
+ *
+ * \warning	If passed an invalid pointer, this function returns without further notice.
+ *
+ * \param	frame_buffer	A valid pointer to the frame buffer.
+ * \param	width			The width of the element to be placed.
+ * \param	height			The height of the element to be placed.
+ * \param	element			A valid pointer to an array of uint16.
+ * \param 	off_x			The x-offset belonging to the position onto which the element should be placed.
+ * \param	off_y			The y-offset belonging to the position onto which the element should be placed.
+ */
+void put_frame_buffer (uint64 *frame_buffer, uint16 *element, uint8 width, uint8 height, uint16 off_x, uint16 off_y);
+
+/*!
+ * \def 	frame_seg (fb, x, y)
+ * \brief	Takes a pixel's \a x and \a y coordinates; resolves to the segment containing the referenced pixel.
+ */
+#define	frame_seg(fb, x, y)				fb[(x+(y*DISPLAY_NUM_COLUMNS))/5]
+
+/*!
+ * \def		frame_px_r (fb, x, y)
+ * \brief	Takes a pixel's \a x and \a y coordinates; resolves to the referenced pixel in the frame buffer \a fb.
+ * \sa		frame_px_w
+ */
+#define frame_px_r(fb, x, y)			((frame_seg (fb, x, y) >> ((x%5) * 12)) & 0xFFF)
+
+/*!
+ * \def		frame_px_w (x, y, value)
+ * \brief	Overwrites the referenced pixel with the given \a value.
+ */
+#define frame_px_w(fb, x, y, value)		frame_seg (fb, x, y) = (frame_seg (fb, x, y) & ~(0xFFFll << ((x%5) * 12))) | (((value)&0xFFFll) << ((x%5) * 12))
+
+#define g(x)							((x << 8) | (x << 4) | x)
+#define rgb(r, g, b)					((r << 8) | (g << 4) | b)
+
+#endif /* VGA_DRIVER_H_ */

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;de0_vga_driver/charset_bavaria.h&apos; to &apos;charset_default.h&apos;" description="Rename resource &apos;charset_bavaria.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="charset_bavaria.h" name="charset_default.h" stamp="1329814690302" updateReferences="true"/>
+</session>

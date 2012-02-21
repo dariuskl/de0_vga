@@ -1112,6 +1112,6 @@
     <single attribute="jtag widget visible" value="1"/>
     <multi attribute="column width" size="23" value="34,95,343,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
     <multi attribute="frame size" size="2" value="1280,752"/>
-    <multi attribute="jtag widget size" size="2" value="372,0"/>
+    <multi attribute="jtag widget size" size="2" value="372,173"/>
   </global_info>
 </session>
