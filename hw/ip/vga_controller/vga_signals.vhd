@@ -53,9 +53,9 @@ begin
 	--	480	lines displayed data
 	--	  8	lines bottom border
 
-	counter: process(s_px_clk_locked, s_px_clk) is
+	counter: process(reset, s_px_clk) is
 	begin
-		if s_px_clk_locked = '0' then
+		if reset = '1' then
 			px_cnt := 0;
 		elsif s_px_clk'event and s_px_clk = '1' then
 			if px_cnt >= 799 then					-- new line
@@ -71,9 +71,9 @@ begin
 		end if;
 	end process;
 	
-	sync: process(s_px_clk_locked, s_px_clk) is
+	sync: process(reset, s_px_clk) is
 	begin
-		if s_px_clk_locked = '0' then
+		if reset = '1' then
 			s_hsync <= '1';
 			s_vsync <= '1';
 			s_hactive <= '0';
@@ -100,6 +100,5 @@ begin
 	h_sync <= s_hsync;
 	v_sync <= s_vsync;
 	screen_active <= s_hactive and s_vactive;
-	px_clk_locked <= s_px_clk_locked;
 
 end default;

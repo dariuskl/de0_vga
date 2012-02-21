@@ -17,7 +17,8 @@ entity fifo is
 end fifo;
 
 architecture default of fifo is
-	signal fifo_queue	:	array (0 to 31) of std_logic_vector(63 downto 0) := (others => (others => '0'));
+	type t_fifo is array (0 to 31) of std_logic_vector(63 downto 0);
+	signal fifo_queue	:	t_fifo := (others => (others => '0'));
 	signal wp			:	integer	:=	0;
 	signal prev_wp		:	integer	:=	0;
 	signal rp			:	integer	:=	0;
@@ -25,13 +26,13 @@ architecture default of fifo is
 	signal s_wrusedw	:	integer	:=	0;
 	signal curr_rd		:	std_logic_vector(63 downto 0) := (others => '0');
 begin
-	wrusedw_calc : process(aclr,wp,rp,s_wrusedw) is
+	wrusedw_calc : process(wrclk,aclr,wp,prev_wp,rp,prev_rp,s_wrusedw) is
 	begin
 		if aclr = '1' then
 			prev_wp <= 0;
 			prev_rp <= 0;
 			s_wrusedw <= 0;
-		else
+		elsif rising_edge(wrclk) then
 			if prev_wp /= wp then
 				s_wrusedw <= s_wrusedw + 1;
 			end if;
@@ -40,16 +41,12 @@ begin
 				s_wrusedw <= s_wrusedw - 1;
 			end if;
 			prev_rp <= rp;
-			if s_wrusedw = 32 then
-				wrfull <= '1';
-				rdempty <= '0'
-			elsif s_wrusedw = 0 then
-				wrfull <= '0';
+			if s_wrusedw = 0 then
 				rdempty <= '1';
 			else
-				wrfull <= '0';
 				rdempty <= '0';
 			end if;
+		end if;
 	end process;
 
 	wrp : process(aclr,wrclk,wrreq) is
