@@ -7,7 +7,6 @@ entity vga_signals is
 		reset				:	in		std_logic;
 		clk50				:	in		std_logic;
 		px_clk			:	out	std_logic;
-		px_clk_locked	:	out	std_logic;
 		screen_active	:	out	std_logic;	-- 1: data displayed on screen, 0: data not displayed on screen
 		h_sync			:	out	std_logic;
 		v_sync			:	out	std_logic
@@ -20,11 +19,9 @@ architecture default of vga_signals is
 		port(
 			areset	: in std_logic;
 			inclk0	: in std_logic;
-			c0		: out std_logic;
-			locked	: out std_logic 
+			c0		: out std_logic
 		);
 	end component;
-	signal s_px_clk_locked		: std_logic;
 	signal s_px_clk				: std_logic;
 	signal s_hsync				: std_logic;
 	signal s_vsync				: std_logic;
@@ -37,8 +34,7 @@ begin
 	port map(
 			areset	=> reset,
 			inclk0	=> clk50,
-			c0		=> s_px_clk,
-			locked	=> s_px_clk_locked
+			c0		=> s_px_clk
 	);
 
 	-- 800 pixel(= 800 clock ticks) per line with:

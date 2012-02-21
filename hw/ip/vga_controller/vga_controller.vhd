@@ -76,7 +76,6 @@ architecture default of vga_controller is
 			reset				:	in		std_logic;
 			clk50				:	in		std_logic;
 			px_clk			:	out	std_logic;
-			px_clk_locked	:	out	std_logic;
 			screen_active	:	out 	std_logic;
 			h_sync			:	out	std_logic;
 			v_sync			:	out	std_logic
@@ -131,7 +130,6 @@ begin
 			reset				=> not s_control_reg (0),
 			clk50				=> csi_clk_snk_clk,
 			px_clk			=> s_px_clk,
-			px_clk_locked	=> open,
 			screen_active	=> s_screen_active,
 			h_sync			=> coe_vga_hs_export,
 			v_sync			=> s_v_sync
