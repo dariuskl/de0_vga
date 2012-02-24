@@ -1,0 +1,3 @@
+<library>
+  <path path="/home/darius/Projects/altera/de0_vga/hw/ip/**/*" />
+</library>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -35,30 +35,25 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" partName="hello_world.c" path="/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/hello_world.c" title="hello_world.c" tooltip="de0_vga_qsys_application/hello_world.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="hello_world.c" partName="hello_world.c" path="/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/hello_world.c" title="hello_world.c" tooltip="de0_vga_qsys_application/hello_world.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de0_vga_qsys_application/hello_world.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1360" selectionTopPixel="435"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="781" selectionTopPixel="390"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="vga_driver.h" partName="vga_driver.h" path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver/vga_driver.h" title="vga_driver.h" tooltip="de0_vga_driver/vga_driver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de0_vga_driver/vga_driver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3938" selectionTopPixel="1525"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5370" selectionTopPixel="1877"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="vga_driver.c" partName="vga_driver.c" path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver/vga_driver.c" title="vga_driver.c" tooltip="de0_vga_driver/vga_driver.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="vga_driver.c" partName="vga_driver.c" path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver/vga_driver.c" title="vga_driver.c" tooltip="de0_vga_driver/vga_driver.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de0_vga_driver/vga_driver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="222" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1669" selectionTopPixel="699"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="charset_default.h" partName="charset_default.h" path="/home/darius/Projects/altera/de0_vga/sw/de0_vga_driver/charset_default.h" title="charset_default.h" tooltip="de0_vga_driver/charset_default.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de0_vga_driver/charset_default.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="208" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.make.editor" name="Makefile" partName="Makefile" path="/home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/Makefile" title="Makefile" tooltip="de0_vga_qsys_application/Makefile" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de0_vga_qsys_application/Makefile"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4902" selectionTopPixel="2231"/>
+<editorState selectionHorizontalPixel="0" selectionLength="21" selectionOffset="294" selectionTopPixel="116"/>
 </editor>
 </editors>
 <views>
@@ -101,8 +96,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Errors (5 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -117,7 +111,7 @@
 </view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [4-1].1.0" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -294,13 +288,14 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.75" ratioLeft="510" ratioRight="170" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<folder activePageID="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [4-1].1.0" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [4-1].1.0" label="Nios II Console"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [5-2].1.0" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:*" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView" label="LabelNotFound"/>
@@ -311,6 +306,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -412,166 +408,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_qsys_application/hello_world.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.make.editor" path="/de0_vga_qsys_application/Makefile"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_demo/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_qsys_application/hello_world.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.make.editor" path="/de0_vga_driver/Makefile"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/charset_default.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/de0_vga_driver/vga_driver.h"/>
 </editors>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1610" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3679" y="0"/>
 </item>
-<item historyLabel="Makefile" index="3">
-<position info="not_deleted" x="4902" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="1607" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1503" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3632" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3327" y="25"/>
+<item historyLabel="hello_world.c" index="0">
+<position/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1431" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3632" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3327" y="25"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="1618" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1431" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3632" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3892" y="8"/>
+<item historyLabel="hello_world.c" index="0">
+<position/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1431" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3507" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1365" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="319" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1365" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="577" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3892" y="8"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3507" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1366" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3397" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1366" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="661" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="1500" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1366" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="661" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1333" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="1500" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="661" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1333" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="838" y="0"/>
 </item>
-<item historyLabel="vga_driver.c" index="1">
-<position info="not_deleted" x="176" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3397" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1333" y="0"/>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="754" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1429" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="1209" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="679" y="0"/>
 </item>
-<item historyLabel="vga_driver.c" index="1">
-<position info="not_deleted" x="176" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="1209" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1415" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="1193" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="1183" y="0"/>
 </item>
-<item historyLabel="vga_driver.c" index="1">
-<position info="not_deleted" x="176" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="716" y="0"/>
 </item>
-<item historyLabel="vga_driver.h" index="0">
-<position info="not_deleted" x="3938" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="1021" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1415" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="590" y="0"/>
 </item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3277" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="1401" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="590" y="0"/>
 </item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="1583" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="3097" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="119" y="1462"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3277" y="0"/>
 </item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="182" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="377" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="182" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3277" y="0"/>
 </item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="200" y="0"/>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="377" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="2">
-<position info="not_deleted" x="182" y="0"/>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="3277" y="0"/>
+</item>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="377" y="0"/>
+</item>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="vga_driver.h" index="1">
+<position info="not_deleted" x="5370" y="0"/>
+</item>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="vga_driver.c" index="2">
+<position/>
+</item>
+<item historyLabel="charset_default.h" index="3">
+<position info="not_deleted" x="294" y="21"/>
+</item>
+<item historyLabel="vga_driver.c" index="2">
+<position info="not_deleted" x="3757" y="0"/>
+</item>
+<item historyLabel="hello_world.c" index="0">
+<position info="not_deleted" x="754" y="0"/>
+</item>
+<item historyLabel="vga_driver.c" index="4">
+<position info="not_deleted" x="3746" y="0"/>
 </item>
 <item historyLabel="vga_driver.h" index="5">
-<position info="not_deleted" x="3938" y="0"/>
+<position info="not_deleted" x="5370" y="0"/>
 </item>
-<item historyLabel="hello_world.c" index="6">
-<position info="not_deleted" x="308" y="0"/>
+<item historyLabel="vga_driver.c" index="4">
+<position info="not_deleted" x="2870" y="0"/>
 </item>
-<item historyLabel="Makefile" index="7">
-<position info="not_deleted" x="2711" y="0"/>
-</item>
-<item historyLabel="hello_world.c" index="6">
-<position info="not_deleted" x="308" y="0"/>
-</item>
-<item historyLabel="vga_driver.c" index="8">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item historyLabel="vga_driver.h" index="5">
-<position info="not_deleted" x="3938" y="0"/>
-</item>
-<item historyLabel="vga_driver.c" index="8">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item historyLabel="charset_default.h" index="9">
-<position info="not_deleted" x="208" y="0"/>
-</item>
-<item historyLabel="charset_default.h" index="9">
-<position info="not_deleted" x="208" y="0"/>
-</item>
-<item historyLabel="vga_driver.c" index="8">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item historyLabel="vga_driver.c" index="8">
-<position info="not_deleted" x="222" y="0"/>
-</item>
-<item active="true" historyLabel="hello_world.c" index="6">
-<position info="not_deleted" x="308" y="0"/>
+<item active="true" historyLabel="vga_driver.c" index="4">
+<position info="not_deleted" x="1654" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

@@ -16,15 +16,6 @@ entity vga_signals is
 end vga_signals;
 
 architecture default of vga_signals is
-	component vga_px_clk_pll
-		port(
-			areset	: in std_logic;
-			inclk0	: in std_logic;
-			c0		: out std_logic;
-			locked	: out std_logic 
-		);
-	end component;
-	signal s_px_clk_locked		: std_logic;
 	signal s_px_clk				: std_logic;
 	signal s_hsync				: std_logic;
 	signal s_vsync				: std_logic;
@@ -33,13 +24,20 @@ architecture default of vga_signals is
 	shared variable px_cnt		: integer := 0;
 	shared variable line_cnt	: integer := 0;
 begin
-	pll: vga_px_clk_pll
-	port map(
-			areset	=> reset,
-			inclk0	=> clk50,
-			c0		=> s_px_clk,
-			locked	=> s_px_clk_locked
-	);
+	
+	px_clk_generator : process (reset, clk50) is
+	begin
+	
+		if reset = '1' then
+			s_px_clk <= '0';
+		elsif rising_edge (clk50) then
+			s_px_clk <= not s_px_clk;
+		end if;
+		
+	end process;
+	
+	px_clk_locked <= not reset;
+	px_clk <= s_px_clk;
 
 	-- 800 pixel(= 800 clock ticks) per line with:
 	--	  8	pixel front porch
@@ -57,9 +55,9 @@ begin
 	--	480	lines displayed data
 	--	  8	lines bottom border
 
-	counter: process(s_px_clk_locked, s_px_clk) is
+	counter: process(reset, s_px_clk) is
 	begin
-		if s_px_clk_locked = '0' then
+		if reset = '1' then
 			px_cnt := 0;
 		elsif s_px_clk'event and s_px_clk = '1' then
 			if px_cnt >= 799 then					-- new line
@@ -75,9 +73,9 @@ begin
 		end if;
 	end process;
 	
-	sync: process(s_px_clk_locked, s_px_clk) is
+	sync: process(reset, s_px_clk) is
 	begin
-		if s_px_clk_locked = '0' then
+		if reset = '1' then
 			s_hsync <= '1';
 			s_vsync <= '1';
 			s_hactive <= '0';
@@ -100,10 +98,8 @@ begin
 		end if;
 	end process;
 	
-	px_clk <= s_px_clk;
 	h_sync <= s_hsync;
 	v_sync <= s_vsync;
 	screen_active <= s_hactive and s_vactive;
-	px_clk_locked <= s_px_clk_locked;
 
 end default;

@@ -12541,54 +12541,77 @@ datab[6] => data_wire[3].IN1
 
 
 |de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s
-reset => vga_px_clk_pll:pll.areset
-clk50 => vga_px_clk_pll:pll.inclk0
-
-
-|de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|vga_px_clk_pll:pll
-areset => altpll:altpll_component.areset
-inclk0 => altpll:altpll_component.inclk[0]
-
-
-|de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|vga_px_clk_pll:pll|altpll:altpll_component
-inclk[0] => vga_px_clk_pll_altpll:auto_generated.inclk[0]
-inclk[1] => vga_px_clk_pll_altpll:auto_generated.inclk[1]
-fbin => ~NO_FANOUT~
-pllena => ~NO_FANOUT~
-clkswitch => ~NO_FANOUT~
-areset => vga_px_clk_pll_altpll:auto_generated.areset
-pfdena => ~NO_FANOUT~
-clkena[0] => ~NO_FANOUT~
-clkena[1] => ~NO_FANOUT~
-clkena[2] => ~NO_FANOUT~
-clkena[3] => ~NO_FANOUT~
-clkena[4] => ~NO_FANOUT~
-clkena[5] => ~NO_FANOUT~
-extclkena[0] => ~NO_FANOUT~
-extclkena[1] => ~NO_FANOUT~
-extclkena[2] => ~NO_FANOUT~
-extclkena[3] => ~NO_FANOUT~
-scanclk => ~NO_FANOUT~
-scanclkena => ~NO_FANOUT~
-scanaclr => ~NO_FANOUT~
-scanread => ~NO_FANOUT~
-scanwrite => ~NO_FANOUT~
-scandata => ~NO_FANOUT~
-phasecounterselect[0] => ~NO_FANOUT~
-phasecounterselect[1] => ~NO_FANOUT~
-phasecounterselect[2] => ~NO_FANOUT~
-phasecounterselect[3] => ~NO_FANOUT~
-phaseupdown => ~NO_FANOUT~
-phasestep => ~NO_FANOUT~
-configupdate => ~NO_FANOUT~
-fbmimicbidir <> <GND>
-
-
-|de0_vga_qsys|system:qsys_system_0|vga_controller:vga_0|vga_signals:vga_s|vga_px_clk_pll:pll|altpll:altpll_component|vga_px_clk_pll_altpll:auto_generated
-areset => pll_lock_sync.ACLR
-areset => pll1.ARESET
-inclk[0] => pll1.CLK
-inclk[1] => pll1.CLK1
+reset => s_vactive.ACLR
+reset => s_hactive.ACLR
+reset => s_vsync.PRESET
+reset => s_hsync.PRESET
+reset => px_cnt[0].ACLR
+reset => px_cnt[1].ACLR
+reset => px_cnt[2].ACLR
+reset => px_cnt[3].ACLR
+reset => px_cnt[4].ACLR
+reset => px_cnt[5].ACLR
+reset => px_cnt[6].ACLR
+reset => px_cnt[7].ACLR
+reset => px_cnt[8].ACLR
+reset => px_cnt[9].ACLR
+reset => px_cnt[10].ACLR
+reset => px_cnt[11].ACLR
+reset => px_cnt[12].ACLR
+reset => px_cnt[13].ACLR
+reset => px_cnt[14].ACLR
+reset => px_cnt[15].ACLR
+reset => px_cnt[16].ACLR
+reset => px_cnt[17].ACLR
+reset => px_cnt[18].ACLR
+reset => px_cnt[19].ACLR
+reset => px_cnt[20].ACLR
+reset => px_cnt[21].ACLR
+reset => px_cnt[22].ACLR
+reset => px_cnt[23].ACLR
+reset => px_cnt[24].ACLR
+reset => px_cnt[25].ACLR
+reset => px_cnt[26].ACLR
+reset => px_cnt[27].ACLR
+reset => px_cnt[28].ACLR
+reset => px_cnt[29].ACLR
+reset => px_cnt[30].ACLR
+reset => px_cnt[31].ACLR
+reset => s_px_clk.ACLR
+reset => px_clk_locked.DATAIN
+reset => line_cnt[31].ENA
+reset => line_cnt[30].ENA
+reset => line_cnt[29].ENA
+reset => line_cnt[28].ENA
+reset => line_cnt[27].ENA
+reset => line_cnt[26].ENA
+reset => line_cnt[25].ENA
+reset => line_cnt[24].ENA
+reset => line_cnt[23].ENA
+reset => line_cnt[22].ENA
+reset => line_cnt[21].ENA
+reset => line_cnt[20].ENA
+reset => line_cnt[19].ENA
+reset => line_cnt[18].ENA
+reset => line_cnt[17].ENA
+reset => line_cnt[16].ENA
+reset => line_cnt[15].ENA
+reset => line_cnt[14].ENA
+reset => line_cnt[13].ENA
+reset => line_cnt[12].ENA
+reset => line_cnt[11].ENA
+reset => line_cnt[10].ENA
+reset => line_cnt[9].ENA
+reset => line_cnt[8].ENA
+reset => line_cnt[7].ENA
+reset => line_cnt[6].ENA
+reset => line_cnt[5].ENA
+reset => line_cnt[4].ENA
+reset => line_cnt[3].ENA
+reset => line_cnt[2].ENA
+reset => line_cnt[1].ENA
+reset => line_cnt[0].ENA
+clk50 => s_px_clk.CLK
 
 
 |de0_vga_qsys|system:qsys_system_0|altera_merlin_master_translator:cpu_0_instruction_master_translator

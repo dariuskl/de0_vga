@@ -1,0 +1,129 @@
+/*!
+ * \file vga_driver.c
+ *
+ * \date	File created: Jan 13, 2012
+ * \author	Darius Kellermann
+ *
+ * \version WS 11/12
+ */
+
+#include "vga_driver.h"
+#include "charset_default.h"
+#include "fh_logo.h"
+
+static short vprintln_y_off;	/*! Keeps track of the y-position while writing to the frame buffer */
+
+uint8 de0_vga_init (frame_buffer *fb)
+{
+	uint16 x, y;
+	char buffer[50] = {0};
+
+	// Try to allocate as many segments as required for the frame buffer.
+	if ((fb->p_pxs = (uint64 *) malloc (((DISPLAY_NUM_COLUMNS * DISPLAY_NUM_ROWS) / 5) * sizeof (uint64))) == NULL)
+		return 1;	// out of memory
+	fb->text_offset_x = 20;
+	fb->text_offset_y = 120;
+
+	vprintln_y_off = fb->text_offset_y;
+
+	// Pre-fill the frame buffer all white
+	for (y = 0; y < DISPLAY_NUM_ROWS; y++)
+		for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
+			frame_px_w (fb, x, y, 0xFFF);
+
+	// write sample splash
+	put_frame_buffer (fb, fh_logo, FH_LOGO_WIDTH, FH_LOGO_HEIGHT, 20, 30);
+	for (y = 0; y < 5; y++)
+		for (x = 0; x < 5; x++)
+		{
+			if (!(y == 4 && x > 2))
+				put_frame_buffer (fb, fh_logo, FH_LOGO_WIDTH, FH_LOGO_HEIGHT, (20 + (x+2)*FH_LOGO_WIDTH), (30 + y*FH_LOGO_HEIGHT));
+			if (y == 2 && x == 4)
+			{
+				sprintf (buffer, "Fachhochschule Koeln");
+				put_fb_string (fb, buffer, (30 + x*FH_LOGO_WIDTH) + 35, (30 + y*FH_LOGO_HEIGHT) + 4);
+			}
+			if (y == 3 && x == 4)
+			{
+				sprintf (buffer, "Cologne University of Applied Sciences");
+				put_fb_string (fb, buffer, (30 + x*FH_LOGO_WIDTH) + 35, (30 + y*FH_LOGO_HEIGHT) + 4);
+			}
+		}
+
+	// TODO Write the frame buffer base address into the hardware register and set go bit (not yet possible)
+	return 0;
+}
+
+void put_frame_buffer (frame_buffer *fb, uint16 *element, uint8 width, uint8 height, uint16 off_x, uint16 off_y)
+{
+	uint16 x, y;
+
+	for (y = off_y; (y < (off_y + height)) && (y < DISPLAY_NUM_ROWS); y++)
+		for (x = off_x; (x < (off_x + width)) && (x < DISPLAY_NUM_COLUMNS); x++)
+			frame_px_w (fb, x, y, element[(x-off_x)+(width*(y-off_y))]);
+}
+
+void put_fb_string (frame_buffer *fb, char *string, uint16 x_off, uint16 y_off)
+{
+	int i = 0, x = x_off, y = y_off;
+
+	while (string[i] != 0)
+	{
+		put_frame_buffer (fb, (uint16 *)&charmap[get_index (string[i])], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+		if (x < (DISPLAY_NUM_COLUMNS - (fb->text_offset_x + CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+			x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+		else
+		{
+			x = x_off;
+			if (y < DISPLAY_NUM_ROWS - 2 * (CHAR_HEIGHT + CHAR_INTERLINESPACING))
+				y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+			else
+				y = y_off;
+		}
+		i++;
+	}
+}
+
+void vprintln (frame_buffer *fb, char *string)
+{
+	int i = 0, x = fb->text_offset_x, y = vprintln_y_off;
+
+	while (string[i] != 0)
+	{
+		switch (string[i])
+		{
+		case '\n':
+			x = fb->text_offset_x;
+			if (y < DISPLAY_NUM_ROWS - 2 * (CHAR_HEIGHT + CHAR_INTERLINESPACING))
+				y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+			else
+				y = fb->text_offset_y;
+			break;
+		default:
+			put_frame_buffer (fb, (uint16 *)&charmap[get_index (string[i])], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+			if (x < (DISPLAY_NUM_COLUMNS - (fb->text_offset_x + CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+				x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+			else
+			{
+				x = fb->text_offset_x;
+				if (y < DISPLAY_NUM_ROWS - 2 * (CHAR_HEIGHT + CHAR_INTERLLINESPACING))
+					y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+				else
+					y = fb->text_offset_y;
+			}
+		}
+		i++;
+	}
+	// whiten all remainder of the line
+	while (x < (DISPLAY_NUM_COLUMNS - (fb->text_offset_x + CHAR_WIDTH + CHAR_INTERCHARSPACING)))
+	{
+		put_frame_buffer (fb, (uint16 *)&charmap[get_index (' ')], CHAR_WIDTH, CHAR_HEIGHT, x, y);
+		x += CHAR_WIDTH + CHAR_INTERCHARSPACING;
+	}
+	// Line break!
+	if (y < VGA_PRINTLN_TEXT_Y_MAX)
+		y += CHAR_HEIGHT + CHAR_INTERLINEPSACING;
+	else
+		y = VGA_PRINTLN_TEXT_OFFSET_Y;
+	vprintln_y_off = y;
+}

@@ -312,12 +312,20 @@ hal_C_LIB_SRCS := \
 	$(hal_SRCS_ROOT)/src/alt_wait.c \
 	$(hal_SRCS_ROOT)/src/alt_write.c
 
+# vga_controller_driver sources root 
+vga_controller_driver_SRCS_ROOT := drivers
+
+# vga_controller_driver sources 
+vga_controller_driver_C_LIB_SRCS := \
+	$(vga_controller_driver_SRCS_ROOT)/src/vga_driver.c
+
 
 # Assemble all component C source files 
 COMPONENT_C_LIB_SRCS += \
 	$(altera_avalon_jtag_uart_driver_C_LIB_SRCS) \
 	$(altera_nios2_qsys_hal_driver_C_LIB_SRCS) \
-	$(hal_C_LIB_SRCS)
+	$(hal_C_LIB_SRCS) \
+	$(vga_controller_driver_C_LIB_SRCS)
 
 # Assemble all component assembly source files 
 COMPONENT_ASM_LIB_SRCS += \

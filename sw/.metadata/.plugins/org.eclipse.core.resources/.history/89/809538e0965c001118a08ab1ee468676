@@ -1,0 +1,55 @@
+/*!
+ *	\file demo.c
+ *
+ *	\date		File created: Feb 15, 2012
+ *	\author		Darius Kellermann
+ *
+ *	\version	WS 11/12
+ */
+
+#include <stdio.h>
+
+#include <vga_driver.h>
+#include <system.h>
+#include <io.h>
+
+
+int main ()
+{
+	uint16 x;
+	frame_buffer fb;
+	char buffer[200] = {0};
+
+	if ((x = de0_vga_init (&fb)) != 0)
+	{
+		switch (x)
+		{
+		case 1:
+			printf ("ERROR: Out of memory. Could not allocate memory for the frame buffer\n");
+			break;
+		default:
+			printf ("ERROR: Something went wrong initializing the de0_vga\n");
+			break;
+		}
+		return -1;
+	}
+
+	IOWR (VGA_0_BASE, VGA_CSR_FB_BASE_ADDR, (uint32) fb.p_pxs);	// write frame buffer base address into control register
+
+	IOWR (VGA_0_BASE, VGA_CSR_CTRL, VGA_CSR_CTRL_GO);				// write GO-Bit into control register
+	printf ("VGA startet\n");
+	sprintf (buffer, "Max Stolze & Darius Kellermann\n\nImplementation einer VGA-Schnittstelle unter Verwendung von DMA in einem NIOS-System\n\nAbschlussbericht zur Embedded-Systems-Projektarbeit im WS 2011/2012\n\n");
+	vprintln (&fb, buffer);
+
+	sprintf (buffer, "Hello World! Use the JTAG UART to tell me what to say. :)");
+	vprintln (&fb, buffer);
+
+	while (1)
+	{
+		printf ("Tell me what to say: ");
+		vprintln (&fb, fgets (buffer, 200, stdin));
+		printf ("Written \"%s\" into the buffer\n", buffer);
+	}
+
+	return 0;
+}
