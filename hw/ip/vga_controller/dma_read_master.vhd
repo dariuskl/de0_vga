@@ -116,9 +116,12 @@ begin
 			
 				when idle =>
 					address <= ctrl_fb_base;
+					----------------------------
 					dma_state <= nospace;
 				
 				when nospace =>
+					address <= address;
+					----------------------------
 					if fifo_empty = '1' then
 						burstcount <= BUFFERWIDTH;
 						dma_state <= reading;
@@ -129,6 +132,7 @@ begin
 				
 				when reading =>
 					if dma_waitreq /= '1' then
+					
 						-- address += Word size in bytes * num of words bursted
 						address <= std_logic_vector (unsigned (address) + (ADDR_INC * burstcount));
 						
@@ -144,10 +148,8 @@ begin
 					end if;
 				
 				when complete =>
-					if dma_readdatavalid = '1' then	-- a read returns
-						if pending_reads = 1 then	-- last one?
+					if dma_readdatavalid = '1' and pending_reads = 1 then	-- a read returns and it's the last one
 							dma_state <= nospace;	-- wait for new space
-						end if;
 					end if;
 			
 			end case;
@@ -196,9 +198,9 @@ begin
 					pxcnt <= pxcnt + 1;
 					fifo_read <= '1';
 				end if;
-			-- when last pixel requested
 			elsif pxcnt < (PXPERREAD-1) then
 				pxcnt <= pxcnt + 1;
+			-- when last pixel requested
 			else
 				pxcnt <= 0;
 			end if;

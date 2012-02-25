@@ -12,9 +12,20 @@
 
 #include "vga_driver.h"
 
+/*!
+ *	\def 	FH_LOGO_WIDTH
+ *	\brief	Width in pixels of this graphic.
+ */
 #define FH_LOGO_WIDTH	12
+/*!
+ *	\def 	FH_LOGO_HEIGHT
+ *	\brief	Height in pixels of this graphic.
+ */
 #define FH_LOGO_HEIGHT	13
 
+/*!
+ *	The actual graphic.
+ */
 uint16 fh_logo[] = {
 		0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF,
 		0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF, 0xFFF,
