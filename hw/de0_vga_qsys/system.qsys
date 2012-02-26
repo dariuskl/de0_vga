@@ -120,7 +120,7 @@
  <parameter name="projectName" value="de0_vga_qsys.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1329759793781" />
+ <parameter name="timeStamp" value="1330258319135" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -147,8 +147,8 @@
    type="clock"
    dir="start" />
  <interface name="vga_0_hs" internal="vga_0.vga_hs" type="conduit" dir="end" />
- <interface name="vga_0_vs" internal="vga_0.vga_vs" type="conduit" dir="end" />
  <interface name="vga_0_r" internal="vga_0.vga_r" type="conduit" dir="end" />
+ <interface name="vga_0_vs" internal="vga_0.vga_vs" type="conduit" dir="end" />
  <interface name="vga_0_g" internal="vga_0.vga_g" type="conduit" dir="end" />
  <interface name="vga_0_b" internal="vga_0.vga_b" type="conduit" dir="end" />
  <module kind="clock_source" version="11.1" enabled="1" name="clk_0">
@@ -482,9 +482,7 @@
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
- <module kind="vga_controller" version="1.1" enabled="1" name="vga_0">
-  <parameter name="DATAWIDTH" value="64" />
- </module>
+ <module kind="vga_controller" version="1.2" enabled="1" name="vga_0" />
  <connection
    kind="clock"
    version="11.1"

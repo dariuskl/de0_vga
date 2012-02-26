@@ -1,3 +1,7 @@
+------------------------------------------------------------------------------------------------------------------------
+--! @file	vga_controll_slave.vhd
+--! @brief	This file contains the control registers for the vga_controller component.
+------------------------------------------------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

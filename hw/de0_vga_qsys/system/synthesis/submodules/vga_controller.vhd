@@ -1,36 +1,37 @@
+------------------------------------------------------------------------------------------------------------------------
+--! @file	vga_controller.vhd
+--! @brief	This file contains the top level entity for the vga_controller component.
+------------------------------------------------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity vga_controller is
-	generic (
-		DATAWIDTH				:	integer	:= 64
-	);
 	port(
 		-- Avalon Clock Sink
-		csi_clk_snk_reset			: in	std_logic;
-		csi_clk_snk_clk			: in	std_logic;
+		csi_clk_snk_reset			: in	std_logic;								--! system reset
+		csi_clk_snk_clk			: in	std_logic;								--! system clock
 		
 		-- Avalon MM Slave Interface "controll"
-		avs_controll_write		: in	std_logic;
-		avs_controll_address		: in	std_logic_vector (0 downto 0);  --slave address as words
-		avs_controll_writedata	: in	std_logic_vector (31 downto 0);
+		avs_controll_write		: in	std_logic;								--! Control register interface: write
+		avs_controll_address		: in	std_logic_vector (0 downto 0); 	--! Control register interface: register address
+		avs_controll_writedata	: in	std_logic_vector (31 downto 0);	--! Control register interface: writedata
 		
 		-- Avalon MM Master Interface "dma"
-		avm_dma_waitrequest		: in	std_logic;
-		avm_dma_readdata			: in	std_logic_vector ((DATAWIDTH-1) downto 0);
-		avm_dma_readdatavalid	: in	std_logic;
-		avm_dma_address			: out	std_logic_vector (31 downto 0);  --master address as bytes
-		avm_dma_read				: out	std_logic;
-		avm_dma_byteenable		: out	std_logic_vector (((DATAWIDTH/8)-1) downto 0);
-		avm_dma_burstcount		: out std_logic_vector (5 downto 0);
+		avm_dma_waitrequest		: in	std_logic;								--! DMA interface: waitrequest
+		avm_dma_readdata			: in	std_logic_vector (63 downto 0);	--! DMA interface: readdata
+		avm_dma_readdatavalid	: in	std_logic;								--! DMA interface: readdatavalid
+		avm_dma_address			: out	std_logic_vector (31 downto 0);  --! DMA interface: SDRAM address in bytes
+		avm_dma_read				: out	std_logic;								--! DMA interface: read
+		avm_dma_byteenable		: out	std_logic_vector (7 downto 0);	--! DMA interface: byteenable
+		avm_dma_burstcount		: out std_logic_vector (5 downto 0);	--! DMA interface: burstcount
 		
 		-- VGA outputs
-		coe_vga_hs_export			: out	std_logic;
-		coe_vga_vs_export			: out	std_logic;
-		coe_vga_r_export			: out	std_logic_vector (3 downto 0);
-		coe_vga_g_export			: out	std_logic_vector (3 downto 0);
-		coe_vga_b_export			: out	std_logic_vector (3 downto 0)
+		coe_vga_hs_export			: out	std_logic;								--! VGA H Sync
+		coe_vga_vs_export			: out	std_logic;								--! VGA V Sync
+		coe_vga_r_export			: out	std_logic_vector (3 downto 0);	--! VGA red component
+		coe_vga_g_export			: out	std_logic_vector (3 downto 0);	--! VGA green component
+		coe_vga_b_export			: out	std_logic_vector (3 downto 0)		--! VGA blue component
 	);
 end vga_controller;
 
@@ -49,9 +50,6 @@ architecture default of vga_controller is
 	end component;
 	
 	component dma_read_master
-		generic(
-			DATAWIDTH		:	integer := 64
-		);
 		port(
 			reset					: in	std_logic;
 			clk50					: in	std_logic;
@@ -62,12 +60,12 @@ architecture default of vga_controller is
 			G						: out	std_logic_vector (3 downto 0);
 			B						: out	std_logic_vector (3 downto 0);
 			dma_waitreq			: in	std_logic;
-			dma_readdata		: in	std_logic_vector ((DATAWIDTH-1) downto 0);
+			dma_readdata		: in	std_logic_vector (63 downto 0);
 			dma_readdatavalid	: in	std_logic;
 			dma_read				: out	std_logic;
 			dma_address			: out	std_logic_vector (31 downto 0);
 			dma_burstcount		: out std_logic_vector (5 downto 0);
-			dma_byte_en			: out	std_logic_vector (((DATAWIDTH/8)-1) downto 0)
+			dma_byte_en			: out	std_logic_vector (7 downto 0)
 		);
 	end component;
 	
@@ -105,9 +103,6 @@ begin
 	);
 	
 	dma : dma_read_master
-	generic map(
-		DATAWIDTH		=> DATAWIDTH
-	)
 	port map(
 		clk50					=> csi_clk_snk_clk,
 		reset					=> not s_control_reg(0) or not s_v_sync,	-- GO-Bit nicht gesetzt oder VSync aktiv

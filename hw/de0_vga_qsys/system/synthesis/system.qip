@@ -2,7 +2,7 @@ set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_NAME 
 set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_VERSION "11.1"
 set_global_assignment -entity "system" -library "lib_system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -library "lib_system" -name MISC_FILE [file join $::quartus(qip_path) ../../system.sopcinfo]
-set_instance_assignment -entity "system" -library "lib_system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1330004491"
+set_instance_assignment -entity "system" -library "lib_system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1330258600"
 set_global_assignment -library "lib_system" -name MISC_FILE [file join $::quartus(qip_path) ../../system.qsys]
 
 set_global_assignment -library "lib_system" -name VERILOG_FILE [file join $::quartus(qip_path) system.v]

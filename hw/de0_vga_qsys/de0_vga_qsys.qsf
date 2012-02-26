@@ -572,7 +572,6 @@ set_global_assignment -name USE_SIGNALTAP_FILE default.stp
 set_global_assignment -name SIGNALTAP_FILE default.stp
 set_global_assignment -name VHDL_FILE ../ip/vga_controller/vga_controller.vhd
 set_global_assignment -name VHDL_FILE ../ip/vga_controller/vga_signals.vhd
-set_global_assignment -name VHDL_FILE ../ip/vga_controller/vga_px_clk_pll.vhd
 set_global_assignment -name VHDL_FILE ../ip/vga_controller/vga_controll_slave.vhd
 set_global_assignment -name VHDL_FILE ../ip/vga_controller/dma_read_master.vhd
 set_global_assignment -name QIP_FILE system/synthesis/system.qip

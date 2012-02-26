@@ -2,7 +2,7 @@
 <launchConfiguration type="com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchConfiguration">
 <booleanAttribute key="acceptBadSysId" value="true"/>
 <booleanAttribute key="acceptBadTimestamp" value="true"/>
-<stringAttribute key="byteStreamDeviceCableName" value="USB-Blaster on localhost [4-1]"/>
+<stringAttribute key="byteStreamDeviceCableName" value="USB-Blaster on localhost [5-2]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="33957"/>
@@ -21,7 +21,7 @@
 <stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList&gt;&#10;&lt;memoryBlockExpressionItem&gt;&#10;&lt;expression text=&quot;0xffff18&quot;/&gt;&#10;&lt;/memoryBlockExpressionItem&gt;&#10;&lt;/memoryBlockExpressionList&gt;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="de0_vga_qsys_application.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="de0_vga_qsys_application"/>
-<stringAttribute key="processorCableName" value="USB-Blaster on localhost [4-1]"/>
+<stringAttribute key="processorCableName" value="USB-Blaster on localhost [5-2]"/>
 <stringAttribute key="processorDeviceIndex" value="1"/>
 <stringAttribute key="processorInstanceId" value="0"/>
 <booleanAttribute key="runProgram" value="true"/>

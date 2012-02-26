@@ -1,3 +1,7 @@
+------------------------------------------------------------------------------------------------------------------------
+--! @file	vga_signals.vhd
+--! @brief	This file contains the project's top level entity. The Qsys system is instatiated here.
+------------------------------------------------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

@@ -1,5 +1,5 @@
 Flow report for de0_vga_qsys
-Thu Feb 23 14:11:40 2012
+Sun Feb 26 15:33:21 2012
 Quartus II 32-bit Version 11.1 Build 173 11/01/2011 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 23 14:11:27 2012    ;
+; Flow Status                        ; Successful - Sun Feb 26 15:33:08 2012    ;
 ; Quartus II 32-bit Version          ; 11.1 Build 173 11/01/2011 SJ Web Edition ;
 ; Revision Name                      ; de0_vga_qsys                             ;
 ; Top-level Entity Name              ; de0_vga_qsys                             ;
 ; Family                             ; Cyclone III                              ;
 ; Device                             ; EP3C16F484C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 5,001 / 15,408 ( 32 % )                  ;
-;     Total combinational functions  ; 4,222 / 15,408 ( 27 % )                  ;
-;     Dedicated logic registers      ; 3,351 / 15,408 ( 22 % )                  ;
-; Total registers                    ; 3421                                     ;
+; Total logic elements               ; 4,929 / 15,408 ( 32 % )                  ;
+;     Total combinational functions  ; 4,156 / 15,408 ( 27 % )                  ;
+;     Dedicated logic registers      ; 3,306 / 15,408 ( 21 % )                  ;
+; Total registers                    ; 3374                                     ;
 ; Total pins                         ; 66 / 347 ( 19 % )                        ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 50,816 / 516,096 ( 10 % )                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/23/2012 14:08:42 ;
+; Start date & time ; 02/26/2012 15:30:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_vga_qsys        ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name                              ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 120881185408.133000252206041                             ; --            ; --                                       ; --         ;
+; COMPILER_SIGNATURE_ID               ; 120881185408.133026664613118                             ; --            ; --                                       ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                                      ; --            ; --                                       ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_sc_fifo                    ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_st_handshake_clock_crosser ; --         ;
@@ -188,7 +188,7 @@ applicable agreement for further details.
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                                   ; --            ; --                                       ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                      ; --            ; --                                       ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                    ; --            ; --                                       ; --         ;
-; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1329772399 ; --            ; system                                   ; --         ;
+; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1330258600 ; --            ; system                                   ; --         ;
 ; USE_SIGNALTAP_FILE                  ; default.stp                                              ; --            ; --                                       ; --         ;
 +-------------------------------------+----------------------------------------------------------+---------------+------------------------------------------+------------+
 
@@ -198,11 +198,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:00     ; 1.0                     ; --                  ; 00:00:56                           ;
-; Fitter                    ; 00:00:48     ; 1.0                     ; --                  ; 00:00:47                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; --                  ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:20     ; 1.0                     ; --                  ; 00:00:16                           ;
-; Total                     ; 00:02:14     ; --                      ; --                  ; 00:02:03                           ;
+; Analysis & Synthesis      ; 00:01:03     ; 1.0                     ; --                  ; 00:01:01                           ;
+; Fitter                    ; 00:00:53     ; 1.0                     ; --                  ; 00:00:53                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; --                  ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:17     ; 1.0                     ; --                  ; 00:00:16                           ;
+; Total                     ; 00:02:17     ; --                      ; --                  ; 00:02:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

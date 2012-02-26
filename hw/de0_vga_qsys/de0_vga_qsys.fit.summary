@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Feb 23 14:10:55 2012
+Fitter Status : Successful - Sun Feb 26 15:32:53 2012
 Quartus II 32-bit Version : 11.1 Build 173 11/01/2011 SJ Web Edition
 Revision Name : de0_vga_qsys
 Top-level Entity Name : de0_vga_qsys
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 5,001 / 15,408 ( 32 % )
-    Total combinational functions : 4,222 / 15,408 ( 27 % )
-    Dedicated logic registers : 3,351 / 15,408 ( 22 % )
-Total registers : 3421
+Total logic elements : 4,929 / 15,408 ( 32 % )
+    Total combinational functions : 4,156 / 15,408 ( 27 % )
+    Dedicated logic registers : 3,306 / 15,408 ( 21 % )
+Total registers : 3374
 Total pins : 66 / 347 ( 19 % )
 Total virtual pins : 0
 Total memory bits : 50,816 / 516,096 ( 10 % )

@@ -1,42 +1,48 @@
+------------------------------------------------------------------------------------------------------------------------
+--! @file	dma_read_master.vhd
+--! @brief	This file contains the Avalon MM-Master utilizing burst mode to read from the SDRAM in an DMA fashhion
+--!			and the VGA Logic that phases pixels from the FIFO out onto the interface.
+------------------------------------------------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity dma_read_master is
 
-	generic(
-		DATAWIDTH	:	integer range 16 to 1024 	:= 64
-	);
-
 	port(
-		reset				: in	std_logic;
-		clk50				: in	std_logic;
+		reset				: in	std_logic;					--! reset input for the dma_read_master_fsm
+		clk50				: in	std_logic;					--! the 50MHz system clock
 		
 		-- control and status registers
-		ctrl_fb_base	: in	std_logic_vector (31 downto 0);	-- frame buffer base address
+		ctrl_fb_base	: in	std_logic_vector (31 downto 0);	--! frame buffer base address in SDRAM
 		
 		-- vga timing inputs
-		vga_px_clk		: in	std_logic;	-- pixel clock
-		vga_screen_act	: in	std_logic;	-- currenlty in active screen area, real pixel data must be phased out
+		vga_px_clk		: in	std_logic;					--! VGA pixel clock
+		vga_screen_act	: in	std_logic;					--! currenlty in active screen area, reset for the vga_fsm
 		
 		-- vga signal outputs
-		R	: out		std_logic_vector (3 downto 0);
-		G	: out		std_logic_vector (3 downto 0);
-		B	: out		std_logic_vector (3 downto 0);
+		R	: out		std_logic_vector (3 downto 0);	--! VGA red component
+		G	: out		std_logic_vector (3 downto 0);	--! VGA green component
+		B	: out		std_logic_vector (3 downto 0);	--! VGA blue component
 		
 		-- read master
-		dma_waitreq			: in	std_logic;
-		dma_readdata		: in	std_logic_vector ((DATAWIDTH-1) downto 0);
-		dma_readdatavalid	: in	std_logic;
-		dma_read				: out	std_logic;
-		dma_address			: out	std_logic_vector (31 downto 0);
-		dma_burstcount		: out std_logic_vector (5 downto 0);
-		dma_byte_en			: out	std_logic_vector (((DATAWIDTH/8)-1) downto 0)
+		dma_waitreq			: in	std_logic;								--! Avalon signal waitrequest
+		dma_readdata		: in	std_logic_vector (63 downto 0);	--! Avalon signal readdata
+		dma_readdatavalid	: in	std_logic;								--! Avalon signal readdatavalid
+		dma_read				: out	std_logic;								--! Avalon signal read
+		dma_address			: out	std_logic_vector (31 downto 0);	--! Avalon signal address
+		dma_burstcount		: out std_logic_vector (5 downto 0);	--! Avalon signal burstcount
+		dma_byte_en			: out	std_logic_vector (7 downto 0)		--! Avalon signal byteenable
 	);
 
 end dma_read_master;
 
-architecture default of dma_read_master is
+--! @brief		Words of 64Bit, FIFO of 64 words
+--! @details	This architecture implements a bursting Avalon MM-Master to read words of 64 Bit out of the SDRAM.
+--!				The functionality of the MM-Master ist inside the dma_read_master_fsm process. The FIFO size is
+--!				optimized for a resolution of 640x480@60Hz.
+--!				Further the VGA output logic is incorporated in here via the vga_fsm process.
+architecture words_64bit_fifo_64words of dma_read_master is
 
 	component fifo port
 		(
@@ -52,10 +58,12 @@ architecture default of dma_read_master is
 		);
 	end component;
 	
-	constant PXPERREAD	:	integer range DATAWIDTH/12 to DATAWIDTH/12	:= DATAWIDTH/12;
-	constant ADDR_INC		:	integer range DATAWIDTH/8 to DATAWIDTH/8		:= DATAWIDTH/8;
-	-- the currently configured size of the FIFO
-	constant BUFFERWIDTH	:	integer range 8 to 64		:= 63;
+	--! Amount of pixels inside of one word.
+	constant PXPERREAD	:	integer range 5 to 5	:= 5;
+	--! The number by which the address gets incremented after a single transfer. Or: number of bytes in one word.
+	constant ADDR_INC		:	integer range 8 to 8 := 8;
+	--! The amount of words that can be stored inside the FIFO buffer.
+	constant BUFFERWIDTH	:	integer range 8 to 64 := 63;
 	
 	-- fifo signals
 	signal fifo_write, fifo_read, fifo_empty : std_logic;
@@ -72,7 +80,7 @@ architecture default of dma_read_master is
 	-- vga_fsm
 	type t_vga_state is (idle, running);
 	signal vga_state	: t_vga_state := idle;
-	signal curr_segment : std_logic_vector ((DATAWIDTH-1) downto 0);
+	signal curr_segment : std_logic_vector (63 downto 0);
 	signal pxcnt : integer range 0 to PXPERREAD		:= 0;
 
 begin
@@ -187,7 +195,7 @@ begin
 			
 			if pxcnt /= 0 then
 				-- rightshift current Segment by one px
-				curr_segment <= "000000000000" & curr_segment ((DATAWIDTH-1) downto 12);
+				curr_segment <= "000000000000" & curr_segment (63 downto 12);
 				fifo_read <= '0';
 			end if;
 			
@@ -219,4 +227,4 @@ begin
 			"0000" when fifo_empty = '1' and vga_state = running else	-- underflow
 			curr_segment (3 downto 0);
 	
-end default;
+end words_64bit_fifo_64words;

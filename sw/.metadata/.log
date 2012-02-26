@@ -2238,3 +2238,358 @@ Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.pa
 
 !ENTRY com.altera.sbtgui.launch 1 0 2012-02-23 13:17:33.698
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+!SESSION 2012-02-23 14:42:47.118 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 0 2012-02-26 10:33:05.076
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)])
+	at org.eclipse.swt.SWT.error(SWT.java:4083)
+	at org.eclipse.swt.SWT.error(SWT.java:3998)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+Caused by: org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:4109)
+	at org.eclipse.swt.browser.Mozilla.initMozilla(Mozilla.java:1739)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:656)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:119)
+	at org.eclipse.epp.usagedata.internal.ui.wizards.TermsOfUseWizardPage.createControl(TermsOfUseWizardPage.java:48)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:170)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:734)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:606)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.jface.window.Window.open(Window.java:790)
+	at org.eclipse.epp.usagedata.internal.ui.uploaders.AskUserUploader$1.run(AskUserUploader.java:65)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 23 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:27:48.401
+!MESSAGE Cannot initialize the Nios II Console view for use. Byte stream service may still be open by another process like 'nios2-terminal'.
+!SESSION 2012-02-26 11:28:07.741 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:28:31.984
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:28:33.997
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:28:37.751
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:28:39.017
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:28:39.024
+!MESSAGE Downloading ELF Process failed
+!SESSION 2012-02-26 11:29:12.291 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:29:27.161
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:28.543
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:29:28.581
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:29.915
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:29.921
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:29:47.508
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:48.636
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:29:48.668
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:49.918
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:29:49.925
+!MESSAGE Downloading ELF Process failed
+!SESSION 2012-02-26 11:30:37.472 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:31:01.571
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:31:02.786
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:31:02.819
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+!SESSION 2012-02-26 11:31:14.420 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:31:29.055
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:31:30.417
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:31:30.453
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:31:31.715
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:31:31.724
+!MESSAGE Downloading ELF Process failed
+!SESSION 2012-02-26 11:33:11.010 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:33:46.973
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:33:48.260
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:33:48.299
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:33:49.599
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:33:49.605
+!MESSAGE Downloading ELF Process failed
+!SESSION 2012-02-26 11:34:40.564 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:35:24.862
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:35:26.125
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:35:26.212
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:35:27.458
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:35:27.466
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:36:13.401
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:36:14.532
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:36:14.630
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:36:15.888
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:36:15.890
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:39:30.400
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:39:31.534
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:39:36.317
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:39:37.539
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:39:37.544
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:39:59.092
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:40:00.215
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:40:00.250
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:40:01.518
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:40:01.519
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:40:06.184
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:40:07.319
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [4-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:40:07.350
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [4-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+!SESSION 2012-02-26 11:42:25.011 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:43:15.354
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 11:43:16.503
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 11:43:16.537
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 14:57:01.268
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 14:57:02.569
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 14:57:02.800
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 14:58:42.724
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 14:58:43.869
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 14:58:44.038
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:01:16.670
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [5-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:01:37.284
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:01:38.423
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:01:38.573
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:02:50.956
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:02:52.098
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:02:52.252
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+!SESSION 2012-02-26 15:10:21.169 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-02-26 15:10:25.409
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:11:29.940
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:11:31.130
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:11:31.220
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:13:31.109
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:13:32.249
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:13:32.340
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:15:48.261
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:15:49.406
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:15:49.506
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:16:48.946
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2012-02-26 15:16:50.070
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [5-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-02-26 15:16:50.158
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [5-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/darius/Projects/altera/de0_vga/hw/de0_vga_qsys/software/de0_vga_qsys_application/de0_vga_qsys_application.elf]

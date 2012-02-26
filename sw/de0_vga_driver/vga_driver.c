@@ -15,7 +15,7 @@ static short vprintln_y_off;	/*! Keeps track of the y-position while writing to 
 
 uint8 de0_vga_init (frame_buffer *fb)
 {
-	uint16 x, y, color;
+	uint16 x, y, color = 0x000, component = 0;
 	char buffer[50] = {0};
 
 	// Try to allocate as many segments as required for the frame buffer.
@@ -53,18 +53,87 @@ uint8 de0_vga_init (frame_buffer *fb)
 	// write color banner to show off 12-Bit color
 	for (x = 0; x < DISPLAY_NUM_COLUMNS; x++)
 	{
-		if (x < 106)
-			color = 0xF00;
-		else if (x < 213)
-			color = 0xFF0;
-		else if (x < 319)
-			color = 0x0F0;
-		else if (x < 416)
-			color = 0x0FF;
-		else if (x < 524)
-			color = 0x00F;
+		if (x < 105)
+		{
+			if (x == 0)
+			{
+				color = 0xF00;
+				component = 0;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0xF0F;
+				color |= (++component << 4);
+			}
+		}
+		else if (x < 210)
+		{
+			if (x == 105)
+			{
+				color = 0xFF0;
+				component = 0xF;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0x0FF;
+				color |= --component << 8;
+			}
+		}
+		else if (x < 315)
+		{
+			if (x == 210)
+			{
+				color = 0x0F0;
+				component = 0;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0xFF0;
+				color |= ++component;
+			}
+		}
+		else if (x < 420)
+		{
+			if (x == 315)
+			{
+				color = 0x0FF;
+				component = 0xF;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0xF0F;
+				color |= --component << 4;
+			}
+		}
+		else if (x < 525)
+		{
+			if (x == 420)
+			{
+				color = 0x00F;
+				component = 0;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0x0FF;
+				color |= ++component << 8;
+			}
+		}
+		else if (x < 630)
+		{
+			if (x == 525)
+			{
+				color = 0xF0F;
+				component = 0xF;
+			}
+			else if (x % 7 == 0)
+			{
+				color &= 0xFF0;
+				color |= --component;
+			}
+		}
 		else
-			color = 0xF0F;
+			color = 0xF00;
+
 		for (y = 0; y < 5; y++)
 			frame_px_w (fb, x, y, color);
 	}
