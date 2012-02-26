@@ -1,21 +1,31 @@
 ABOUT THE PROJECT
 ----------------------------------------------------------------------
+This project aims at implementing the VGA interface on Altera's DE0 
+development board. This is utilized by a custom Qsys component that
+accesses the SDRAM via the Avalon Bus. The frame buffer is stored
+inside the SDRAM and via a softcore processor like the NIOS II and the
+included graphics driver, the vga_controller component can be 
+configured and started.
 
+Supported graphic modes are:
+	* 640x480@60Hz & 12-bit color
 
 
 DIRECTORY STRUCTURE
 ----------------------------------------------------------------------
-	doc		DOCumentation, DOCuments, etc.
-	hw		Quartus hardware design
-	sw		driver software
+	doc		Doxygen-generated documentation
+	hw		Quartus hardware designs
+	sw		Driver and applications software
 
 
-OVERVIEW HARDWARE DESIGNS
+OVERVIEW HARDWARE PROJECTS
 ----------------------------------------------------------------------
-de0_vga_qsys	Der Versuch das Ding mit Qsys hinzubiegen
+ip/vga_controller	The custom vga_controller IP-component.
+de0_vga_qsys		A Qsys-based system including the vga_controller
+					component together with a NIOS II /s
 
 
 OVERVIEW SOFTWARE PROJECTS
 ----------------------------------------------------------------------
-de0_vga_driver		the basic vga graphics driver including an even more basic demo application
-de0_vga_qsys_bsp	board support package for the de0_vga_qsys hardware design
+de0_vga_driver		A basic graphics driver for the vga_controller
+
