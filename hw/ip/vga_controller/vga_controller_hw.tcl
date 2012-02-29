@@ -5,13 +5,8 @@
 
 # +-----------------------------------
 # | 
-# | vga_controller "VGA Controller" v1.2
+# | vga_controller "VGA Controller" v1.3
 # | Darius Kellermann, Max Stolze 2012.02.26.13:15:38
-# | 
-# | 
-# | /home/darius/Projects/altera/de0_vga/hw/ip/vga_controller/vga_controller.vhd
-# | 
-# |    ./vga_controller.vhd syn, sim
 # | 
 # +-----------------------------------
 
@@ -26,7 +21,9 @@ package require -exact sopc 11.0
 # | module vga_controller
 # | 
 set_module_property NAME vga_controller
-set_module_property VERSION 1.2
+set_module_property VERSION 1.3
+set_module_property DESCRIPTION "This IP includes a VGA Core with DMA capabilities to access a framebuffer located in RAM or ROM."
+set_module_property GROUP Peripherals/Display
 set_module_property INTERNAL false
 set_module_property OPAQUE_ADDRESS_MAP true
 set_module_property AUTHOR "Darius Kellermann, Max Stolze"
@@ -46,6 +43,10 @@ set_module_property FIX_110_VIP_PATH false
 # | files
 # | 
 add_file vga_controller.vhd {SYNTHESIS SIMULATION}
+add_file vga_controller_dma_vga_logic.vhd {SYNTHESIS SIMULATION}
+add_file vga_controller_registers.vhd {SYNTHESIS SIMULATION}
+add_file vga_controller_vga_signals.vhd {SYNTHESIS SIMULATION}
+add_file vga_controller_fifo.vhd {SYNTHESIS SIMULATION}
 # | 
 # +-----------------------------------
 

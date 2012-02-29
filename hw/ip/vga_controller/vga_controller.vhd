@@ -37,7 +37,7 @@ end vga_controller;
 
 architecture default of vga_controller is
 	
-	component vga_controll_slave
+	component vga_controller_registers
 		port(
 			clk50				:	in		std_logic;
 			reset				:	in		std_logic;
@@ -49,7 +49,7 @@ architecture default of vga_controller is
 		);
 	end component;
 	
-	component dma_read_master
+	component vga_controller_dma_vga_logic
 		port(
 			reset					: in	std_logic;
 			clk50					: in	std_logic;
@@ -69,7 +69,7 @@ architecture default of vga_controller is
 		);
 	end component;
 	
-	component vga_signals
+	component vga_controller_vga_signals
 		port(
 			reset				:	in		std_logic;
 			clk50				:	in		std_logic;
@@ -91,7 +91,7 @@ architecture default of vga_controller is
 	
 begin
 	
-	ctrl: vga_controll_slave
+	ctrl: vga_controller_registers
 	port map(
 			clk50				=> csi_clk_snk_clk,
 			reset				=> csi_clk_snk_reset,
@@ -102,7 +102,7 @@ begin
 			control_reg		=> s_control_reg
 	);
 	
-	dma : dma_read_master
+	dma : vga_controller_dma_vga_logic
 	port map(
 		clk50					=> csi_clk_snk_clk,
 		reset					=> not s_control_reg(0) or not s_v_sync,	-- GO-Bit nicht gesetzt oder VSync aktiv
@@ -121,7 +121,7 @@ begin
 		dma_byte_en			=>	avm_dma_byteenable
 	);
 	
-	vga_s : vga_signals
+	vga_s : vga_controller_vga_signals
 	port map(
 			reset				=> not s_control_reg (0),
 			clk50				=> csi_clk_snk_clk,

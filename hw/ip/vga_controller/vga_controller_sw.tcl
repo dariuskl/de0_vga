@@ -15,12 +15,9 @@ set_sw_property version 1.0
 # than specified below. Updates to hardware and device drivers
 # rendering the driver incompatible with older versions of
 # hardware are noted with this property assignment.
-#
-# Multiple-Version compatibility was introduced in version 7.1;
-# prior versions are therefore excluded.
 set_sw_property min_compatible_hw_version 1.0
 
-# Initialize the driver in alt_sys_init()
+# Do not initialize the driver in alt_sys_init()
 set_sw_property auto_initialize false
 
 # Location in generated BSP that above sources will be copied into
